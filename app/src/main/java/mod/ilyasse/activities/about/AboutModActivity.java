@@ -95,7 +95,6 @@ public class AboutModActivity extends ThemedActivity {
         sharedPref = getSharedPreferences("AboutMod", Activity.MODE_PRIVATE);
 
         setSupportActionBar(toolbar);
-        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));

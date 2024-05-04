@@ -16,12 +16,13 @@ import android.widget.TextView;
 import androidx.annotation.DrawableRes;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.trindade.ware.R;
 
 /**
  * A Sketchware-styled dialog.
  */
-public class aB extends Dialog {
+public class aB extends MaterialAlertDialogBuilder {
 
     private int dialogImageResId = -1;
     private String dialogTitleText = "";

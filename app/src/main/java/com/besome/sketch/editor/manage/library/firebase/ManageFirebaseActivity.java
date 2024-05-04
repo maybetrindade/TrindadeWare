@@ -23,6 +23,7 @@ import com.github.angads25.filepicker.model.DialogConfigs;
 import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.google.android.material.materialswitch.MaterialSwitch;
+import com.google.android.material.appbar.MaterialToolbar; 
 import com.trindade.ware.R;
 
 import java.util.regex.Matcher;
@@ -164,9 +165,9 @@ public class ManageFirebaseActivity extends BaseAppCompatActivity implements Vie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manage_library_manage_firebase);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
+        
         getSupportActionBar().setTitle(Helper.getResString(R.string.design_library_firebase_title_firebase_manager));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
