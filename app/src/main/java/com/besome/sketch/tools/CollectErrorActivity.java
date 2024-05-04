@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.gson.Gson;
-import com.sketchware.remod.BuildConfig;
-import com.sketchware.remod.R;
+import com.trindade.ware.BuildConfig;
+import com.trindade.ware.R;
 
 import java.io.File;
 import java.util.HashMap;

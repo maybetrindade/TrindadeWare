@@ -39,7 +39,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 import com.google.gson.LongSerializationPolicy;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -48,8 +48,9 @@ import mod.RequestNetwork;
 import mod.RequestNetworkController;
 import mod.SketchwareUtil;
 import mod.hey.studios.util.Helper;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class AboutModActivity extends AppCompatActivity {
+public class AboutModActivity extends ThemedActivity {
     private ViewPager viewPager;
     private ExtendedFloatingActionButton fab;
     private ArrayList<HashMap<String, Object>> teamList = new ArrayList<>();

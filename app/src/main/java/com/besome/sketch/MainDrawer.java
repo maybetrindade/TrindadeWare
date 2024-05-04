@@ -19,7 +19,7 @@ import com.besome.sketch.help.ProgramInfoActivity;
 import com.besome.sketch.help.SystemSettingActivity;
 import com.besome.sketch.tools.NewKeyStoreActivity;
 import com.google.android.material.navigation.NavigationView;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import a.a.a.mB;
 import a.a.a.wB;

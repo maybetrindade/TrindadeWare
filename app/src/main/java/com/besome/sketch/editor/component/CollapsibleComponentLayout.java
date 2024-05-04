@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 import com.besome.sketch.lib.ui.CollapsibleButton;
 import com.besome.sketch.lib.base.CollapsibleLayout;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import java.util.List;
 

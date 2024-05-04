@@ -30,7 +30,7 @@ import com.besome.sketch.beans.ViewBean;
 import com.besome.sketch.editor.manage.image.ManageImageActivity;
 import com.besome.sketch.editor.property.ViewPropertyItems;
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import java.util.ArrayList;
 import java.util.Map;

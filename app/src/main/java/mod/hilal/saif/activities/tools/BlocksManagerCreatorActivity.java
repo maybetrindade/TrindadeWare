@@ -30,7 +30,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -48,8 +48,9 @@ import mod.hasrat.highlighter.SimpleHighlighter;
 import mod.hasrat.lib.BaseTextWatcher;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.lib.PCP;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class BlocksManagerCreatorActivity extends AppCompatActivity {
+public class BlocksManagerCreatorActivity extends ThemedActivity {
 
     private final ArrayList<String> id_detector = new ArrayList<>();
     private ArrayList<HashMap<String, Object>> blocksList = new ArrayList<>();

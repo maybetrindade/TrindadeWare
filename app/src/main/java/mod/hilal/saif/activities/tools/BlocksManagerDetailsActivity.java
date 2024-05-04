@@ -32,7 +32,7 @@ import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -43,8 +43,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import mod.SketchwareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class BlocksManagerDetailsActivity extends AppCompatActivity {
+public class BlocksManagerDetailsActivity extends ThemedActivity {
 
     private static final String BLOCK_EXPORT_PATH = new File(FileUtil.getExternalStorageDir(), ".sketchware/resources/block/export/").getAbsolutePath();
 

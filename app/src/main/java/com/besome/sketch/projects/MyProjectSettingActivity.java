@@ -25,8 +25,8 @@ import androidx.transition.TransitionManager;
 
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.MyprojectSettingBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.MyprojectSettingBinding;
 
 import java.io.File;
 import java.io.FileOutputStream;

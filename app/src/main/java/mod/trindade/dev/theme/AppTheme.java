@@ -2,7 +2,7 @@ package mod.trindade.dev.theme;
 
 import mod.hilal.saif.activities.tools.ConfigActivity; 
 
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import android.content.Context;
 

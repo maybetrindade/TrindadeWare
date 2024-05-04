@@ -10,8 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.besome.sketch.beans.QuizBean;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.QuizBoardBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.QuizBoardBinding;
 
 import java.util.ArrayList;
 import java.util.Random;

@@ -8,7 +8,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.besome.sketch.lib.base.BaseDialogActivity;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import a.a.a.xB;
 

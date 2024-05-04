@@ -22,7 +22,7 @@ import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import java.io.File;
 import java.util.ArrayList;

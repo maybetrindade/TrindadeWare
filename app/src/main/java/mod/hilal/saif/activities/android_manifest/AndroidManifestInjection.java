@@ -28,8 +28,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.besome.sketch.editor.manage.library.LibraryItemView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.gson.Gson;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.ProgressMsgBoxBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.ProgressMsgBoxBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,9 +50,10 @@ import mod.hilal.saif.asd.DialogButtonGradientDrawable;
 import mod.jbk.code.CodeEditorColorSchemes;
 import mod.jbk.code.CodeEditorLanguages;
 import mod.remaker.view.CustomAttributeView;
+import mod.trindade.dev.theme.ThemedActivity; 
 
 @SuppressLint("SetTextI18n")
-public class AndroidManifestInjection extends AppCompatActivity {
+public class AndroidManifestInjection extends ThemedActivity {
 
     private final ArrayList<HashMap<String, Object>> list_map = new ArrayList<>();
     private ListView act_list;

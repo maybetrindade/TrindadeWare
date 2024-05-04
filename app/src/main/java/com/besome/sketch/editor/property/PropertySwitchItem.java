@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import a.a.a.wB;
 

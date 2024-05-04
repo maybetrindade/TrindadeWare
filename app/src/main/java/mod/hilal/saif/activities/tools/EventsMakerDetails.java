@@ -18,8 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.AddCustomAttributeBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.AddCustomAttributeBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,8 +27,9 @@ import java.util.HashMap;
 import mod.SketchwareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class EventsMakerDetails extends Activity {
+public class EventsMakerDetails extends ThemedActivity {
 
     private final ArrayList<HashMap<String, Object>> listMap = new ArrayList<>();
     private AlertDialog.Builder dia;

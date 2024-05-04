@@ -23,8 +23,8 @@ import com.besome.sketch.projects.MyProjectButton;
 import com.besome.sketch.projects.MyProjectButtonLayout;
 import com.besome.sketch.projects.MyProjectSettingActivity;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.BottomSheetProjectOptionsBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.BottomSheetProjectOptionsBinding;
 
 import java.io.File;
 import java.util.ArrayList;

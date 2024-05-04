@@ -9,16 +9,17 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.lib.code_editor.CodeEditorLayout;
 import mod.hey.studios.lib.code_editor.ColorScheme;
+import mod.trindade.dev.theme.ThemedActivity; 
 
 /**
  * Legacy code editor
  */
-public class SrcCodeEditorLegacy extends Activity {
+public class SrcCodeEditorLegacy extends ThemedActivity {
 
     private CodeEditorLayout codeEditor;
     private SharedPreferences sp;

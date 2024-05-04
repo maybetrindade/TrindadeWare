@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.besome.sketch.lib.ui.CustomScrollView;
 import com.google.android.material.color.MaterialColors;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import a.a.a.wB;
 import dev.aldi.sayuti.editor.view.palette.IconBadgeView;

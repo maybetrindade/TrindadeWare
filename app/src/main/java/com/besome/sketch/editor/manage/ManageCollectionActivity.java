@@ -47,7 +47,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import java.io.File;
 import java.nio.file.Path;

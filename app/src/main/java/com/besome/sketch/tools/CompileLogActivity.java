@@ -18,8 +18,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.CompileLogBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.CompileLogBinding;
 
 import mod.SketchwareUtil;
 import mod.hey.studios.util.CompileLogHelper;

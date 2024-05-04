@@ -12,15 +12,16 @@ import android.widget.TextView;
 
 import androidx.appcompat.widget.SwitchCompat;
 
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 import mod.agus.jcoderz.editor.manage.library.locallibrary.ManageLocalLibrary;
 import mod.hey.studios.util.Helper;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class ManageProguardActivity extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class ManageProguardActivity extends ThemedActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
     private ProguardHandler pg;
     private SwitchCompat sw_pg_enabled;

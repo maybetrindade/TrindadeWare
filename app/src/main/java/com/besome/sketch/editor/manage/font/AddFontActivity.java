@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 import com.besome.sketch.beans.ProjectResourceBean;
 import com.besome.sketch.lib.base.BaseDialogActivity;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.ManageFontAddBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.ManageFontAddBinding;
 
 import a.a.a.Np;
 import a.a.a.WB2;

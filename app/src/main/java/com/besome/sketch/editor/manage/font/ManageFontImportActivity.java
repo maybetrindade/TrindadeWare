@@ -21,7 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.besome.sketch.beans.ProjectResourceBean;
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
 import com.besome.sketch.lib.ui.EasyDeleteEditText;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import java.util.ArrayList;
 import java.util.Iterator;

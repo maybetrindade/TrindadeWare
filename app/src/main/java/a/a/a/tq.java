@@ -11,7 +11,7 @@ public class tq {
         if (a == null) {
             a = new ArrayList<>();
         }
-
+        a.add(new QuizBean("TrindadeWare is better than Official Sketchware Pro", QuizBean.QUIZ_TYPE_OX));
         a.add(new QuizBean("Gyroscope component is supported on every device.", QuizBean.QUIZ_TYPE_OX));
         a.add(new QuizBean("The index of the first item in the list is 1.", QuizBean.QUIZ_TYPE_OX));
         a.add(new QuizBean("Saved SharedPreference data remains even if you delete the application.", QuizBean.QUIZ_TYPE_OX));

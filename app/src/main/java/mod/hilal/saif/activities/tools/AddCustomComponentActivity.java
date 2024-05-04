@@ -11,8 +11,8 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.ManageCustomComponentAddBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.ManageCustomComponentAddBinding;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -29,8 +29,9 @@ import mod.hasrat.tools.ComponentHelper;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.components.ComponentsHandler;
 import mod.jbk.util.OldResourceIdMapper;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class AddCustomComponentActivity extends AppCompatActivity implements View.OnClickListener {
+public class AddCustomComponentActivity extends ThemedActivity implements View.OnClickListener {
 
     private boolean isEditMode = false;
     private int position = 0;

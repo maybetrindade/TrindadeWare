@@ -19,9 +19,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.ManagePermissionBinding;
-import com.sketchware.remod.databinding.ViewItemPermissionBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.ManagePermissionBinding;
+import com.trindade.ware.databinding.ViewItemPermissionBinding;
 
 import java.util.ArrayList;
 

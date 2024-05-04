@@ -26,8 +26,8 @@ import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.MenuActivityBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.MenuActivityBinding;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -37,8 +37,9 @@ import dev.aldi.sayuti.block.ExtraBlockClassInfo;
 import mod.SketchwareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class BlockSelectorActivity extends AppCompatActivity implements View.OnClickListener {
+public class BlockSelectorActivity extends ThemedActivity implements View.OnClickListener {
 
     private static final File BLOCK_SELECTOR_MENUS_FILE = new File(Environment.getExternalStorageDirectory(), ".sketchware/resources/block/My Block/menu.json");
 

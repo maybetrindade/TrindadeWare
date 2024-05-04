@@ -18,7 +18,7 @@ import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.appbar.AppBarLayout;
 
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import a.a.a.mB;
 import mod.hey.studios.util.Helper;

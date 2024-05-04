@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.card.MaterialCardView;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import a.a.a.mB;
 import a.a.a.wB;

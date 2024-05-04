@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.gson.Gson;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.EventsCreatorBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.EventsCreatorBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,8 +15,9 @@ import mod.SketchwareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
 import mod.jbk.util.OldResourceIdMapper;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class EventsMakerCreator extends Activity {
+public class EventsMakerCreator extends ThemedActivity {
 
     private String _code;
     private String _desc;

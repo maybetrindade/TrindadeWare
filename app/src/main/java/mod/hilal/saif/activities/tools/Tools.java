@@ -22,8 +22,8 @@ import com.besome.sketch.editor.manage.library.LibraryItemView;
 import com.github.angads25.filepicker.model.DialogConfigs;
 import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.DialogSelectApkToSignBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.DialogSelectApkToSignBinding;
 
 import java.io.File;
 

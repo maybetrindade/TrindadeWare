@@ -25,7 +25,7 @@ import com.besome.sketch.lib.base.CollapsibleViewHolder;
 import com.besome.sketch.lib.ui.CollapsibleButton;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.gson.Gson;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -43,8 +43,9 @@ import mod.elfilibustero.sketch.editor.component.CollapsibleCustomComponentLayou
 import mod.elfilibustero.sketch.lib.ui.SketchFilePickerDialog;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.components.ComponentsHandler;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class ManageCustomComponentActivity extends AppCompatActivity {
+public class ManageCustomComponentActivity extends ThemedActivity {
 
     private List<HashMap<String, Object>> componentsList = new ArrayList<>();
 

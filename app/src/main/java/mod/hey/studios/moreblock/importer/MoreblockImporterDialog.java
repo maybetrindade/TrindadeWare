@@ -13,8 +13,8 @@ import android.widget.SearchView;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.besome.sketch.beans.MoreBlockCollectionBean;
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.ManageCollectionPopupImportMoreBlockListItemBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.ManageCollectionPopupImportMoreBlockListItemBinding;
 
 import java.util.ArrayList;
 

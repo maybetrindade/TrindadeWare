@@ -1,6 +1,7 @@
 package mod.trindade.dev.theme;
 
 import androidx.appcompat.app.AppCompatActivity; 
+
 import android.os.Bundle;
 
 import mod.trindade.dev.theme.AppTheme;

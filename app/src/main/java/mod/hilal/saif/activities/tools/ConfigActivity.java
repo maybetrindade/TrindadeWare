@@ -40,11 +40,11 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.google.android.material.appbar.AppBarLayout;
 
-import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.DialogCreateNewFileLayoutBinding;
-import com.sketchware.remod.databinding.DialogInputLayoutBinding;
-import com.sketchware.remod.databinding.ManageFileBinding;
-import com.sketchware.remod.databinding.ManageJavaItemHsBinding;
+import com.trindade.ware.R;
+import com.trindade.ware.databinding.DialogCreateNewFileLayoutBinding;
+import com.trindade.ware.databinding.DialogInputLayoutBinding;
+import com.trindade.ware.databinding.ManageFileBinding;
+import com.trindade.ware.databinding.ManageJavaItemHsBinding;
 
 import com.topjohnwu.superuser.Shell;
 

@@ -14,7 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
 import com.besome.sketch.lib.ui.PropertyOneLineItem;
 import com.besome.sketch.lib.ui.PropertyTwoLineItem;
-import com.sketchware.remod.R;
+import com.trindade.ware.R;
 
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.appbar.AppBarLayout;
