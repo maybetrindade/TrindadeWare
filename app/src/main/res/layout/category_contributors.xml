@@ -15,7 +15,7 @@
         android:padding="8dp"
         android:text="@string/about_team_title"
         android:textAppearance="?attr/textAppearanceLabelLarge"
-        tools:text="Main contributors" />
+        />
     
   <com.google.android.material.card.MaterialCardView
     android:id="@+id/category_contributors_layout"
