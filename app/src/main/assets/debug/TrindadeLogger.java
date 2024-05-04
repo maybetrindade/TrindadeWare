@@ -9,15 +9,15 @@ import java.io.InputStreamReader;
 import android.content.Context;
 import android.util.Log;
 
-public class SketchLogger {
+public class TrindadeLogger {
 
     /**
      * Logcat Reader Class
      * <p>
      * Uses:
      * <br>
-     *  - "SketchLogger.broadcastLog(String)" to manually send a debug log that's then viewable in Logcat Reader
-     *  - "SketchLogger.stopLogging()" to stop logging
+     *  - "TrindadeLogger.broadcastLog(String)" to manually send a debug log that's then viewable in Logcat Reader
+     *  - "TrindadeLogger.stopLogging()" to stop logging
      */
 
     private static Thread loggerThread = new Thread() {
@@ -60,7 +60,7 @@ public class SketchLogger {
     }
 
     public static void broadcastLog(String log) {
-        Context context = SketchApplication.getContext();
+        Context context = TrindadeApplication.getContext();
 
         Intent intent = new Intent();
         intent.setAction("com.sketchware.remod.ACTION_NEW_DEBUG_LOG");
