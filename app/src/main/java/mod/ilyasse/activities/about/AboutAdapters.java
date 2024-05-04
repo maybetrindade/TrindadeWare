@@ -113,7 +113,7 @@ public class AboutAdapters {
             if (githubUrl instanceof String && githubUrl != null) {
                     githubUrl = (String) githubUrl;
                     holder.github_handle.setOnClickListener(v -> {
-                    TrindadeUtil.openUrl(mContext, (String) githubUrl)
+                    TrindadeUtil.openUrl(mContext, (String) githubUrl);
                  });
             } else {
                 holder.github_handle.setVisibility(View.GONE);
