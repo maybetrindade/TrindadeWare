@@ -80,6 +80,17 @@ public class AppTheme {
        return appThemeID;
     }
     
+    public int getCurrentThemePos () {
+       if (current("Sketchware-Default")) {
+            return 0;
+       } else if (current("Florest")) {
+            return 1;
+       } else if (current("Red florest")) {
+            return 2;
+       }      
+       return 0;
+    }
+    
     public boolean current (String val) {
        if (appThemeName.equals(val)){ return true; }
        return false;

@@ -397,9 +397,10 @@ public class ConfigActivity extends ThemedActivity {
        String selectedTheme = appThemeHelper.getThemes().get(pos);
        setting_map.put(SETTING_APP_THEME, selectedTheme);
        FileUtil.writeFile(SETTINGS_FILE.getAbsolutePath(), new Gson().toJson(setting_map));
-       SketchwareUtil.toast("Saved");
        SketchwareUtil.toast("Restart to apply the changes.");
+       recreate();
     }
+    
 
     private void addSwitchPreference(String title, String subtitle, String keyName, boolean defaultValue) {
         addSwitchPreference(title, subtitle, keyName, defaultValue, null);
@@ -424,6 +425,7 @@ public class ConfigActivity extends ThemedActivity {
     public void trindadeInitialize () {
         appThemeHelper = new AppTheme(this);
         appThemeHelper.appThemes();
+        selected = appThemeHelper.getCurrentThemePos();
     }
 
     @SuppressLint("SetTextI18n")
