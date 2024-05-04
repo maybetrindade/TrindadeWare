@@ -126,9 +126,9 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
                 binding.spinner.setSelection(data.size() - 1);
                 AutoTransition autoTransition = new AutoTransition();
                 autoTransition.setDuration(200L);
-                TransitionManager.beginDelayedTransition(binding.back, autoTransition);
+             //   TransitionManager.beginDelayedTransition(binding.back, autoTransition);
                 binding.contai.setVisibility(View.GONE);
-                Helper.setViewsVisibility(false, binding.igToolbarLoadFile, binding.add, binding.edi, binding.dele);
+            //    Helper.setViewsVisibility(false, binding.igToolbarLoadFile, binding.add, binding.edi, binding.dele);
                 binding.spinner.setEnabled(true);
                 binding.listv.setEnabled(true);
                 isNewGroup = false;
@@ -141,9 +141,9 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
                 binding.spinner.setSelection(current_item);
                 AutoTransition autoTransition2 = new AutoTransition();
                 autoTransition2.setDuration(200L);
-                TransitionManager.beginDelayedTransition(binding.back, autoTransition2);
+             //   TransitionManager.beginDelayedTransition(binding.back, autoTransition2);
                 binding.contai.setVisibility(View.GONE);
-                Helper.setViewsVisibility(false, binding.igToolbarLoadFile, binding.add, binding.edi, binding.dele);
+             //   Helper.setViewsVisibility(false, binding.igToolbarLoadFile, binding.add, binding.edi, binding.dele);
                 binding.spinner.setEnabled(true);
                 binding.listv.setEnabled(true);
             }
@@ -152,7 +152,7 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
     }
 
     private void showOptionsMenu() {
-        PopupMenu popupMenu = new PopupMenu(this, binding.igToolbarLoadFile);
+        //>PopupMenu popupMenu = new PopupMenu(this, binding.igToolbarLoadFile);
         Menu menu = popupMenu.getMenu();
         menu.add("Import block selector menus");
         menu.add("Export current block selector menu");
@@ -191,11 +191,11 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
 
         if (id == R.id.add) {
             _fabVisibility(false);
-            TransitionManager.beginDelayedTransition(binding.back, autoTransition);
+           // TransitionManager.beginDelayedTransition(binding.back, autoTransition);
             binding.name.setText("");
             binding.title.setText("");
             isNewGroup = true;
-            Helper.setViewsVisibility(true, binding.igToolbarLoadFile, binding.add, binding.edi);
+           // Helper.setViewsVisibility(true, binding.igToolbarLoadFile, binding.add, binding.edi);
             Helper.setViewsVisibility(false, binding.label, binding.dele, binding.contai);
             binding.spinner.setEnabled(false);
             binding.listv.setEnabled(false);
@@ -234,9 +234,9 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
                 _fabVisibility(false);
                 binding.name.setText(map.get("name").toString());
                 binding.title.setText(map.get("title").toString());
-                TransitionManager.beginDelayedTransition(binding.back, autoTransition);
+                //TransitionManager.beginDelayedTransition(binding.back, autoTransition);
                 binding.contai.setVisibility(View.VISIBLE);
-                Helper.setViewsVisibility(true, binding.igToolbarLoadFile, binding.add, binding.edi, binding.dele);
+             //   Helper.setViewsVisibility(true, binding.igToolbarLoadFile, binding.add, binding.edi, binding.dele);
                 binding.spinner.setEnabled(false);
                 binding.listv.setEnabled(false);
             } else {
@@ -246,8 +246,8 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
             save();
         } else if (id == R.id.canc) {
             _fabVisibility(true);
-            TransitionManager.beginDelayedTransition(binding.back, autoTransition);
-            Helper.setViewsVisibility(false, binding.igToolbarLoadFile, binding.add, binding.edi, binding.dele);
+          //  TransitionManager.beginDelayedTransition(binding.back, autoTransition);
+           // Helper.setViewsVisibility(false, binding.igToolbarLoadFile, binding.add, binding.edi, binding.dele);
             Helper.setViewsVisibility(true, binding.contai, binding.label);
             binding.spinner.setEnabled(true);
             binding.listv.setEnabled(true);
@@ -398,12 +398,12 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
         if (visible) {
             AutoTransition autoTransition = new AutoTransition();
             autoTransition.setDuration(200L);
-            TransitionManager.beginDelayedTransition(binding.back, autoTransition);
+       //     TransitionManager.beginDelayedTransition(binding.back, autoTransition);
             binding.bottom.setVisibility(View.VISIBLE);
         } else {
             AutoTransition autoTransition2 = new AutoTransition();
             autoTransition2.setDuration(200L);
-            TransitionManager.beginDelayedTransition(binding.back, autoTransition2);
+           // TransitionManager.beginDelayedTransition(binding.back, autoTransition2);
             binding.bottom.setVisibility(View.GONE);
         }
     }
