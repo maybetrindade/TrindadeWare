@@ -1,11 +1,12 @@
 name: Debug Compile
 
 on:
- workflow_dispatch:
   push:
     branches:
       - main
       - dev
+      
+  workflow_dispatch:
 jobs:
   build:
     name: Building minApi 21 + 26
