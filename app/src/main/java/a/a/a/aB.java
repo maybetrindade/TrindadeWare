@@ -22,7 +22,7 @@ import com.trindade.ware.R;
 /**
  * A Sketchware-styled dialog.
  */
-public class aB extends MaterialAlertDialogBuilder {
+public class aB extends Dialog {
 
     private int dialogImageResId = -1;
     private String dialogTitleText = "";
