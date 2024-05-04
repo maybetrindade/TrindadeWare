@@ -93,7 +93,7 @@ public class sq {
         K = new ColorBean[]{new ColorBean(Color.TRANSPARENT, "TRANSPARENT", Color.parseColor("#212121"), R.drawable.checked_grey_32)};
         L = new ColorBean[]{new ColorBean(0xffffff, "NONE", Color.parseColor("#212121"), R.drawable.checked_grey_32)};
         M = new int[]{R.color.scolor_blue_01, R.color.scolor_red_02, R.color.scolor_green_02, R.color.scolor_dark_yellow_01};
-        N = new ColorBean[]{new ColorBean("#A21412", "RamdomColors", "#ffffff", R.drawable.checked_white_32), new ColorBean{"#FAFAFA", "RamdomColors", "#000000", R.drawable.checked_grey_32)};
+        //N = new ColorBean[]{new ColorBean("#A21412", "RamdomColors", "#ffffff", R.drawable.checked_white_32), new ColorBean{"#FAFAFA", "RamdomColors", "#000000", R.drawable.checked_grey_32)};
     }
 
     public static String a(int gravity) {
