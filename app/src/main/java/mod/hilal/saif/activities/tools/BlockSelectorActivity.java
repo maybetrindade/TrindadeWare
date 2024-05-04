@@ -152,7 +152,7 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
     }
 
     private void showOptionsMenu() {
-        //>PopupMenu popupMenu = new PopupMenu(this, binding.igToolbarLoadFile);
+        /*PopupMenu popupMenu = new PopupMenu(this, binding.igToolbarLoadFile);
         Menu menu = popupMenu.getMenu();
         menu.add("Import block selector menus");
         menu.add("Export current block selector menu");
@@ -180,7 +180,7 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
             }
             return true;
         });
-        popupMenu.show();
+        popupMenu.show();*/
     }
 
     @Override
