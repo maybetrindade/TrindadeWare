@@ -63,7 +63,7 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
 
     private void initialize() {
         fixbug();
-        binding.igToolbarBack.setOnClickListener(Helper.getBackPressedClickListener(this));
+//       binding.igToolbarBack.setOnClickListener(Helper.getBackPressedClickListener(this));
         binding.addVal.setOnClickListener(this);
         binding.dele.setOnClickListener(this);
         binding.edi.setOnClickListener(this);
@@ -102,10 +102,10 @@ public class BlockSelectorActivity extends ThemedActivity implements View.OnClic
             return true;
         });
 
-        binding.igToolbarLoadFile.setVisibility(View.VISIBLE);
+    /*    binding.igToolbarLoadFile.setVisibility(View.VISIBLE);
         binding.igToolbarLoadFile.setImageResource(R.drawable.ic_more_vert_white_24dp);
         binding.igToolbarLoadFile.setOnClickListener(v -> showOptionsMenu());
-        applyRippleToView(binding.igToolbarBack, binding.dele, binding.edi, binding.add, binding.canc, binding.save, binding.addVal, binding.igToolbarLoadFile);
+        applyRippleToView(binding.igToolbarBack, binding.dele, binding.edi, binding.add, binding.canc, binding.save, binding.addVal, binding.igToolbarLoadFile);*/
     }
 
     private void save() {
