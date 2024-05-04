@@ -1,5 +1,5 @@
 <resources>
-   <style name="CategoryContributorsCard" parent="AppTheme.Red">
+   <style name="CategoryContributorsCard.Red" parent="AppTheme.Red">
         <item name="cardBackgroundColor">?attr/colorSurfaceContainer</item>
     </style>
 </resources>
