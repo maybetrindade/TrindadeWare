@@ -1,4 +1,4 @@
-name: Latest build(release)
+name: Release compile
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build release apk
+    name: Building minApi 21 + 26
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.0.2
@@ -30,8 +30,8 @@ jobs:
         with:
           arguments: assembleRelease
 
-      - name: Upload release apk
+      - name: Upload release apk minApi 21 +26
         uses: actions/upload-artifact@v3
         with:
-          name: app-release
+          name: trindade-ware-release
           path: app/build/outputs/apk/release/

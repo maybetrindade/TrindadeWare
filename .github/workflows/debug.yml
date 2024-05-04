@@ -1,4 +1,4 @@
-name: Latest Build(debug)
+name: Debug Compile
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - dev
 jobs:
   build:
-    name: Build debug apk
+    name: Building minApi 21 + 26
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.0.2
@@ -30,8 +30,8 @@ jobs:
         with:
           arguments: assembleDebug
 
-      - name: Upload debug apk
+      - name: Upload debug apk minApi 21 +26
         uses: actions/upload-artifact@v3
         with:
-          name: debug
+          name: trindade-ware-debug
           path: app/build/outputs/apk/
