@@ -143,7 +143,7 @@ public class NewKeyStoreActivity extends BaseAppCompatActivity implements OnClic
         setContentView(R.layout.keystore_new);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
+        
         getSupportActionBar().setTitle(Helper.getResString(R.string.myprojects_sign_apk_new_certificate_title_new_certificate));
         getSupportActionBar().setSubtitle("Export path: " + wq.D);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

@@ -47,6 +47,18 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
     
+    <style name="ItemTitle" parent="AppTheme">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ItemDescription" parent="AppTheme">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:alpha">0.9</item>
+    </style>   
+    
+    <style name="CategoryContributorsCard" parent="AppTheme">
+        <item name="cardBackgroundColor">?attr/colorSecondaryContainer</item>
+    </style>
 </resources>
