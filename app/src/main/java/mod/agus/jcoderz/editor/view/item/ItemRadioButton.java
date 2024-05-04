@@ -8,6 +8,8 @@ import android.widget.RadioButton;
 
 import com.besome.sketch.beans.ViewBean;
 
+import com.trindade.ware.R;
+
 import a.a.a.sy;
 import a.a.a.wB;
 

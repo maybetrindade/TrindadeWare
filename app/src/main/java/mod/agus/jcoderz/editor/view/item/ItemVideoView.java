@@ -10,7 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.besome.sketch.beans.ViewBean;
-import com.sketchware.remod.R;
+
+import com.trindade.ware.R;
 
 import a.a.a.sy;
 import a.a.a.wB;
