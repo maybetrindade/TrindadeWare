@@ -29,7 +29,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/ic_back"
-                app:menu="@menu/manage_firebase"
+                
                 app:title="toolbar" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
      </com.google.android.material.appbar.AppBarLayout>
