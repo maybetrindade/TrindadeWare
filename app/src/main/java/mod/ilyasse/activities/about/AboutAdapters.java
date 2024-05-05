@@ -36,11 +36,11 @@ import mod.trindade.dev.utils.TrindadeUtil;
 
 public class AboutAdapters {
 
-    public String githubUrlString;
 
     public static class TeamRecyclerAdapter extends RecyclerView.Adapter<TeamRecyclerAdapter.ViewHolder> {
 
         private final ArrayList<HashMap<String, Object>> team;
+        private final String githubUrlString;
         
         public TeamRecyclerAdapter(ArrayList<HashMap<String, Object>> data) {
             team = data;
