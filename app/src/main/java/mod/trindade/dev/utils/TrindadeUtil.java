@@ -9,6 +9,6 @@ import com.besome.sketch.SketchApplication;
 public class TrindadeUtil {
    
    public static void openUrl(String url) {
-        SketchwareApplication.openUrl(url);
+        SketchApplication.openUrl(url);
    }   
 }
