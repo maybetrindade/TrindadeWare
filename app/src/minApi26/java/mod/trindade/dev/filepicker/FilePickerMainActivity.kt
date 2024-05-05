@@ -30,9 +30,9 @@ import com.jn.filepickersphere.models.FileModel
 import com.jn.filepickersphere.models.FilePickerModel
 import com.jn.filepickersphere.models.PickOptions
 import com.jn.filepickersphere.utils.SphereThemes
+import mod.trindade.dev.theme.ThemedActivity
 
-
-class MainActivity : AppCompatActivity() {
+class FilePickerMainActivity : ThemedActivity() {
 
     private lateinit var btnPickerPhotos: Button
     private lateinit var recyclerView: RecyclerView
