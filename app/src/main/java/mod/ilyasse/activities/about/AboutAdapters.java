@@ -35,6 +35,9 @@ import java.util.Locale;
 import mod.trindade.dev.utils.TrindadeUtil;
 
 public class AboutAdapters {
+
+    public String githubUrlString;
+
     public static class TeamRecyclerAdapter extends RecyclerView.Adapter<TeamRecyclerAdapter.ViewHolder> {
 
         private final ArrayList<HashMap<String, Object>> team;
@@ -106,7 +109,7 @@ public class AboutAdapters {
             }
             
             Object githubUrl = team.get(position).get("githubUrl");
-            String githubUrlString = "https://github.com/aquilesTrindade/";
+            githubUrlString = "https://github.com/aquilesTrindade/";
             
             if (githubUrl instanceof String && githubUrl != null) {
                     githubUrl = (String) githubUrl;
