@@ -54,7 +54,7 @@ public class SketchApplication extends Application {
     public static void openUrl(String url) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        mApplicationContext().startActivity(intent);
+        mApplicationContext.startActivity(intent);
     }
     
 }
