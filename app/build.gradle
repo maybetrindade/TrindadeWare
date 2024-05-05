@@ -26,6 +26,7 @@ android {
     def authorName = "git log -1 --pretty=format:'%an'".execute().text.trim()
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.trindade.ware"
         namespace "com.trindade.ware"
         //noinspection ExpiredTargetSdkVersion since we don't target getting Sketchware Pro on Google Play.
