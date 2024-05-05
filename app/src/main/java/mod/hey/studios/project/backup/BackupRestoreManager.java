@@ -1,4 +1,4 @@
-*package mod.hey.studios.project.backup;
+package mod.hey.studios.project.backup;
 
 import android.app.Activity;
 import android.app.AlertDialog;

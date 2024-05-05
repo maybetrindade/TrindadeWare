@@ -65,7 +65,7 @@ public class BlocksManagerDetailsActivity extends ThemedActivity {
     private Parcelable listViewSavedState;
     private ImageView swap;
     private MaterialToolbar materialToolbar;
-    private Toolbar = materialToolbar;
+    private Toolbar toolbar = materialToolbar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
