@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Building minApi 21 + 26
+    name: Building minApi26
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.0.2
@@ -32,7 +32,7 @@ jobs:
         with:
           arguments: assembleRelease
 
-      - name: Upload release apk minApi 21 +26
+      - name: Upload release apk minApi26
         uses: actions/upload-artifact@v3
         with:
           name: trindade-ware-release
