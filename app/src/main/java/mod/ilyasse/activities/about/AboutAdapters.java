@@ -39,7 +39,7 @@ public class AboutAdapters {
     public static class TeamRecyclerAdapter extends RecyclerView.Adapter<TeamRecyclerAdapter.ViewHolder> {
 
         private final ArrayList<HashMap<String, Object>> team;
-        private final String githubUrlString = "https://github.com/aquilesTrindade/";
+        private String githubUrlString = "https://github.com/aquilesTrindade/";
         
         public TeamRecyclerAdapter(ArrayList<HashMap<String, Object>> data) {
             team = data;
