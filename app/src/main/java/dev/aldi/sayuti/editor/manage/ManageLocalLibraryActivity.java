@@ -64,9 +64,9 @@ public class ManageLocalLibraryActivity extends AppCompatActivity implements Vie
         if (getIntent().hasExtra("sc_id")) {
             String sc_id = Objects.requireNonNull(getIntent().getStringExtra("sc_id"));
             notAssociatedWithProject = sc_id.equals("system");
-            local_lib_file = FileUtil.getExternalStorageDir().concat("/.sketchware/data/").concat(sc_id.concat("/local_library"));
+            local_lib_file = FileUtil.getExternalStorageDir().concat("/.trindadeware/data/").concat(sc_id.concat("/local_library"));
         }
-        local_libs_path = FileUtil.getExternalStorageDir().concat("/.sketchware/libs/local_libs/");
+        local_libs_path = FileUtil.getExternalStorageDir().concat("/.trindadeware/libs/local_libs/");
         loadFiles();
     }
 

@@ -26,7 +26,7 @@ import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
 import mod.jbk.util.OldResourceIdMapper;
 //responsible code :
-//ComponentBean == sketchware / beans √
+//ComponentBean == trindadeware / beans √
 //Manage components == agus /component √
 //Manage events components == agus/editor/event √
 //TypeVarComponent == agus / lib √
@@ -549,7 +549,7 @@ public class ComponentsHandler {
     }
 
     public static String getPath() {
-        return FileUtil.getExternalStorageDir().concat("/.sketchware/data/system/component.json");
+        return FileUtil.getExternalStorageDir().concat("/.trindadeware/data/system/component.json");
     }
 
     /**

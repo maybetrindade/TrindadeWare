@@ -55,7 +55,7 @@ public class AndroidManifestInjectionDetails extends ThemedActivity {
             activityName = getIntent().getStringExtra("file_name").replaceAll(".java", "");
             type = getIntent().getStringExtra("type");
         }
-        ATTRIBUTES_FILE_PATH = FileUtil.getExternalStorageDir().concat("/.sketchware/data/").concat(src_id).concat("/Injection/androidmanifest/attributes.json");
+        ATTRIBUTES_FILE_PATH = FileUtil.getExternalStorageDir().concat("/.trindadeware/data/").concat(src_id).concat("/Injection/androidmanifest/attributes.json");
         setupConst();
         setToolbar();
         setupViews();

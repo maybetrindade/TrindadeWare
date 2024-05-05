@@ -6,7 +6,7 @@ import android.util.Pair;
 
 import androidx.core.content.ContextCompat;
 
-import com.besome.sketch.SketchApplication;
+import com.besome.sketch.TrindadeApplication;
 import com.besome.sketch.beans.BlockBean;
 import com.besome.sketch.beans.ComponentBean;
 import com.besome.sketch.beans.ProjectFileBean;
@@ -332,7 +332,7 @@ public class yq {
     }
 
     /**
-     * Generates DebugActivity.java, SketchApplication.java, and SketchLogger.java, if necessary.
+     * Generates DebugActivity.java, TrindadeApplication.java, and TrindadeLogger.java, if necessary.
      */
     public void a(Context context) {
         boolean logcatEnabled = N.isDebugBuild && new BuildSettings(sc_id).getValue(
@@ -351,14 +351,14 @@ public class yq {
         }
 
         String customApplicationClassName = new ProjectSettings(sc_id).getValue(ProjectSettings.SETTING_APPLICATION_CLASS,
-                ".SketchApplication");
-        boolean notUsingCustomApplicationClass = customApplicationClassName.equals(".SketchApplication");
-        if (!new File(javaDir, "SketchApplication.java").exists() && notUsingCustomApplicationClass) {
+                ".TrindadeApplication");
+        boolean notUsingCustomApplicationClass = customApplicationClassName.equals(".TrindadeApplication");
+        if (!new File(javaDir, "TrindadeApplication.java").exists() && notUsingCustomApplicationClass) {
             boolean applyMultiDex = projectSettings.getMinSdkVersion() < 21;
 
             String sketchApplicationFileContent = PACKAGE_PLACEHOLDER_PATTERN.matcher(fileUtil.b(
                     context,
-                    "debug" + File.separator + "SketchApplication.java"
+                    "debug" + File.separator + "TrindadeApplication.java"
             )).replaceAll(packageName);
             if (applyMultiDex) {
                 sketchApplicationFileContent = sketchApplicationFileContent.replaceAll(
@@ -366,36 +366,36 @@ public class yq {
             }
             if (logcatEnabled) {
                 sketchApplicationFileContent = sketchApplicationFileContent.replace(
-                        "super.onCreate();", "SketchLogger.startLogging();\n" +
+                        "super.onCreate();", "TrindadeLogger.startLogging();\n" +
                                 "        super.onCreate();").replace(
                         "Process.killProcess(Process.myPid());",
-                        "SketchLogger.broadcastLog(Log.getStackTraceString(throwable));\n" +
+                        "TrindadeLogger.broadcastLog(Log.getStackTraceString(throwable));\n" +
                                 "                    Process.killProcess(Process.myPid());"
                 );
             }
 
             fileUtil.b(javaFilesPath + File.separator
                             + packageNameAsFolders + File.separator
-                            + "SketchApplication.java",
+                            + "TrindadeApplication.java",
                     sketchApplicationFileContent);
         }
 
         if (logcatEnabled) {
-            if (!new File(javaDir, "SketchLogger.java").exists()) {
+            if (!new File(javaDir, "TrindadeLogger.java").exists()) {
                 String sketchLoggerFileContent = PACKAGE_PLACEHOLDER_PATTERN.matcher(fileUtil.b(
                         context,
                         "debug" + File.separator
-                                + "SketchLogger.java"
+                                + "TrindadeLogger.java"
                 )).replaceAll(packageName);
 
                 if (!notUsingCustomApplicationClass && customApplicationClassName.charAt(0) == '.') {
-                    sketchLoggerFileContent = sketchLoggerFileContent.replaceAll("SketchApplication\\.getContext\\(\\)",
+                    sketchLoggerFileContent = sketchLoggerFileContent.replaceAll("TrindadeApplication\\.getContext\\(\\)",
                             customApplicationClassName.substring(1) + ".getContext()");
                 }
 
                 fileUtil.b(javaFilesPath + File.separator
                         + packageNameAsFolders + File.separator
-                        + "SketchLogger.java", sketchLoggerFileContent);
+                        + "TrindadeLogger.java", sketchLoggerFileContent);
             }
         }
     }
@@ -679,7 +679,7 @@ public class yq {
      * Get source code files that are viewable in SrcCodeViewer
      */
     public ArrayList<SrcCodeBean> a(hC projectFileManager, eC projectDataManager, BuiltInLibraryManager builtInLibraryManager) {
-        a(SketchApplication.getContext());
+        a(TrindadeApplication.getContext());
         CommandBlock.x();
 
         final String javaDir = FileUtil.getExternalStorageDir() + "/.trindadeware/data/" + sc_id + "/files/java/";
@@ -738,8 +738,8 @@ public class yq {
         ix.setYq(this);
 
         // Make generated classes viewable
-        if (!javaFiles.contains(new File(javaDir + "SketchwareUtil.java"))) {
-            srcCodeBeans.add(new SrcCodeBean("SketchwareUtil.java",
+        if (!javaFiles.contains(new File(javaDir + "TrindadewareUtil.java"))) {
+            srcCodeBeans.add(new SrcCodeBean("TrindadewareUtil.java",
                     Lx.i(packageName)));
         }
 
@@ -871,7 +871,7 @@ public class yq {
         }
 
         if (isManifestFile) {
-            ProjectBuilder builder = new ProjectBuilder(SketchApplication.getContext(), this);
+            ProjectBuilder builder = new ProjectBuilder(TrindadeApplication.getContext(), this);
             builder.buildBuiltInLibraryInformation();
             Ix ix = new Ix(N, projectFileManager.b(), builder.getBuiltInLibraryManager());
             ix.setYq(this);

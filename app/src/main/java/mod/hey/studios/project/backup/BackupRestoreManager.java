@@ -16,6 +16,8 @@ import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.trindade.ware.R;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+
 import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
@@ -143,7 +145,7 @@ public class BackupRestoreManager {
                 if (BackupFactory.zipContainsFile(backupFilePath, "local_libs")) {
                     boolean restoringMultipleBackups = files.length > 1;
 
-                    new AlertDialog.Builder(act)
+                    MaterialAlertDialogBuilder aa = new MaterialAlertDialogBuilder(act)
                             .setTitle("Warning")
                             .setMessage(getRestoreIntegratedLocalLibrariesMessage(restoringMultipleBackups, i, files.length,
                                     FileUtil.getFileNameNoExtension(backupFilePath)))

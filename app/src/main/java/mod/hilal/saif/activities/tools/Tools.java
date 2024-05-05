@@ -222,13 +222,13 @@ public class Tools extends ThemedActivity {
             String input_apk_path = apk_path_txt.getText().toString();
             String output_apk_file_name = Uri.fromFile(new File(input_apk_path)).getLastPathSegment();
             String output_apk_path = new File(Environment.getExternalStorageDirectory(),
-                    "sketchware/signed_apk/" + output_apk_file_name).getAbsolutePath();
+                    "trindadeware/signed_apk/" + output_apk_file_name).getAbsolutePath();
 
             if (new File(output_apk_path).exists()) {
                 aB confirmOverwrite = new aB(this);
                 confirmOverwrite.a(R.drawable.color_save_as_new_96);
                 confirmOverwrite.b("File exists");
-                confirmOverwrite.a("An APK named " + output_apk_file_name + " already exists at /sketchware/signed_apk/.  Overwrite it?");
+                confirmOverwrite.a("An APK named " + output_apk_file_name + " already exists at /trindadeware/signed_apk/.  Overwrite it?");
 
                 confirmOverwrite.a(Helper.getResString(R.string.common_word_cancel), Helper.getDialogDismissListener(confirmOverwrite));
                 confirmOverwrite.b("Overwrite", view -> {
@@ -298,7 +298,7 @@ public class Tools extends ThemedActivity {
                 runOnUiThread(() -> {
                     if (callback.errorCount.get() == 0) {
                         building_dialog.dismiss();
-                        SketchwareUtil.toast("Successfully saved signed APK to: /Internal storage/sketchware/signed_apk/"
+                        SketchwareUtil.toast("Successfully saved signed APK to: /Internal storage/trindadeware/signed_apk/"
                                         + Uri.fromFile(new File(outputApkPath)).getLastPathSegment(),
                                 Toast.LENGTH_LONG);
                     } else {

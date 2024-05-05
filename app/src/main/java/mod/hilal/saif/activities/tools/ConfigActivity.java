@@ -81,7 +81,7 @@ public class ConfigActivity extends ThemedActivity {
     public static final String SETTING_SKIP_MAJOR_CHANGES_REMINDER = "skip-major-changes-reminder";
     public static final String SETTING_BLOCKMANAGER_DIRECTORY_PALETTE_FILE_PATH = "palletteDir";
     public static final String SETTING_BLOCKMANAGER_DIRECTORY_BLOCK_FILE_PATH = "blockDir";
-    public static final String SETTING_APP_THEME = "sketchware-theme";
+    public static final String SETTING_APP_THEME = "trindadeware-theme";
     public int selected = 0;
     
     public AppTheme appThemeHelper;

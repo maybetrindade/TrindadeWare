@@ -13,6 +13,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:padding="8dp"
+        android:visible="gone"
         android:text="@string/about_team_title"
         android:textAppearance="?attr/textAppearanceLabelLarge"
         />
@@ -105,7 +106,8 @@
                 app:paddingEnd="12dp"
                 app:icon="@drawable/ic_github" />
                 
-            </LinearLayout>
+
+q            </LinearLayout>
 
         </LinearLayout>
 
