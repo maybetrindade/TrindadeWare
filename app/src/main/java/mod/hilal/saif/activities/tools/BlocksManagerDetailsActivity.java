@@ -65,8 +65,7 @@ public class BlocksManagerDetailsActivity extends ThemedActivity {
     private int palette = 0;
     private Parcelable listViewSavedState;
     private ImageView swap;
-    private MaterialToolbar materialToolbar;
-    private Toolbar toolbar = materialToolbar;
+    private MaterialToolbar toolbar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,10 +78,10 @@ public class BlocksManagerDetailsActivity extends ThemedActivity {
     private void initialize() {
         _fab = findViewById(R.id.fab);
         listview1 = findViewById(R.id.listview);
-        materialToolbar = findViewById(R.id.toolbar);        
-        materialToolbar.setNavigationIcon(R.drawable.ic_back);
-        materialToolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
-        materialToolbar.setTitle("Mod Settings");
+        toolbar = findViewById(R.id.toolbar);        
+        toolbar.setNavigationIcon(R.drawable.ic_back);
+        toolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
+        toolbar.setTitle("Mod Settings");
         /*ImageView back_icon = findViewById(R.id.backicon);
         page_title = findViewById(R.id.pagetitle);
         import_export = findViewById(R.id.import_export);
