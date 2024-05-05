@@ -29,6 +29,11 @@
         android:id="@+id/create_release_keystore"
         android:icon="@drawable/ic_key_24"
         android:title="Create Release Keystore" />
+        
+    <item
+        android:id="@+id/filepicker_test"
+        android:icon="@drawable/ic_key_24"
+        android:title="FilePickerSphere Test" />    
 
     <item android:title="Related links">
         <menu>

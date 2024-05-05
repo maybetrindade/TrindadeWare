@@ -44,7 +44,6 @@ class FilePickerMainActivity : ThemedActivity() {
     private lateinit var autoCompleteTextView: MaterialAutoCompleteTextView
     private lateinit var toggleGroupCornerFamily: MaterialButtonToggleGroup
 
-
     private lateinit var adapter: PhotoAdapter
     private val photoList = mutableListOf<PhotoModel>()
     private var theme: Int? = null
