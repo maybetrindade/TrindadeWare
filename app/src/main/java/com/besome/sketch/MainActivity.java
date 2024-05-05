@@ -239,8 +239,8 @@ public class MainActivity extends BasePermissionAppCompatActivity {
                 }).execute(data);
             }
         } else if (hasStorageAccess && !ConfigActivity.isSettingEnabled(ConfigActivity.SETTING_SKIP_MAJOR_CHANGES_REMINDER)) {
-            aB dialog = new aB(this);
-            dialog.b("New changes in v6.4.0");
+           /*aB dialog = new aB(this);
+            dialog.b("Wel");
             dialog.a("Just as a reminder; There have been many changes since v6.3.0 fix1, " +
                     "and it's important to know them all if you want your projects to still work.\n" +
                     "You can view all changes whenever you want at the updated About Sketchware Pro screen.");
@@ -256,7 +256,7 @@ public class MainActivity extends BasePermissionAppCompatActivity {
                 ConfigActivity.setSetting(ConfigActivity.SETTING_SKIP_MAJOR_CHANGES_REMINDER, true);
                 dialog.dismiss();
             });
-            dialog.show();
+            dialog.show();*/
         }
     }
 

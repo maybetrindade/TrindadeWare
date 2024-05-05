@@ -27,7 +27,7 @@ public class BuiltInLibraries {
     public static String ANDROIDX_ACTIVITY = "activity-1.3.0";
     public static String ANDROIDX_ANNOTATION = "annotation-1.3.0";
     public static String ANDROIDX_ANNOTATION_EXPERIMENTAL = "annotation-experimental-1.2.0";
-    public static String ANDROIDX_APPCOMPAT = "appcompat-1.4.0";
+    public static String ANDROIDX_APPCOMPAT = "appcompat-1.6.0";
     public static String ANDROIDX_APPCOMPAT_RESOURCES = "appcompat-resources-1.4.0";
     public static String ANDROIDX_ASYNCLAYOUTINFLATER = "asynclayoutinflater-1.0.0";
     public static String ANDROIDX_BROWSER = "browser-1.5.0";
@@ -113,7 +113,7 @@ public class BuiltInLibraries {
     public static String KOTLIN_STDLIB = "kotlin-stdlib-1.4.30-M1-release-152";
     public static String KOTLIN_STDLIB_JDK7 = "kotlin-stdlib-jdk7-1.4.30-M1-release-152";
     public static String LOTTIE = "Lottie-3.4.0";
-    public static String MATERIAL = "material-1.6.1";
+    public static String MATERIAL = "material-1.9.0";
     public static String OKHTTP = "okhttp-3.9.1";
     public static String OKIO = "Okio-1.17.4";
     public static String ONESIGNAL = "OneSignal-3.14.0";

@@ -55,7 +55,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 
-import mod.SketchwareUtil;
+import mod.trindadewareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
 import mod.jbk.util.LogUtil;
@@ -67,7 +67,7 @@ import mod.trindade.dev.theme.AppTheme;
  
 public class ConfigActivity extends ThemedActivity {
 
-    public static final File SETTINGS_FILE = new File(FileUtil.getExternalStorageDir(), ".sketchware/data/settings.json");
+    public static final File SETTINGS_FILE = new File(FileUtil.getExternalStorageDir(), ".trindadeware/data/settings.json");
     public static final String SETTING_ALWAYS_SHOW_BLOCKS = "always-show-blocks";
     public static final String SETTING_BACKUP_DIRECTORY = "backup-dir";
     public static final String SETTING_ROOT_AUTO_INSTALL_PROJECTS = "root-auto-install-projects";
@@ -113,7 +113,7 @@ public class ConfigActivity extends ThemedActivity {
                 }
             }
         }
-        return "/.sketchware/backups/";
+        return "/.trindadeware/backups/";
     }
 
     public static String getStringSettingValueOrSetAndGet(String settingKey, String toReturnAndSetIfNotFound) {
@@ -284,16 +284,16 @@ public class ConfigActivity extends ThemedActivity {
                 return false;
 
             case SETTING_BACKUP_DIRECTORY:
-                return "/.sketchware/backups/";
+                return "/.trindadeware/backups/";
 
             case SETTING_ROOT_AUTO_OPEN_AFTER_INSTALLING:
                 return true;
 
             case SETTING_BLOCKMANAGER_DIRECTORY_PALETTE_FILE_PATH:
-                return "/.sketchware/resources/block/My Block/palette.json";
+                return "/.trindadeware/resources/block/My Block/palette.json";
 
             case SETTING_BLOCKMANAGER_DIRECTORY_BLOCK_FILE_PATH:
-                return "/.sketchware/resources/block/My Block/block.json";
+                return "/.trindadeware/resources/block/My Block/block.json";
                 
             case SETTING_APP_THEME:
                 return "Sketchware-Default";    
@@ -355,7 +355,7 @@ public class ConfigActivity extends ThemedActivity {
         AlertDialog dialog = new MaterialAlertDialogBuilder(this) 
             .setView(dialogBinding.getRoot())
             .setTitle("Backup directory")
-            .setMessage("Directory inside /Internal storage/, e.g. sketchware/backups")
+            .setMessage("Directory inside /Internal storage/, e.g. .trindadeware/backups")
             .setNegativeButton(R.string.common_word_cancel, (dialogInterface, i) -> dialogInterface.dismiss())
             .setPositiveButton(R.string.common_word_save, null)
             .create();
@@ -450,7 +450,7 @@ public class ConfigActivity extends ThemedActivity {
                 SETTING_SHOW_EVERY_SINGLE_BLOCK,
                 false);
         addTextInputPreference("Backup directory",
-                "The default directory is /Internal storage/.sketchware/backups/.", v -> {
+                "The default directory is /Internal storage/.trindadeware/backups/.", v -> {
                             backupDirectoryDialog();
                 });
         addSwitchPreference("Use legacy Code Editor",

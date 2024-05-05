@@ -16,6 +16,16 @@
         android:text="@string/about_team_title"
         android:textAppearance="?attr/textAppearanceLabelLarge"
         />
+        
+      <LinearLayout
+            android:id="@+id/view_leftline"
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?attr/colorPrimary"
+            android:orientation="horizontal" />
     
   <com.google.android.material.card.MaterialCardView
     android:id="@+id/category_contributors_layout"

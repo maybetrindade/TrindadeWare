@@ -1,9 +1,9 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="?android:colorBackground" />
+    <item android:drawable="?attr/colorBackground" />
     <item
         android:layout_width="100dp"
         android:layout_height="100dp">
-        <bitmap
+        <drawable
             android:width="200dp"
             android:height="200dp"
             android:gravity="center"
