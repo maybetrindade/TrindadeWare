@@ -78,19 +78,17 @@ public class BlocksManager extends ThemedActivity {
     private void initialize() {
         FloatingActionButton _fab = findViewById(R.id.fab);
         listview1 = findViewById(R.id.list_pallete);
-        ImageView back = findViewById(R.id.ig_toolbar_back);
+        /*ImageView back = findViewById(R.id.ig_toolbar_back);
         TextView title = findViewById(R.id.tx_toolbar_title);
-        ImageView settings = findViewById(R.id.ig_toolbar_load_file);
+        ImageView settings = findViewById(R.id.ig_toolbar_load_file);*/
         card2 = findViewById(R.id.recycle_bin);
         card2_sub = findViewById(R.id.recycle_sub);
 
-        back.setOnClickListener(Helper.getBackPressedClickListener(this));
-        Helper.applyRippleToToolbarView(back);
-        title.setText("Block manager");
-        settings.setVisibility(View.VISIBLE);
-        settings.setImageResource(R.drawable.settings_96_white);
-        Helper.applyRippleToToolbarView(settings);
-        settings.setOnClickListener(v -> {
+        MaterialToolbar materialToolbar = findViewById(R.id.toolbar);        
+        materialToolbar.setNavigationIcon(R.drawable.ic_back);
+        materialToolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
+        materialToolbar.setTitle("Mod Settings");
+       /* settings.setOnClickListener(v -> {
             aB dialog = new aB(this);
             dialog.a(R.drawable.ic_folder_48dp);
             dialog.b("Block configuration");
@@ -151,7 +149,7 @@ public class BlocksManager extends ThemedActivity {
                 dialog.dismiss();
             });
             dialog.show();
-        });
+        });*/
 
         _fab.setOnClickListener(v -> showPaletteDialog(false, null, null, null, null));
     }

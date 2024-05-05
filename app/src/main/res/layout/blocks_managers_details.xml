@@ -1,62 +1,33 @@
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="?attr/colorBackground"
     android:layout_height="match_parent">
+   
 
-    <LinearLayout
+     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ffeeeeee"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
 
-        <LinearLayout
-            android:id="@+id/toolbar"
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#ff008dcd"
-            android:gravity="center|left"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            android:paddingTop="8dp"
-            android:paddingRight="4dp"
-            android:paddingBottom="8dp">
+            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <ImageView
-                android:id="@+id/backicon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="8dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/abc_vector_test" />
-
-            <TextView
-                android:id="@+id/pagetitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:padding="8dp"
-                android:text="Blocks Manager"
-                android:textColor="#ffffffff"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/swap"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="8dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_menu_white_24dp" />
-
-            <ImageView
-                android:id="@+id/import_export"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="8dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_more_vert_white_24dp" />
-        </LinearLayout>
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_back"
+                app:title="toolbar" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+     </com.google.android.material.appbar.AppBarLayout>
 
         <ListView
             android:id="@+id/listview"
@@ -74,4 +45,4 @@
         android:layout_gravity="bottom|center|right"
         android:layout_margin="16dp"
         app:srcCompat="@drawable/ic_add_white_24dp" />
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

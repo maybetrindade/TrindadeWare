@@ -75,12 +75,17 @@ public class BlocksManagerDetailsActivity extends ThemedActivity {
     private void initialize() {
         _fab = findViewById(R.id.fab);
         listview1 = findViewById(R.id.listview);
-        ImageView back_icon = findViewById(R.id.backicon);
+        MaterialToolbar materialToolbar = findViewById(R.id.toolbar);        
+        materialToolbar.setNavigationIcon(R.drawable.ic_back);
+        materialToolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
+        materialToolbar.setTitle("Mod Settings");
+        /*ImageView back_icon = findViewById(R.id.backicon);
         page_title = findViewById(R.id.pagetitle);
         import_export = findViewById(R.id.import_export);
         swap = findViewById(R.id.swap);
         back_icon.setOnClickListener(Helper.getBackPressedClickListener(this));
         Helper.applyRippleToToolbarView(back_icon);
+        
         import_export.setOnClickListener(v -> {
             PopupMenu popupMenu = new PopupMenu(this, import_export);
             final Menu menu = popupMenu.getMenu();
@@ -128,7 +133,7 @@ public class BlocksManagerDetailsActivity extends ThemedActivity {
             ((BaseAdapter) listview1.getAdapter()).notifyDataSetChanged();
             listview1.onRestoreInstanceState(savedInstanceState);
         });
-        Helper.applyRippleToToolbarView(swap);
+        Helper.applyRippleToToolbarView(swap);*/
         _fab.setOnClickListener(v -> {
             Object paletteColor = pallet_list.get(palette - 9).get("color");
             if (paletteColor instanceof String) {
@@ -209,7 +214,7 @@ public class BlocksManagerDetailsActivity extends ThemedActivity {
         blocks_path = getIntent().getStringExtra("dirB");
         _refreshLists();
         if (palette == -1) {
-            page_title.setText("Recycle bin");
+            toolbar.setTitle("Recycle bin");
             swap.setVisibility(View.GONE);
             import_export.setVisibility(View.GONE);
             _fab.setVisibility(View.GONE);
@@ -217,7 +222,7 @@ public class BlocksManagerDetailsActivity extends ThemedActivity {
             Object paletteName = pallet_list.get(palette - 9).get("name");
 
             if (paletteName instanceof String) {
-                page_title.setText((String) paletteName);
+                toolbar.setTitle((String) paletteName);
             }
         }
     }

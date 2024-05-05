@@ -97,6 +97,7 @@
                     app:layout_behavior="@string/appbar_scrolling_view_behavior"
                     android:clipToPadding="false"
                     android:paddingBottom="70dp"
+                    android:layout_margin="12dp"
                     tools:listitem="@layout/about_teamview" />
             </LinearLayout>
 
@@ -114,8 +115,7 @@
                     android:clipToPadding="false"
                     android:paddingBottom="70dp" />
             </LinearLayout>
-        </LinearLayout>
-  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -128,5 +128,6 @@
         app:backgroundTint="#5865F2"
         app:icon="@drawable/ic_discord"
         app:iconTint="#FFF" />
+        </LinearLayout>
     </LinearLayout>
   </LinearLayout>
