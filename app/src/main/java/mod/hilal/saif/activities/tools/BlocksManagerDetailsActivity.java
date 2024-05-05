@@ -30,6 +30,7 @@ import com.github.angads25.filepicker.model.DialogConfigs;
 import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.appbar.MaterialToolbar; 
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.trindade.ware.R;
@@ -63,6 +64,8 @@ public class BlocksManagerDetailsActivity extends ThemedActivity {
     private int palette = 0;
     private Parcelable listViewSavedState;
     private ImageView swap;
+    private MaterialToolbar materialToolbar;
+    private Toolbar = materialToolbar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -75,7 +78,7 @@ public class BlocksManagerDetailsActivity extends ThemedActivity {
     private void initialize() {
         _fab = findViewById(R.id.fab);
         listview1 = findViewById(R.id.listview);
-        MaterialToolbar materialToolbar = findViewById(R.id.toolbar);        
+        materialToolbar = findViewById(R.id.toolbar);        
         materialToolbar.setNavigationIcon(R.drawable.ic_back);
         materialToolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
         materialToolbar.setTitle("Mod Settings");

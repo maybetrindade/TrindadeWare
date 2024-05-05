@@ -1,4 +1,4 @@
-package mod.hey.studios.project.backup;
+*package mod.hey.studios.project.backup;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -145,16 +145,16 @@ public class BackupRestoreManager {
                 if (BackupFactory.zipContainsFile(backupFilePath, "local_libs")) {
                     boolean restoringMultipleBackups = files.length > 1;
 
-                    MaterialAlertDialogBuilder aa = new MaterialAlertDialogBuilder(act)
-                            .setTitle("Warning")
-                            .setMessage(getRestoreIntegratedLocalLibrariesMessage(restoringMultipleBackups, i, files.length,
-                                    FileUtil.getFileNameNoExtension(backupFilePath)))
-                            .setPositiveButton("Copy", (dialog, which) ->
-                                    doRestore(backupFilePath, true))
-                            .setNegativeButton("Don't copy", (dialog, which) ->
-                                    doRestore(backupFilePath, false))
-                            .setNeutralButton(R.string.common_word_cancel, null)
-                            .show();
+                    MaterialAlertDialogBuilder rest = new MaterialAlertDialogBuilder(act);
+                            rest.setTitle("Warning");
+                            rest.setMessage(getRestoreIntegratedLocalLibrariesMessage(restoringMultipleBackups, i, files.length,
+                                    FileUtil.getFileNameNoExtension(backupFilePath)));
+                            rest.setPositiveButton("Copy", (dialog, which) ->
+                                    doRestore(backupFilePath, true));
+                            rest.setNegativeButton("Don't copy", (dialog, which) ->
+                                    doRestore(backupFilePath, false));
+                            rest.setNeutralButton(R.string.common_word_cancel, null);
+                            rest.show();
                 } else {
                     doRestore(backupFilePath, false);
                 }

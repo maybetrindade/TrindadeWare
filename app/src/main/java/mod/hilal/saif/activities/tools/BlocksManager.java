@@ -29,6 +29,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.appbar.MaterialToolbar; 
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.trindade.ware.R;
