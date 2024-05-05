@@ -38,11 +38,9 @@ public class AboutAdapters {
     public static class TeamRecyclerAdapter extends RecyclerView.Adapter<TeamRecyclerAdapter.ViewHolder> {
 
         private final ArrayList<HashMap<String, Object>> team;
-        private final Context mContext; 
         
-        public TeamRecyclerAdapter(Context ctx, ArrayList<HashMap<String, Object>> data) {
+        public TeamRecyclerAdapter(ArrayList<HashMap<String, Object>> data) {
             team = data;
-            mContext = ctx;
         }
 
         @Override
@@ -113,7 +111,7 @@ public class AboutAdapters {
             if (githubUrl instanceof String && githubUrl != null) {
                     githubUrl = (String) githubUrl;
                     holder.github_handle.setOnClickListener(v -> {
-                    TrindadeUtil.openUrl(mContext, (String) githubUrl);
+                    TrindadeUtil.openUrl((String) githubUrl);
                  });
             } else {
                 holder.github_handle.setVisibility(View.GONE);
@@ -182,9 +180,8 @@ public class AboutAdapters {
         private static final String CHANGELOG_KEY_SHOWING_ADDITIONAL_INFO = "showingAdditionalInfo";
         private final ArrayList<HashMap<String, Object>> changelog;
 
-        public ChangelogRecyclerAdapter(Context ctx, ArrayList<HashMap<String, Object>> data) {
+        public ChangelogRecyclerAdapter(ArrayList<HashMap<String, Object>> data) {
             changelog = data;
-            mContext = ctx;
         }
 
         @Override

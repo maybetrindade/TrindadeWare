@@ -135,10 +135,10 @@ public class AboutModActivity extends ThemedActivity {
                     if (data.discordInviteLink != null) discordInviteLink = data.discordInviteLink;
 
                     teamList = data.moddersteam;
-                    teamRecycler.setAdapter(new AboutAdapters.TeamRecyclerAdapter(this, teamList));
+                    teamRecycler.setAdapter(new AboutAdapters.TeamRecyclerAdapter(teamList));
 
                     changelogList = data.changelog;
-                    changelogRecycler.setAdapter(new AboutAdapters.ChangelogRecyclerAdapter(this, changelogList));
+                    changelogRecycler.setAdapter(new AboutAdapters.ChangelogRecyclerAdapter(changelogList));
 
                     SharedPreferences.Editor savedData = sharedPref.edit();
 
