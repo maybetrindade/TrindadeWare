@@ -16,8 +16,6 @@ import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.trindade.ware.R;
 
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-
 import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
@@ -145,16 +143,16 @@ public class BackupRestoreManager {
                 if (BackupFactory.zipContainsFile(backupFilePath, "local_libs")) {
                     boolean restoringMultipleBackups = files.length > 1;
 
-                    MaterialAlertDialogBuilder rest = new MaterialAlertDialogBuilder(act);
-                            rest.setTitle("Warning");
-                            rest.setMessage(getRestoreIntegratedLocalLibrariesMessage(restoringMultipleBackups, i, files.length,
-                                    FileUtil.getFileNameNoExtension(backupFilePath)));
-                            rest.setPositiveButton("Copy", (dialog, which) ->
-                                    doRestore(backupFilePath, true));
-                            rest.setNegativeButton("Don't copy", (dialog, which) ->
-                                    doRestore(backupFilePath, false));
-                            rest.setNeutralButton(R.string.common_word_cancel, null);
-                            rest.show();
+                    new AlertDialog.Builder(act)
+                            .setTitle("Warning")
+                            .setMessage(getRestoreIntegratedLocalLibrariesMessage(restoringMultipleBackups, i, files.length,
+                                    FileUtil.getFileNameNoExtension(backupFilePath)))
+                            .setPositiveButton("Copy", (dialog, which) ->
+                                    doRestore(backupFilePath, true))
+                            .setNegativeButton("Don't copy", (dialog, which) ->
+                                    doRestore(backupFilePath, false))
+                            .setNeutralButton(R.string.common_word_cancel, null)
+                            .show();
                 } else {
                     doRestore(backupFilePath, false);
                 }
