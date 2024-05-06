@@ -99,6 +99,12 @@ android {
     }
 }
 
+sourceSets {
+    main {
+        java.srcDirs += 'src/minApi26/java'
+    }
+}
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"], exclude: "proguard-base-7.2.2.jar")
 
