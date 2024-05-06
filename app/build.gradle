@@ -102,6 +102,12 @@ android {
           java.srcDirs += 'src/minApi26/java'
           java.srcDirs += 'src/minApi21/java'
        }
+       minApi21 {
+          java.srcDirs += 'src/main/java'
+       }
+       minApi26 {
+          java.srcDirs += 'src/main/java'
+       }
     }
 }
 
