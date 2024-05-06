@@ -113,7 +113,7 @@ public class BuiltInLibraries {
     public static String KOTLIN_STDLIB = "kotlin-stdlib-1.4.30-M1-release-152";
     public static String KOTLIN_STDLIB_JDK7 = "kotlin-stdlib-jdk7-1.4.30-M1-release-152";
     public static String LOTTIE = "Lottie-3.4.0";
-    public static String MATERIAL = "material-1.6.1";
+    public static String MATERIAL = "material-1.9.0";
     public static String OKHTTP = "okhttp-3.9.1";
     public static String OKIO = "Okio-1.17.4";
     public static String ONESIGNAL = "OneSignal-3.14.0";

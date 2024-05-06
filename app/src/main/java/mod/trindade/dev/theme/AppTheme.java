@@ -92,7 +92,7 @@ public class AppTheme {
     }
     
     public boolean getDynamic () {
-       if(current.equals("Material-You")) {
+       if(current("Material-You")) {
            return true;
        }   
        return false;

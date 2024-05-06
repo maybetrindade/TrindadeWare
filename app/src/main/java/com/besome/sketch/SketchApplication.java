@@ -14,6 +14,8 @@ import com.besome.sketch.tools.CollectErrorActivity;
 import com.google.android.gms.analytics.Tracker;
 import com.google.android.material.color.DynamicColors;
 
+import mod.trindade.dev.theme.AppTheme; 
+
 public class SketchApplication extends Application {
 
     private static Context mApplicationContext;
