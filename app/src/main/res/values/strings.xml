@@ -2212,4 +2212,30 @@ Please try again later"</string>
         <item quantity="other">%1$,d files</item>
     </plurals>
     <string name="done">Done</string>
+    
+        <string name="max_selection">Max selection</string>
+    <string name="_8">8</string>
+    <string name="root_path">Root path</string>
+    <string name="storage_emulated_0">/storage/emulated/0/</string>
+    <string name="local_only">Local only</string>
+    <string name="pick_photos">Pick photos</string>
+    <string name="clear_list">Clear list</string>
+    <string name="select_theme">Select theme</string>
+    <string name="pink_theme">Pink theme</string>
+    <string name="green_theme_light_mode">Green theme light mode</string>
+    <string name="green_theme_dark_mode">Green theme dark mode</string>
+    <string name="blue_theme_light_mode">Blue theme light mode</string>
+    <string name="blue_theme_dark_mode">Blue theme dark mode</string>
+    <string name="red_theme_light_mode">Red theme light mode</string>
+    <string name="red_theme_dark_mode">Red theme dark mode</string>
+    <string name="dynamic_colors">Dynamic Colors</string>
+    <string name="theme">Theme</string>
+    <string name="rounded">Rounded</string>
+    <string name="cut">Cut</string>
+    <string name="corner_family">Corner family</string>
+    <string name="by_juan_nascimento">by Juan Nascimento (Ruan325Br)</string>
+    <string name="theme_default">Theme default</string>
+    <string name="corner_size">Corner size</string>
+    <string name="_30">30</string>
+    
 </resources>
