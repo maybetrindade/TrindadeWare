@@ -91,6 +91,13 @@ public class AppTheme {
        return 0;
     }
     
+    public boolean getDynamic () {
+       if(current.equals("Material-You") {
+           return true;
+       }   
+       return false;
+    }
+    
     public boolean current (String val) {
        if (appThemeName.equals(val)){ return true; }
        return false;
