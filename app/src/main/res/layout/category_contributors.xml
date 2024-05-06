@@ -13,8 +13,7 @@
         android:layout_marginRight="10dp"
         android:padding="8dp"
         android:text="@string/about_team_title"
-        android:textAppearance="?attr/textAppearanceLabelLarge"
-        />
+        android:textAppearance="?attr/textAppearanceLabelLarge" />
         
       <LinearLayout
             android:id="@+id/view_leftline"
@@ -81,7 +80,7 @@
             <LinearLayout 
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:orientation="vertical">
+               android:orientation="horizontal">
 
             <Button
                 style="@style/Widget.Material3.Button.Icon"

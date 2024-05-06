@@ -113,6 +113,7 @@ public class AboutAdapters {
                     githubUrlString = (String) githubUrl;
                     holder.github_handle.setOnClickListener(v -> {
                     TrindadeUtil.openUrl((String) githubUrl);
+                    
                  });
             } else {
                 holder.github_handle.setVisibility(View.GONE);
@@ -131,10 +132,12 @@ public class AboutAdapters {
                 int activeBackgroundTextColor;
                 if (isActiveBool) {
                     holder.status.setText("Active");
+                    holder.status.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_checked, 0, 0, 0);
                     activeBackgroundColor = MaterialColors.getColor(holder.status, R.attr.colorCoolGreenContainer);
                     activeBackgroundTextColor = MaterialColors.getColor(holder.status, R.attr.colorOnCoolGreenContainer);
                 } else {
                     holder.status.setText("Inactive");
+                    holder.status.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_cross, 0, 0, 0);
                     activeBackgroundColor = MaterialColors.getColor(holder.status, R.attr.colorAmberContainer);
                     activeBackgroundTextColor = MaterialColors.getColor(holder.status, R.attr.colorOnAmberContainer);
                 }
