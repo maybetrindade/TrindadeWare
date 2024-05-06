@@ -97,12 +97,11 @@ android {
         viewBinding true
         buildConfig true
     }
-}
-
-sourceSets {
-    main {
-        java.srcDirs += 'src/minApi26/java'
-        java.srcDirs += 'src/minApi21/java'
+    sourceSets {
+       main {
+          java.srcDirs += 'src/minApi26/java'
+          java.srcDirs += 'src/minApi21/java'
+       }
     }
 }
 
