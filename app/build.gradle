@@ -156,6 +156,7 @@ dependencies {
     
     // New FilePicker 
     //implementation "com.github.Ruan625Br:FilePickerSphere:1.0.0"
-
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
+    
     coreLibraryDesugaring "com.android.tools:desugar_jdk_libs_nio:2.0.3"
 }
