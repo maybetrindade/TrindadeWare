@@ -21,15 +21,15 @@ import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.ShapeAppearanceModel
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import com.google.android.material.textfield.TextInputEditText
-import com.jn.filepickersphere.filelist.common.mime.MimeType
-import com.jn.filepickersphere.filepicker.FilePickerCallbacks
-import com.jn.filepickersphere.filepicker.FilePickerSphereManager
-import com.jn.filepickersphere.filepicker.style.FileItemStyle
-import com.jn.filepickersphere.filepicker.style.FilePickerStyle
-import com.jn.filepickersphere.models.FileModel
-import com.jn.filepickersphere.models.FilePickerModel
-import com.jn.filepickersphere.models.PickOptions
-import com.jn.filepickersphere.utils.SphereThemes
+import mod.trindade.dev.filepicker.filelist.common.mime.MimeType
+import mod.trindade.dev.filepicker.filepicker.FilePickerCallbacks
+import mod.trindade.dev.filepicker.filepicker.FilePickerSphereManager
+import mod.trindade.dev.filepicker.filepicker.style.FileItemStyle
+import mod.trindade.dev.filepicker.filepicker.style.FilePickerStyle
+import mod.trindade.dev.filepicker.models.FileModel
+import mod.trindade.dev.filepicker.models.FilePickerModel
+import mod.trindade.dev.filepicker.models.PickOptions
+import mod.trindade.dev.filepicker.utils.SphereThemes
 import mod.trindade.dev.theme.ThemedActivity
 
 class FilePickerMainActivity : ThemedActivity() {
