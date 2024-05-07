@@ -39,9 +39,6 @@ public class BaseCompiller {
 			Toast.makeText(mCtx, "Nenhum método encontrado", 4000).show();
 		}
 	}
-
-
-como eu faço esse codigo suportar  quebras de linha 
 	
 	public boolean methodTyped(String methodName){
 		boolean returnVal;

@@ -14,7 +14,7 @@ import mod.SketchwareUtil;
 
 public class ShizukuUtil {
 
-    public static voidsetBinders () {}
+    public static void setBinders () {}
     
     public static void bindUserService() {}
 
@@ -32,9 +32,9 @@ public class ShizukuUtil {
     
     public static void installApks() {}
     
-    public void doInstallApks(List<Uri> uris) {}
+    public static void doInstallApks(List<Uri> uris) {}
     
-    public void unbindUserService() {}
+    public static void unbindUserService() {}
 
-    public void peekUserService() {}
+    public static void peekUserService() {}
 }
