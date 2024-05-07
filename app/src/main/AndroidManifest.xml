@@ -24,6 +24,7 @@
         android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme"
+        tools:overrideLibrary="rikka.shizuku.provider"
         android:usesCleartextTraffic="true">
 
         <provider
