@@ -16,7 +16,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import mod.trindade.dev.strings_creator.StringsCreatorApp;
-import mod.trindade.dev.strings_creator.activities.MainActivity;
+import mod.trindade.dev.strings_creator.activities.StringsManagerActivity;
 import mod.trindade.dev.strings_creator.classes.copyToClipboard;
 import java.util.ArrayList;
 import java.util.HashMap;

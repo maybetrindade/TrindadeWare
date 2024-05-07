@@ -99,6 +99,7 @@ android {
     sourceSets {
        main {
           java.srcDirs += 'src/main/java'
+          java.srcDirs += 'src/minApi26/java'
        }
        minApi21 {
           java.srcDirs += 'src/minApi21/java'

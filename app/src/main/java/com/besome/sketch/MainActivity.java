@@ -91,11 +91,6 @@ public class MainActivity extends BasePermissionAppCompatActivity {
         startActivityForResult(intent, i);
     }
     
-    
-    public void onDestroy() {
-        super.onDestroy();
-        ShizukuUtil.removeRequest();
-    }
 
     @Override
     public void l() {
@@ -278,6 +273,7 @@ public class MainActivity extends BasePermissionAppCompatActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        ShizukuUtil.removeRequest();
         xB.b().a();
     }
 
