@@ -10,7 +10,6 @@ Please give credit when you re-mod or share. Our Main team includes:
 - Mike Anderson (Hey! Studios)
 - Jbk0
 - Hasrat
-- Aquiles Trindade (trindadeDev)
 
 Contributors & Special Thanks:
 
@@ -28,7 +27,6 @@ Contributors & Special Thanks:
 - khaled                (for the HUGE Android 11+ storage performance fix & other fixes)
 - Zirus                 (for an improved project backup dialog)
 - Pranav                (for an improved MainActivity)
-- Aquiles Trindade (Themes system and redesign...)
 
 Make sure to look in-app for an up-to-date list of our team.
 
@@ -66,7 +64,6 @@ I made this part specifically for my fellow modders who want to contribute to Sk
        IndoSW              -> id.indosw.mod
        Jbk0                -> mod.jbk
        tyron               -> mod.tyron
-       Aquiles Trindade -> mod.trindade.dev
 
      and, Sketchware's most important classes that are modified for the Mod, including:
        Fx -> Responsible for generating the code of each block. Cannot be decompiled properly due to its HUGE size, you may want to edit this one by smali.
