@@ -2,31 +2,39 @@ package mod.trindade.dev.shizuku;
 
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.content.Intent;
+import android.content.Context; 
+
+import java.util.ArrayList;
+import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import mod.SketchwareUtil;
+import mod.SketchwareUtil; 
 
 public class ShizukuUtil {
 
-    public static void addRequest(AppCompatActivity activity) {
-        //No support for minApi21
-    }
-
-    public static void onRequestPermissionsResult(int requestCode, int grantResult) {
-        //No support for minApi21
-    }
-
-    public static void removeRequest() {
-        //No support for minApi21
-    }
-
-    public static boolean checkPermission(int code) {
-        //No support for minApi21
-        return false;
-    }
+    public static setBinders () {}
     
-    public static void goDemo (Context ctx) {
-        SketchwareUtil.toastError("not available in minApi21");
-    }    
+    private static void bindUserService() {}
+
+    public static void addRequest () {}
+
+    public static void onRequestPermissionsResult (int requestCode, int grantResult) {}
+
+    public static void removeRequest () {}
+
+    public static boolean checkPermission (int code) { return false; }
+    
+    public static void goDemo (Context ctx) { SketchwareUtil.toastError("Only for minApi26"); }    
+    
+    private static void getUsers() {}
+    
+    private static void installApks() {}
+    
+    private void doInstallApks(List<Uri> uris) {}
+    
+    private void unbindUserService() {}
+
+    private void peekUserService() {}
 }

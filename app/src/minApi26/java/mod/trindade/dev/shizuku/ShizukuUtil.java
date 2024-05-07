@@ -83,6 +83,11 @@ public class ShizukuUtil {
         }
     }
     
+    public static void goDemo (Context ctx) {
+        Intent in = new Intent(ctx, DemoActivity.class);
+        ctx.startActivity();
+    }    
+    
     private static void getUsers() {
         String res;
         try {
@@ -101,11 +106,6 @@ public class ShizukuUtil {
 
         startActivityForResult(intent, REQUEST_CODE_PICK_APKS);
     }
-    
-    public static void goDemo (Context ctx) {
-        Intent in = new Intent(ctx, DemoActivity.class);
-        ctx.startActivity();
-    }    
     
     private void doInstallApks(List<Uri> uris) {
         PackageInstaller packageInstaller;
