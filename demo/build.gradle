@@ -5,13 +5,13 @@ plugins {
 
 android {
     namespace 'rikka.shizuku.demo'
-    compileSdk api_target_sdk
+    compileSdk 34
     defaultConfig {
         applicationId "rikka.shizuku.demo"
-        minSdkVersion api_min_sdk
-        targetSdkVersion api_target_sdk
-        versionCode api_version_code
-        versionName api_version_name
+        minSdkVersion 28
+        targetSdkVersion 34
+        versionCode 1
+        versionName 1.0
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {

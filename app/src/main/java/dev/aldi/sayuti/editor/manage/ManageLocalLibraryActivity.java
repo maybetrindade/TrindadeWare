@@ -40,8 +40,9 @@ import mod.hey.studios.util.Helper;
 import mod.jbk.build.BuiltInLibraries;
 import mod.jbk.util.AddMarginOnApplyWindowInsetsListener;
 import mod.pranav.dependency.resolver.DependencyResolver;
+import mod.trindade.dev.theme.ThemedActivity;
 
-public class ManageLocalLibraryActivity extends AppCompatActivity implements View.OnClickListener {
+public class ManageLocalLibraryActivity extends ThemedActivity implements View.OnClickListener {
     private boolean notAssociatedWithProject = false;
     private String local_lib_file = "";
     private static String local_libs_path = "";
