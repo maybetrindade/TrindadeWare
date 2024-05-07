@@ -108,7 +108,7 @@ public class MainActivity extends BasePermissionAppCompatActivity {
     
     public void requestShizukuPermission() {
        if (ShizukuUtil.checkPermission(1)) {
-          SketchwareUtil.toast("Action executed successfully!");
+          SketchwareUtil.toast("successfully!");
        } else {            
           SketchwareUtil.toastError("Shizuku's permission not granted.");
        }
