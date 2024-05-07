@@ -79,11 +79,11 @@ public class ManageImageActivity extends BaseAppCompatActivity implements ViewPa
         getSupportActionBar().setTitle(getTranslatedString(R.string.design_actionbar_title_manager_image));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-        toolbar.setNavigationOnClickListener(v -> {
+        /*toolbar.setNavigationOnClickListener(v -> {
             if (!mB.a()) {
                 onBackPressed();
             }
-        });
+        });*/
         if (savedInstanceState == null) {
             sc_id = getIntent().getStringExtra("sc_id");
         } else {
