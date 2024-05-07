@@ -1,8 +1,11 @@
 package mod.trindade.dev.shizuku;
 
 import android.content.pm.PackageManager;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import mod.SketchwareUtil;
 
 public class ShizukuUtil {
 
@@ -22,4 +25,8 @@ public class ShizukuUtil {
         //No support for minApi21
         return false;
     }
+    
+    public static void goDemo (Context ctx) {
+        SketchwareUtil.toastError("not available in minApi21");
+    }    
 }

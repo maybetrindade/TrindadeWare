@@ -1,9 +1,13 @@
 package mod.trindade.dev.shizuku;
 
 import android.content.pm.PackageManager;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.content.Intent;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import rikka.shizuku.Shizuku;
+import rikka.shizuku.demo.DemoActivity;
 
 public class ShizukuUtil {
 
@@ -37,4 +41,9 @@ public class ShizukuUtil {
             return false;
         }
     }
+    
+    public static void goDemo (Context ctx) {
+        Intent in = new Intent(ctx, DemoActivity.class);
+        ctx.startActivity();
+    }    
 }

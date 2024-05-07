@@ -27,6 +27,7 @@ import dev.chrisbanes.insetter.Insetter;
 import dev.chrisbanes.insetter.Side;
 import mod.hilal.saif.activities.tools.Tools;
 import mod.ilyasse.activities.about.AboutModActivity;
+import mod.trindade.dev.shizuku.ShizukuUtil;
 
 public class MainDrawer extends NavigationView {
     private static final int DEF_STYLE_RES = R.style.MainDrawer;
@@ -106,9 +107,7 @@ public class MainDrawer extends NavigationView {
             intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             activity.startActivity(intent);
         } else if (id == R.id.filepicker_test) {
-            /*Intent intent = new Intent(activity, FilePickerMainActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-            activity.startActivity(intent);*/
+            ShizukuUtil.goDemo(activity);
         }
     }
 
