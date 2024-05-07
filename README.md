@@ -11,7 +11,7 @@
 
 Bem-vindo ao TrindadeWare! Aqui você encontrará o código fonte de muitas classes do TrindadeWare e, o mais importante, o local para contribuir com o TrindadeWare.
  
-## Building the App
+## Construindo o aplicativo 
 Para construir o aplicativo, você deve usar o Gradle. É altamente recomendável usar o Android Studio para obter a melhor experiência.
  
 Existem duas variantes de construção com recursos diferentes: 
