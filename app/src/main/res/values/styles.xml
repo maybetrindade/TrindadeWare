@@ -248,4 +248,12 @@
         <item name="android:layout_marginTop">10dp</item>
     </style>
     
+    <style name="Gam.Title" parent="@style/Widget.Material3.CollapsingToolbar.Large">
+        <item name="fontFamily">@font/app_font</item>
+    </style>
+    <!-- Button Style -->
+    <style name="Gam.Button" parent="@style/Widget.Material3.Button">
+        <item name="fontFamily">@font/app_font</item>
+    </style>
+    
 </resources>
