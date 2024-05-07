@@ -3,11 +3,11 @@
 </p>
 
 # TrindadeWare
-[![GitHub contributors](https://img.shields.io/github/contributors/Sketchware-Pro/Sketchware-Pro)](https://github.com/Sketchware-Pro/Sketchware-Pro/graphs/contributors)
-[![GitHub last commit](https://img.shields.io/github/last-commit/Sketchware-Pro/Sketchware-Pro)](https://github.com/Sketchware-Pro/Sketchware-Pro/commits/)
+[![GitHub contributors](https://img.shields.io/github/contributors/aquilesTrindade/TrindadeWare)](https://github.com/aquilesTrindade/TrindadeWare/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/aquilesTrindade/TrindadeWare)](https://github.com/aquilesTrindade/TrindadeWare/commits/)
 [![Discord server stats](https://img.shields.io/discord/790686719753846785)](http://discord.gg/kq39yhT4rX)
-[![Total downloads](https://img.shields.io/github/downloads/Sketchware-Pro/Sketchware-Pro/total)](https://github.com/Sketchware-Pro/Sketchware-Pro/releases)
-[![Repository Size](https://img.shields.io/github/repo-size/Sketchware-Pro/Sketchware-Pro)](https://github.com/Sketchware-Pro/Sketchware-Pro)
+[![Total downloads](https://img.shields.io/github/downloads/aquilesTrindade/TrindadeWare/total)](https://github.com/aquilesTrindade/TrindadeWare/releases)
+[![Repository Size](https://img.shields.io/github/repo-size/aquilesTrindade/TrindadeWare)](https://github.com/aquilesTrindade/TrindadeWare)
 
 Bem-vindo ao TrindadeWare! Aqui você encontrará o código fonte de muitas classes do TrindadeWare e, o mais importante, o local para contribuir com o TrindadeWare.
  
