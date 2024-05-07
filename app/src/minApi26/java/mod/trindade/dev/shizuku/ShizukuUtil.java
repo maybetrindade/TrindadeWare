@@ -1,36 +1,33 @@
 package mod.trindade.dev.shizuku;
 
+import android.content.pm.PackageManager;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.content.pm.PackageManager;
 import rikka.shizuku.Shizuku;
 
-public class ShizukuUtil extends AppCompatActivity {
+public class ShizukuUtil {
 
-    private ActivityMainBinding binding;
-    private final Shizuku.OnRequestPermissionResultListener REQUEST_PERMISSION_RESULT_LISTENER =
-            this::onRequestPermissionsResult;
+    private static Shizuku.OnRequestPermissionResultListener onRequestPermissionResultListener =
+            (requestCode, grantResult) -> {
+                onRequestPermissionsResult(requestCode, grantResult);
+            };
+
+    public static void addRequest(AppCompatActivity activity) {
+        Shizuku.addRequestPermissionResultListener(onRequestPermissionResultListener);
     }
-    
-    // put on "onCreate" event
-    public static void addRequest () {
-        Shizuku.addRequestPermissionResultListener(REQUEST_PERMISSION_RESULT_LISTENER);
-    }
-    
+
     public static void onRequestPermissionsResult(int requestCode, int grantResult) {
         boolean granted = grantResult == PackageManager.PERMISSION_GRANTED;
     }
-    
-    // put on "onDestroy" event
-    public static void removeRequest () {
-        Shizuku.removeRequestPermissionResultListener(REQUEST_PERMISSION_RESULT_LISTENER);
+
+    public static void removeRequest() {
+        Shizuku.removeRequestPermissionResultListener(onRequestPermissionResultListener);
     }
-    
-    // 
-    public static boolean checkPermission (int code) {
+
+    public static boolean checkPermission(int code) {
         if (Shizuku.isPreV11()) {
             return false;
-        } 
+        }
         if (Shizuku.checkSelfPermission() == PackageManager.PERMISSION_GRANTED) {
             return true;
         } else if (Shizuku.shouldShowRequestPermissionRationale()) {
