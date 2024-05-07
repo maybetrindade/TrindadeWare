@@ -9,71 +9,67 @@
 [![Total downloads](https://img.shields.io/github/downloads/Sketchware-Pro/Sketchware-Pro/total)](https://github.com/Sketchware-Pro/Sketchware-Pro/releases)
 [![Repository Size](https://img.shields.io/github/repo-size/Sketchware-Pro/Sketchware-Pro)](https://github.com/Sketchware-Pro/Sketchware-Pro)
 
-Welcome to TrindadeWare! Here you'll find the source code of many classes in TrindadeWare and, most importantly, the place to contribute to TrindadeWare.
-
+Bem-vindo ao TrindadeWare! Aqui você encontrará o código fonte de muitas classes do TrindadeWare e, o mais importante, o local para contribuir com o TrindadeWare.
+ 
 ## Building the App
-To build the app, you must use Gradle. It's highly recommended to use Android Studio for the best experience.
+Para construir o aplicativo, você deve usar o Gradle. É altamente recomendável usar o Android Studio para obter a melhor experiência.
+ 
+Existem duas variantes de construção com recursos diferentes: 
 
-There are two build variants with different features:
+- `minApi26:` Esta variante oferece suporte à exportação de AABs de projetos e à compilação de código Java 1.8, 1.9, 10 e 11. No entanto, só funciona no Android 8.0 (O) e superior. 
+- `minApi21:` Esta variante não pode produzir AABs de projetos e só pode compilar código Java 1.7, mas oferece suporte ao Android 5 e superior. 
 
-- `minApi26:` This variant supports exporting AABs from projects and compiling Java 1.8, 1.9, 10, and 11 code. However, it only works on Android 8.0 (O) and above.
-- `minApi21:` This variant can't produce AABs from projects and can only compile Java 1.7 code, but it supports Android 5 and above.
+Para selecionar a variante de build apropriada no Android Studio, use a guia Build Variants ou use o comando de build apropriado do Gradle. 
 
-To select the appropriate build variant in Android Studio, use the Build Variants tab or use the appropriate Gradle build command.
-
-### Source Code Map
-
+### Mapa de código-fonte
+ 
 | Class           | Role                                        |
 | --------------- | ------------------------------------------- |
-| `a.a.a.ProjectBuilder`      | Helper for compiling an entire project       |
-| `a.a.a.Ix`      | Responsible for generating AndroidManifest.xml |
-| `a.a.a.Jx`      | Generates source code of activities          |
-| `a.a.a.Lx`      | Generates source code of components, such as listeners, etc. |
-| `a.a.a.Ox`      | Responsible for generating XML files of layouts |
-| `a.a.a.qq`      | Registry of built-in libraries' dependencies |
-| `a.a.a.tq`      | Responsible for the compiling dialog's quizzes |
-| `a.a.a.yq`      | Organizes Sketchware projects' file paths    |
+| `a.a.a.ProjectBuilder`      | Auxiliar para compilar um projeto inteiro        |
+| `a.a.a.Ix`      | Responsável por gerar AndroidManifest.xml  |
+| `a.a.a.Jx`      | Gera código fonte das atividades           |
+| `a.a.a.Lx`      | Gera código-fonte de componentes, como ouvintes, etc.  |
+| `a.a.a.Ox`      | Responsável por gerar arquivos XML de layouts  |
+| `a.a.a.qq`      | Registro de dependências de bibliotecas integradas  |
+| `a.a.a.tq`      | Responsável pelos questionários do diálogo de compilação  |
+| `a.a.a.yq`      | Organiza os caminhos dos arquivos dos projetos do Sketchware     |
 
-> [!TIP]
-> You can also check the `mod` package, which contains the majority of contributors' changes.
+> [!DICA ]
+> Você também pode verificar o pacote `mod`, que contém a maioria das alterações dos contribuidores. 
 
-## Contributing
+## Contribuindo 
 
-If you'd like to contribute to TrindadeWare, follow these steps:
+Se você gostaria de contribuir com o TrindadeWare, siga estes passos: 
 
-1. Fork this repository.
-2. Make changes in your forked repository.
-3. Test out those changes.
-4. Create a pull request in this repository.
-5. Your pull request will be reviewed by the repository members and merged if accepted.
+1. Bifurque este repositório. 
+2. Faça alterações em seu repositório bifurcado. 
+3. Teste essas mudanças. 
+4. Crie uma solicitação pull neste repositório. 
+5. Sua solicitação pull será revisada pelos membros do repositório e mesclada se for aceita. 
 
-We welcome contributions of any size, whether they are major features or bug fixes, but please note that all contributions will be thoroughly reviewed.
-
-### What Changes We're Unlikely to Accept
-
-Most changes related to the user interface (components that already exist in vanilla Sketchware) are unlikely to be accepted. If something design-related gets changed, ideally the whole app should follow the new style too, which is challenging, especially for mods.
-> [!NOTE]
-> In the meantime, we don't accept UI changes in the main branch, but we do in the [redesign branch](https://github.com/Sketchware-Pro/Sketchware-Pro/tree/material-redesign) since we're actively working on a material design version of TrindadeWare.
-
+Aceitamos contribuições de qualquer tamanho, sejam elas recursos importantes ou correções de bugs, mas observe que todas as contribuições serão revisadas minuciosamente.
+ 
 ### Commit Message
 
-When you make changes to one or more files, you need to commit those changes with a commit message. Here are some guidelines:
+Ao fazer alterações em um ou mais arquivos, você precisa confirmar essas alterações com uma mensagem de confirmação. Aqui estão algumas diretrizes: 
 
-- Keep the commit message short and detailed.
-- Use one of these commit types as a prefix:
-  - `feat:` for a feature, possibly improving something already existing.
-  - `fix:` for a fix, such as a bug fix.
-  - `style:` for features and updates related to styling.
-  - `refactor:` for refactoring a specific section of the codebase.
-  - `test:` for everything related to testing.
-  - `docs:` for everything related to documentation.
-  - `chore:` for code maintenance (you can also use emojis to represent commit types).
+- Mantenha a mensagem de commit curta e detalhada. 
+- Use um destes tipos de commit como prefixo: 
+  - `feat:` para um recurso, possivelmente melhorando algo já existente. 
+  - `fix:` para uma correção, como uma correção de bug. 
+  - `style:` para recursos e atualizações relacionadas ao estilo. 
+  - `refactor:` para refatorar uma seção específica da base de código. 
+  - `test:` para tudo relacionado a testes. 
+  - `docs:` para tudo relacionado à documentação. 
+  - `chore:` para manutenção de código (você também pode usar emojis para representar tipos de commit). 
 
 Examples:
-- `feat: Speed up compiling with new technique`
-- `fix: Fix crash during launch on certain phones`
-- `refactor: Reformat code in File.java`
+- `feat: Acelere a compilação com a nova técnica` 
+- `fix: Corrigir falha durante a inicialização em determinados telefones 
+- `refactor: Reformate o código em File.java`     
 
-## Thanks for Contributing
+- Lembrando que dependendo do seu PR (Pull Request) mesmo sem seguir as regras do commit ele pode ser aceito!
 
-Thank you for contributing to TrindadeWare! Your contributions help keep TrindadeWare alive. Each accepted contribution will be noted down in the "About Modders" activity. We'll use your GitHub name and profile picture initially, but they can be changed, of course.
+## Obrigado por contribuir 
+
+Obrigado por contribuir com TrindadeWare! Suas contribuições ajudam a manter o TrindadeWare vivo. Cada contribuição aceita será anotada na atividade "Sobre Modders". Usaremos inicialmente seu nome GitHub e foto de perfil, mas eles podem ser alterados, é claro. 
