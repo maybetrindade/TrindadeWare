@@ -1,4 +1,4 @@
-name: Release compile
+name: TrindadeWare Release
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Building minApi26
+    name: Building app by trindadeDev
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.0.2
@@ -36,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: trindade-ware-release
-          path: app/build/outputs/apk/release/
+          path: app/build/outputs/apk/release/trindade-ware-release.apk
