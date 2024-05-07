@@ -20,24 +20,24 @@ import rikka.shizuku.demo.util.ShizukuSystemServerApi;
 
 public class ShizukuUtil {
 
-    private final Shizuku.OnBinderReceivedListener BINDER_RECEIVED_LISTENER = () -> {
+    public final Shizuku.OnBinderReceivedListener BINDER_RECEIVED_LISTENER = () -> {
         if (Shizuku.isPreV11()) {
             binding.text1.setText("Shizuku pre-v11 is not supported");
         } else {
             binding.text1.setText("Binder received");
         }
     };
-    private final Shizuku.OnBinderDeadListener BINDER_DEAD_LISTENER = () -> binding.text1.setText("Binder dead");
-    private final Shizuku.OnRequestPermissionResultListener REQUEST_PERMISSION_RESULT_LISTENER = this::onRequestPermissionsResult;
+    public final Shizuku.OnBinderDeadListener BINDER_DEAD_LISTENER = () -> binding.text1.setText("Binder dead");
+    public final Shizuku.OnRequestPermissionResultListener REQUEST_PERMISSION_RESULT_LISTENER = this::onRequestPermissionsResult;
     
     
-    public static setBinders () {
+    public static void setBinders () {
         Shizuku.addBinderReceivedListenerSticky(BINDER_RECEIVED_LISTENER);
         Shizuku.addBinderDeadListener(BINDER_DEAD_LISTENER);
         Shizuku.addRequestPermissionResultListener(REQUEST_PERMISSION_RESULT_LISTENER);
     }
     
-    private static void bindUserService() {
+    public static void bindUserService() {
         StringBuilder res = new StringBuilder();
         try {
             if (Shizuku.getVersion() < 10) {
@@ -88,7 +88,7 @@ public class ShizukuUtil {
         ctx.startActivity();
     }    
     
-    private static void getUsers() {
+    public static void getUsers() {
         String res;
         try {
             res = ShizukuSystemServerApi.UserManager_getUsers(true, true, true).toString();
@@ -98,7 +98,7 @@ public class ShizukuUtil {
         }
     }
     
-    private static void installApks() {
+    public static void installApks() {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
@@ -107,7 +107,7 @@ public class ShizukuUtil {
         startActivityForResult(intent, REQUEST_CODE_PICK_APKS);
     }
     
-    private void doInstallApks(List<Uri> uris) {
+    public void doInstallApks(List<Uri> uris) {
         PackageInstaller packageInstaller;
         PackageInstaller.Session session = null;
         ContentResolver cr = getContentResolver();
@@ -209,7 +209,8 @@ public class ShizukuUtil {
                 }
             }
         }
-    private void unbindUserService() {
+    }
+    public static void unbindUserService() {
         StringBuilder res = new StringBuilder();
         try {
             if (Shizuku.getVersion() < 10) {
@@ -221,10 +222,9 @@ public class ShizukuUtil {
             tr.printStackTrace();
             res.append(tr.toString());
         }
-        binding.text3.setText(res.toString().trim());
     }
 
-    private void peekUserService() {
+    public static void peekUserService() {
         StringBuilder res = new StringBuilder();
         try {
             if (Shizuku.getVersion() < 12) {
@@ -241,7 +241,5 @@ public class ShizukuUtil {
             tr.printStackTrace();
             res.append(tr.toString());
         }
-        binding.text3.setText(res.toString().trim());
-    }    
-    }
+    }   
 }

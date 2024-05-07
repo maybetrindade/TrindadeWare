@@ -14,9 +14,9 @@ import mod.SketchwareUtil;
 
 public class ShizukuUtil {
 
-    public static setBinders () {}
+    public static voidsetBinders () {}
     
-    private static void bindUserService() {}
+    public static void bindUserService() {}
 
     public static void addRequest () {}
 
@@ -28,13 +28,13 @@ public class ShizukuUtil {
     
     public static void goDemo (Context ctx) { SketchwareUtil.toastError("Only for minApi26"); }    
     
-    private static void getUsers() {}
+    public static void getUsers() {}
     
-    private static void installApks() {}
+    public static void installApks() {}
     
-    private void doInstallApks(List<Uri> uris) {}
+    public void doInstallApks(List<Uri> uris) {}
     
-    private void unbindUserService() {}
+    public void unbindUserService() {}
 
-    private void peekUserService() {}
+    public void peekUserService() {}
 }
