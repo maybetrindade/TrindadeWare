@@ -9,8 +9,6 @@ import android.widget.GridView;
 
 import com.besome.sketch.beans.ViewBean;
 
-import com.trindade.ware.R;
-
 import java.util.ArrayList;
 
 import a.a.a.sy;

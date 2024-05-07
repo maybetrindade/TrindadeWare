@@ -1,27 +1,20 @@
 package mod.agus.jcoderz.editor.manage.permission;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.gson.Gson;
 import com.trindade.ware.R;
-import com.trindade.ware.databinding.ManagePermissionBinding;
-import com.trindade.ware.databinding.ViewItemPermissionBinding;
 
 import java.util.ArrayList;
 
@@ -29,51 +22,23 @@ import mod.agus.jcoderz.lib.FilePathUtil;
 import mod.agus.jcoderz.lib.FileResConfig;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
-import mod.jbk.util.AddMarginOnApplyWindowInsetsListener;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class ManagePermissionActivity extends AppCompatActivity {
-    private PermissionsAdapter adapter;
+public class ManagePermissionActivity extends ThemedActivity {
+    private ListAdapter adapter;
     private ArrayList<String> arrayList;
     private FileResConfig frc;
+    private ListView lv;
     private String numProj;
-
-    private LinearLayoutManager layoutManager;
-    private ManagePermissionBinding binding;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        EdgeToEdge.enable(this);
-        super.onCreate(savedInstanceState);
-        binding = ManagePermissionBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        initViews();
-        if (getIntent().hasExtra("sc_id")) {
-            numProj = getIntent().getStringExtra("sc_id");
-            frc = new FileResConfig(numProj);
-        }
-        arrayList = new ArrayList<>();
-        initRecyclerView();
-        checkFile();
-        setItems();
-        setUpSearchView();
-        initButtons();
-    }
-
-    private void initViews() {
-        binding.topAppBar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
-        ViewCompat.setOnApplyWindowInsetsListener(binding.scrollToTopButton,
-                new AddMarginOnApplyWindowInsetsListener(WindowInsetsCompat.Type.navigationBars(), WindowInsetsCompat.CONSUMED));
-    }
+    private SearchView sv;
 
     private void setItems() {
-        var recyclerView = binding.recyclerView;
-        Parcelable rvSavedState = recyclerView.getLayoutManager().onSaveInstanceState();
+        Parcelable lvSavedState = lv.onSaveInstanceState();
         arrayList = ListPermission.getPermissions();
-        PermissionsAdapter listAdapter = new PermissionsAdapter(arrayList);
+        ListAdapter listAdapter = new ListAdapter(arrayList);
         adapter = listAdapter;
-        recyclerView.setAdapter(listAdapter);
-        recyclerView.getLayoutManager().onRestoreInstanceState(rvSavedState);
+        lv.setAdapter(listAdapter);
+        lv.onRestoreInstanceState(lvSavedState);
     }
 
     private void checkFile() {
@@ -84,19 +49,15 @@ public class ManagePermissionActivity extends AppCompatActivity {
     }
 
     private void setUpSearchView() {
-        TextInputEditText searchEditText = findViewById(R.id.searchInput);
-        searchEditText.addTextChangedListener(new TextWatcher() {
+        sv.setActivated(true);
+        sv.setQueryHint("Search for a permission");
+        sv.onActionViewExpanded();
+        sv.setIconifiedByDefault(true);
+        sv.clearFocus();
+        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence newText, int start, int before, int count) {
-                String lowerCase = newText.toString().toLowerCase();
+            public boolean onQueryTextChange(String newText) {
+                String lowerCase = newText.toLowerCase();
                 ArrayList<String> filter = new ArrayList<>();
                 for (String next : arrayList) {
                     if (next.toLowerCase().contains(lowerCase)) {
@@ -104,46 +65,53 @@ public class ManagePermissionActivity extends AppCompatActivity {
                     }
                 }
                 adapter.setFilter(filter);
+                return true;
             }
-        });
-    }
 
-    public void initButtons() {
-        var scrollToTopButton = binding.scrollToTopButton;
-        MaterialButton resetPermissions = findViewById(R.id.resetPermissions);
-        resetPermissions.setOnClickListener(view -> new AlertDialog.Builder(ManagePermissionActivity.this)
-                .setTitle("Reset permissions")
-                .setMessage("Are you sure you want to reset all permissions? This cannot be undone!")
-                .setPositiveButton("Reset", (dialog, which) -> {
-                    FileUtil.writeFile(new FilePathUtil().getPathPermission(numProj), "[]");
-                    //As FileResConfig only refreshes permissions during <init>()V, this is required.
-                    frc = new FileResConfig(numProj);
-                    setItems();
-                }));
-        scrollToTopButton.setOnClickListener(view -> {
-            scrollToTopButton.hide();
-            binding.appBarLayout.setExpanded(true);
-            binding.recyclerView.smoothScrollToPosition(0);
-        });
-    }
-
-    private void initRecyclerView() {
-        var recyclerView = binding.recyclerView;
-        var scrollToTopButton = binding.scrollToTopButton;
-
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
-            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-                if (dy > 0) {
-                    if (!scrollToTopButton.isShown()) scrollToTopButton.show();
-                } else if (layoutManager.findFirstCompletelyVisibleItemPosition() == 0) {
-                    scrollToTopButton.hide();
-                }
+            public boolean onQueryTextSubmit(String query) {
+                return true;
             }
         });
+    }
+
+    public void initToolbar() {
+        ((TextView) findViewById(R.id.tx_toolbar_title)).setText("Permission Manager");
+        ImageView back = findViewById(R.id.ig_toolbar_back);
+        Helper.applyRipple(this, back);
+        back.setOnClickListener(Helper.getBackPressedClickListener(this));
+        ImageView resetPermissions = findViewById(R.id.ig_toolbar_load_file);
+        resetPermissions.setVisibility(View.VISIBLE);
+        resetPermissions.setImageResource(R.drawable.ic_restore_white_24dp);
+        resetPermissions.setOnClickListener(v ->
+                new AlertDialog.Builder(this)
+                        .setTitle("Reset permissions")
+                        .setMessage("Are you sure you want to reset all permissions? This cannot be undone!")
+                        .setPositiveButton("Reset", (dialog, which) -> {
+                            FileUtil.writeFile(new FilePathUtil().getPathPermission(numProj), "[]");
+                            //As FileResConfig only refreshes permissions during <init>()V, this is required.
+                            frc = new FileResConfig(numProj);
+                            setItems();
+                        })
+                        .setNegativeButton("Cancel", null)
+                        .show());
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.manage_permission);
+        if (getIntent().hasExtra("sc_id")) {
+            numProj = getIntent().getStringExtra("sc_id");
+            frc = new FileResConfig(numProj);
+        }
+        sv = findViewById(R.id.search_perm);
+        lv = findViewById(R.id.main_content);
+        arrayList = new ArrayList<>();
+        checkFile();
+        setItems();
+        setUpSearchView();
+        initToolbar();
     }
 
     @Override
@@ -152,32 +120,37 @@ public class ManagePermissionActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    private class PermissionsAdapter extends RecyclerView.Adapter<PermissionsAdapter.ViewHolder> {
+    private class ListAdapter extends BaseAdapter {
         private ArrayList<String> namePerm;
 
-        public PermissionsAdapter(ArrayList<String> arrayList) {
+        public ListAdapter(ArrayList<String> arrayList) {
             namePerm = arrayList;
         }
 
-        @NonNull
         @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            var listBinding = ViewItemPermissionBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
-            var layoutParams = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            listBinding.getRoot().setLayoutParams(layoutParams);
-            return new ViewHolder(listBinding);
+        public int getCount() {
+            return namePerm.size();
         }
 
+        @Override
+        public String getItem(int position) {
+            return namePerm.get(position);
+        }
 
         @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
-            var binding = holder.listBinding;
+        public long getItemId(int position) {
+            return position;
+        }
 
-            String permission = namePerm.get(position);
-            binding.checkboxContent.setText(permission);
-            binding.checkboxContent.setOnCheckedChangeListener(null); // Important to avoid infinite loops
-            binding.checkboxContent.setChecked(frc.getPermissionList().contains(permission));
-            binding.checkboxContent.setOnCheckedChangeListener((button, checked) -> {
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            if (convertView == null) {
+                convertView = getLayoutInflater().inflate(R.layout.view_item_permission, parent, false);
+            }
+
+            CheckBox checkBox = convertView.findViewById(R.id.checkbox_content);
+            checkBox.setText(namePerm.get(position));
+            checkBox.setOnCheckedChangeListener((button, checked) -> {
                 if (checked) {
                     if (!frc.getPermissionList().contains(button.getText().toString())) {
                         frc.listFilePermission.add(button.getText().toString());
@@ -186,25 +159,15 @@ public class ManagePermissionActivity extends AppCompatActivity {
                     frc.listFilePermission.remove(button.getText().toString());
                 }
             });
-        }
-
-        @Override
-        public int getItemCount() {
-            return namePerm.size();
+            checkBox.setChecked(frc.getPermissionList().contains(namePerm.get(position)));
+            return convertView;
         }
 
         public void setFilter(ArrayList<String> filter) {
-            namePerm = new ArrayList<>(filter);
+            ArrayList<String> arrayList2 = new ArrayList<>();
+            namePerm = arrayList2;
+            arrayList2.addAll(filter);
             notifyDataSetChanged();
-        }
-
-        class ViewHolder extends RecyclerView.ViewHolder {
-            private final ViewItemPermissionBinding listBinding;
-
-            public ViewHolder(ViewItemPermissionBinding listBinding) {
-                super(listBinding.getRoot());
-                this.listBinding = listBinding;
-            }
         }
     }
 }
