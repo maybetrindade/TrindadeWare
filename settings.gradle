@@ -12,3 +12,4 @@ include ":app"
 include ':kotlinc'
 include ':jaxp:xml'
 include ':jaxp:internal'
+include ':filepicker'
