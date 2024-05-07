@@ -20,7 +20,7 @@
         <img src="https://img.shields.io/github/v/release/aquilesTrindade/TrindadeWare?color=2196F3&style=for-the-badge&logo=pkgsrc&logoColor=ebebf0&labelColor=23232F" alt="GitHub release">
     </a>
 </div>
-Bem-vindo ao TrindadeWare! Aqui você encontrará o código fonte de muitas classes do TrindadeWare e, o mais importante, o local para contribuir com o TrindadeWare.
+Bem-vindo ao TrindadeWare! Aqui você encontrará o código fonte de muitas classes do TrindadeWare e do Sketchware, o mais importante, o local para contribuir com o TrindadeWare.
  
 ## Construindo o aplicativo 
 Para construir o aplicativo, você deve usar o Gradle. É altamente recomendável usar o Android Studio para obter a melhor experiência.
