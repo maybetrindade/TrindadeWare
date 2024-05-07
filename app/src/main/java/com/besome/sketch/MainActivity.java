@@ -159,7 +159,7 @@ public class MainActivity extends BasePermissionAppCompatActivity {
         Insetter.builder().padding(WindowInsetsCompat.Type.navigationBars(), Side.create(true, false, true, false)).applyToView(findViewById(R.id.layout_coordinator));
         setSupportActionBar(findViewById(R.id.toolbar));
         
-        ShizukuUtil.addRequest();
+        ShizukuUtil.addRequest(MainActivity.this);
         requestShizukuPermission();
         
         u = new DB(getApplicationContext(), "U1");

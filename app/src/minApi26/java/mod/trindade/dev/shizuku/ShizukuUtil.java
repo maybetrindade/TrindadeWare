@@ -7,7 +7,7 @@ import rikka.shizuku.Shizuku;
 
 public class ShizukuUtil {
 
-    private static Shizuku.OnRequestPermissionResultListener onRequestPermissionResultListener =
+    public static Shizuku.OnRequestPermissionResultListener onRequestPermissionResultListener =
             (requestCode, grantResult) -> {
                 onRequestPermissionsResult(requestCode, grantResult);
             };
