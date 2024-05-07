@@ -75,9 +75,7 @@ public class ManageImageActivity extends BaseAppCompatActivity implements ViewPa
         if (!super.isStoragePermissionGranted()) {
             finish();
         }
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
+        
         getSupportActionBar().setTitle(getTranslatedString(R.string.design_actionbar_title_manager_image));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
