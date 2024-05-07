@@ -54,7 +54,7 @@ import mod.jbk.util.LogUtil;
 import mod.tyron.backup.CallBackTask;
 import mod.tyron.backup.SingleCopyAsyncTask;
 import mod.trindade.dev.theme.AppTheme;
-
+import mod.trindade.dev.shizuku.ShizukuUtil;
 
 public class MainActivity extends BasePermissionAppCompatActivity {
     private final OnBackPressedCallback closeDrawer = new OnBackPressedCallback(true) {
@@ -90,6 +90,12 @@ public class MainActivity extends BasePermissionAppCompatActivity {
         intent.setData(Uri.parse("package:" + getApplicationContext().getPackageName()));
         startActivityForResult(intent, i);
     }
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ShizukuUtil.removeRequest();
+    }
 
     @Override
     public void l() {
@@ -103,6 +109,14 @@ public class MainActivity extends BasePermissionAppCompatActivity {
         if (projectsFragment != null) {
             projectsFragment.refreshProjectsList();
         }
+    }
+    
+    public void requestShizukuPermission() {
+       if (ShizukuUtil.checkPermission(1)) {
+          SketchwareUtil.toast("Action executed successfully!");
+       } else {            
+          SketchwareUtil.toastError("Shizuku's permission not granted.");
+       }
     }
 
     @Override
@@ -144,14 +158,15 @@ public class MainActivity extends BasePermissionAppCompatActivity {
         AppTheme appThemeHelper = new AppTheme(this);
         setTheme(appThemeHelper.getMainTheme());
         super.onCreate(savedInstanceState);
-
+        
         tryLoadingCustomizedAppStrings();
         setContentView(R.layout.main);
-        Insetter.builder()
-                .padding(WindowInsetsCompat.Type.navigationBars(), Side.create(true, false, true, false))
-                .applyToView(findViewById(R.id.layout_coordinator));
+        Insetter.builder().padding(WindowInsetsCompat.Type.navigationBars(), Side.create(true, false, true, false)).applyToView(findViewById(R.id.layout_coordinator));
         setSupportActionBar(findViewById(R.id.toolbar));
-
+        
+        ShizukuUtil.addRequest();
+        requestShizukuPermission();
+        
         u = new DB(getApplicationContext(), "U1");
         int u1I0 = u.a("U1I0", -1);
         long u1I1 = u.e("U1I1");
