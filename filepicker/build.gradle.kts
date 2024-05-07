@@ -36,5 +36,5 @@ android {
 }
 
 dependencies {
-   implementation "com.github.Ruan625Br:FilePickerSphere:1.0.0"
+    implementation("com.github.Ruan625Br:FilePickerSphere:1.0.0")
 }
