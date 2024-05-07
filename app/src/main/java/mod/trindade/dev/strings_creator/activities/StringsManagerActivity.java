@@ -37,7 +37,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
-import mod.trindade.dev.strings_creator.R;
+import com.trindade.ware.R;
 import mod.trindade.dev.strings_creator.adapters.StringsAdapter;
 import mod.trindade.dev.strings_creator.classes.SimpleHighlighter;
 import mod.trindade.dev.strings_creator.classes.copyToClipboard;
