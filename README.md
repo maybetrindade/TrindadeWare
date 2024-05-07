@@ -3,12 +3,23 @@
 </p>
 
 # TrindadeWare
-[![GitHub contributors](https://img.shields.io/github/contributors/aquilesTrindade/TrindadeWare)](https://github.com/aquilesTrindade/TrindadeWare/graphs/contributors)
-[![GitHub last commit](https://img.shields.io/github/last-commit/aquilesTrindade/TrindadeWare)](https://github.com/aquilesTrindade/TrindadeWare/commits/)
-[![Discord server stats](https://img.shields.io/discord/790686719753846785)](http://discord.gg/kq39yhT4rX)
-[![Total downloads](https://img.shields.io/github/downloads/aquilesTrindade/TrindadeWare/total)](https://github.com/aquilesTrindade/TrindadeWare/releases)
-[![Repository Size](https://img.shields.io/github/repo-size/aquilesTrindade/TrindadeWare)](https://github.com/aquilesTrindade/TrindadeWare)
-
+<div align="center">
+    <a href="LICENSE">
+        <img src="https://img.shields.io/github/license/6eero/newpass.svg?color=2196F3&style=for-the-badge&logo=gitbook&logoColor=ebebf0&labelColor=23232F" alt="License">
+    </a>
+    <a href="https://github.com/aquilesTrindade/TrindadeWare/releases">
+        <img src="https://img.shields.io/github/downloads/aquilesTrindade/TrindadeWare/total.svg?color=2196F3&style=for-the-badge&logo=github&logoColor=ebebf0&labelColor=23232F" alt="GitHub release">
+    </a>
+    <a href="https://github.com/aquilesTrindade/TrindadeWare/stargazers">
+        <img src="https://img.shields.io/github/stars/aquilesTrindade/TrindadeWare.svg?color=2196F3&style=for-the-badge&logo=apachespark&logoColor=ebebf0&labelColor=23232F" alt="Stars Count">
+    </a>
+</div>
+<div align="center">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/aquilesTrindade/TrindadeWare?color=2196F3&style=for-the-badge&logo=github&logoColor=ebebf0&labelColor=23232F">
+    <a href="https://github.com/aquilesTrindade/TrindadeWare/releases">
+        <img src="https://img.shields.io/github/v/release/aquilesTrindade/TrindadeWare?color=2196F3&style=for-the-badge&logo=pkgsrc&logoColor=ebebf0&labelColor=23232F" alt="GitHub release">
+    </a>
+</div>
 Bem-vindo ao TrindadeWare! Aqui você encontrará o código fonte de muitas classes do TrindadeWare e, o mais importante, o local para contribuir com o TrindadeWare.
  
 ## Construindo o aplicativo 
