@@ -3,7 +3,8 @@ package mod.trindade.dev.shizuku;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.content.Intent;
-import android.content.Context; 
+import android.content.Context;
+import android.net.Uri;
 
 import androidx.appcompat.app.AppCompatActivity;
 
