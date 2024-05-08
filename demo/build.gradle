@@ -47,9 +47,10 @@ android {
 dependencies {
     implementation 'androidx.annotation:annotation:1.3.0'
 
-    implementation project(':api') // required by Shizuku and Sui
-    implementation project(':provider') // required by Shizuku only
-
+    def shizuku_version = "13.1.5"
+    implementation "dev.rikka.shizuku:api:$shizuku_version"
+    implementation "dev.rikka.shizuku:provider:$shizuku_version"
+    
     compileOnly project(':demo-hidden-api-stub')
     implementation 'org.lsposed.hiddenapibypass:hiddenapibypass:4.3' // bypass hidden api restriction, https://github.com/LSPosed/AndroidHiddenApiBypass
 }
