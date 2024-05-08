@@ -1,1 +1,0 @@
-GSLang is GamEngine/GamIDE Lanaguage created by Aquiles Trindade

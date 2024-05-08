@@ -173,8 +173,13 @@ dependencies {
     implementation "com.google.firebase:firebase-analytics"
     
     // Shizuku
-    minApi26Implementation "dev.rikka.shizuku:api:12.0.0"
-    minApi26Implementation "dev.rikka.shizuku:provider:12.0.0"
+    def shizuku_version = "13.1.5"
+    minApi26Implementation "dev.rikka.shizuku:aidl:$shizuku_version"
+    minApi26Implementation "dev.rikka.shizuku:api:$shizuku_version"
+    minApi26Implementation "dev.rikka.shizuku:provider:$shizuku_version"
+    minApi26Implementation "dev.rikka.shizuku:rish:$shizuku_version"
+    minApi26Implementation "dev.rikka.shizuku:server-shared:$shizuku_version"
+    minApi26Implementation "dev.rikka.shizuku:shared:$shizuku_version"
     minApi26Implementation project(path: ":demo")
         
     coreLibraryDesugaring "com.android.tools:desugar_jdk_libs_nio:2.0.3"

@@ -1,5 +1,0 @@
-//GSLang by Aquiles Trindade 
-
-createButton Go$%To$%New$%Tela #000000
-createText error #2196f3
-showTerminal
