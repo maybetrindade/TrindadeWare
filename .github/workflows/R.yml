@@ -1,4 +1,4 @@
-name: Build GamIDE R
+name: TrindadeWare - R
 
 on:
   push:
@@ -35,8 +35,3 @@ jobs:
         with:
           name: app-release
           path: app/build/outputs/apk/release/
-
-      - name: Publish GSLang library
-        run: |
-          ./gradlew publish
-        working-directory: path/to/GSLang/library
