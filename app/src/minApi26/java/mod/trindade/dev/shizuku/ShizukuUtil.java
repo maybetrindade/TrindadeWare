@@ -11,13 +11,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import rikka.shizuku.Shizuku;
 import rikka.shizuku.ShizukuBinderWrapper;
 import rikka.shizuku.ShizukuSystemProperties;
-import rikka.shizuku.demo.databinding.MainActivityBinding;
-import rikka.shizuku.demo.service.UserService;
-import rikka.shizuku.demo.util.ApplicationUtils;
-import rikka.shizuku.demo.util.IIntentSenderAdaptor;
-import rikka.shizuku.demo.util.IntentSenderUtils;
-import rikka.shizuku.demo.util.PackageInstallerUtils;
-import rikka.shizuku.demo.util.ShizukuSystemServerApi;
+import com.trindade.ware.databinding.MainActivityBinding;
+import mod.trindade.dev.shizuku.service.UserService;
+import mod.trindade.dev.shizuku.util.ApplicationUtils;
+import mod.trindade.dev.shizuku.util.IIntentSenderAdaptor;
+import mod.trindade.dev.shizuku.util.IntentSenderUtils;
+import mod.trindade.dev.shizuku.util.PackageInstallerUtils;
+import mod.trindade.dev.shizuku.util.ShizukuSystemServerApi;
 
 public class ShizukuUtil {
 

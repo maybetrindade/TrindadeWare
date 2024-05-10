@@ -1,4 +1,4 @@
-package rikka.shizuku.demo.util;
+package mod.trindade.dev.shizuku.util;
 
 import android.content.Context;
 import android.content.pm.IPackageInstaller;

@@ -1,4 +1,4 @@
-package rikka.shizuku.demo.service;
+package mod.trindade.dev.shizuku.service;
 
 import android.content.Context;
 import android.os.RemoteException;
@@ -7,7 +7,7 @@ import android.util.Log;
 
 import androidx.annotation.Keep;
 
-import rikka.shizuku.demo.IUserService;
+import mod.trindade.dev.shizuku.IUserService;
 
 public class UserService extends IUserService.Stub {
 

@@ -1,4 +1,4 @@
-package rikka.shizuku.demo.util;
+package mod.trindade.dev.shizuku.util;
 
 public abstract class Singleton<T> {
 

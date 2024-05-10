@@ -1,4 +1,4 @@
-package rikka.shizuku.demo.util;
+package mod.trindade.dev.shizuku.util;
 
 import android.content.IIntentReceiver;
 import android.content.IIntentSender;

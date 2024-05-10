@@ -1,4 +1,4 @@
-package rikka.shizuku.demo;
+package mod.trindade.dev.shizuku;
 
 import android.app.Application;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.util.Log;
 
 import org.lsposed.hiddenapibypass.HiddenApiBypass;
 
-import rikka.shizuku.demo.util.ApplicationUtils;
+import mod.trindade.dev.shizuku.util.ApplicationUtils;
 import rikka.sui.Sui;
 
 public class DemoApplication extends Application {
