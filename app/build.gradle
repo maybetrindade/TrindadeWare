@@ -196,7 +196,6 @@ dependencies {
     minApi26Implementation "dev.rikka.shizuku:rish:$shizuku_version"
     minApi26Implementation "dev.rikka.shizuku:server-shared:$shizuku_version"
     minApi26Implementation "dev.rikka.shizuku:shared:$shizuku_version"
-    minApi26Implementation project(path: ":demo")    
     compileOnly project(':demo-hidden-api-stub')
         
 }
