@@ -41,8 +41,9 @@ import mod.agus.jcoderz.lib.FileResConfig;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
 import mod.jbk.util.AddMarginOnApplyWindowInsetsListener;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class ManageNativelibsActivity extends AppCompatActivity implements View.OnClickListener {
+public class ManageNativelibsActivity extends ThemedActivity implements View.OnClickListener {
     private FilePickerDialog filePicker;
     private FilePathUtil fpu;
     private FileResConfig frc;

@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 
 import android.widget.TextView;
 
-import androidx.appcompat.widget.SwitchCompat;
+import com.google.android.material.materialswitch.MaterialSwitch;
 
 import com.trindade.ware.R;
 
@@ -19,13 +19,14 @@ import java.util.HashMap;
 
 import mod.agus.jcoderz.editor.manage.library.locallibrary.ManageLocalLibrary;
 import mod.hey.studios.util.Helper;
+import mod.trindade.dev.theme.ThemedActivity;
 
-public class ManageProguardActivity extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class ManageProguardActivity extends ThemedActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 
     private ProguardHandler pg;
-    private SwitchCompat sw_pg_enabled;
-    private SwitchCompat sw_pg_debug;
-    private SwitchCompat r8_enabled;
+    private MaterialSwitch sw_pg_enabled;
+    private MaterialSwitch sw_pg_debug;
+    private MaterialSwitch r8_enabled;
 
     @Override
     public void onClick(View v) {
