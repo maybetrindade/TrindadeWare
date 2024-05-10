@@ -186,16 +186,5 @@ dependencies {
     // Analytics and Crashlytics
     if (analyticsEnabled) {
         new File("$projectDir/google-services.json").text = secrets
-    }
-    
-    // Shizuku
-    def shizuku_version = "13.1.5"
-    minApi26Implementation "dev.rikka.shizuku:aidl:$shizuku_version"
-    minApi26Implementation "dev.rikka.shizuku:api:$shizuku_version"
-    minApi26Implementation "dev.rikka.shizuku:provider:$shizuku_version"
-    minApi26Implementation "dev.rikka.shizuku:rish:$shizuku_version"
-    minApi26Implementation "dev.rikka.shizuku:server-shared:$shizuku_version"
-    minApi26Implementation "dev.rikka.shizuku:shared:$shizuku_version"
-    compileOnly project(':demo-hidden-api-stub')
-        
+    }        
 }
