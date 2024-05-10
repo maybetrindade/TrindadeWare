@@ -52,8 +52,8 @@ public class SketchApplication extends Application {
             }
         });
         super.onCreate();
-        if (appThemeHelper.getDynamic()) {
+        /*if (appThemeHelper.getDynamic()) {
             DynamicColors.applyToActivitiesIfAvailable(this);
-        }    
+        }*/
     }
 }
