@@ -1,15 +1,13 @@
-name: TrindadeWare Release
+name: Build GamIDE R
 
 on:
   push:
     branches:
       - release
-      
-  workflow_dispatch:
 
 jobs:
   build:
-    name: Building app by trindadeDev
+    name: Build release apk
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3.0.2
@@ -32,8 +30,13 @@ jobs:
         with:
           arguments: assembleRelease
 
-      - name: Upload release apk minApi26
+      - name: Upload release apk
         uses: actions/upload-artifact@v3
         with:
-          name: trindade-ware-release
-          path: app/build/outputs/apk/release/trindade-ware-release.apk
+          name: app-release
+          path: app/build/outputs/apk/release/
+
+      - name: Publish GSLang library
+        run: |
+          ./gradlew publish
+        working-directory: path/to/GSLang/library
