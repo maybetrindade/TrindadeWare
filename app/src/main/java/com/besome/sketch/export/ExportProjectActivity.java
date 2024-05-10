@@ -34,8 +34,8 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.toolbar.MaterialToolbar;
-import com.trindade.ware.BuildConfig;
-import com.trindade.ware.R;
+import com.sketchware.remod.BuildConfig;
+import com.sketchware.remod.R;
 
 import org.spongycastle.jce.provider.BouncyCastleProvider;
 
