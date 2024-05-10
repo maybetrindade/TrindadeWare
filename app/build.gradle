@@ -175,7 +175,7 @@ dependencies {
     // org
     minApi26Implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21'
     minApi21Implementation "org.eclipse.jdt:ecj:3.13.0"
-    minApi26Implementation "org.eclipse.jdt:ecj:3.26.0".
+    minApi26Implementation "org.eclipse.jdt:ecj:3.26.0"
     
     // Modules(projects)
     minApi26Implementation project(path: ":kotlinc")   
