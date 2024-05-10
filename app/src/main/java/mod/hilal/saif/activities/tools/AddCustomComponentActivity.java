@@ -11,8 +11,8 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.ManageCustomComponentAddBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.ManageCustomComponentAddBinding;
 
 import java.io.File;
 import java.util.ArrayList;

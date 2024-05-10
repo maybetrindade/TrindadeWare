@@ -24,10 +24,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.ActivityLogcatreaderBinding;
-import com.trindade.ware.databinding.EasyDeleteEdittextBinding;
-import com.trindade.ware.databinding.ViewLogcatItemBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.ActivityLogcatreaderBinding;
+import com.sketchware.remod.databinding.EasyDeleteEdittextBinding;
+import com.sketchware.remod.databinding.ViewLogcatItemBinding;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -92,7 +92,7 @@ public class LogReaderActivity extends ThemedActivity {
         binding.logsRecyclerView.setAdapter(new Adapter(new ArrayList<>()));
 
         IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction("com.trindade.ware.ACTION_NEW_DEBUG_LOG");
+        intentFilter.addAction("com.sketchware.remod.ACTION_NEW_DEBUG_LOG");
         registerReceiver(logger, intentFilter);
 
         final View decorView = getWindow().getDecorView();

@@ -24,7 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.color.MaterialColors;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

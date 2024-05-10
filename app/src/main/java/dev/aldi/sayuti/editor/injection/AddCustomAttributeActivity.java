@@ -23,7 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,8 +32,9 @@ import mod.SketchwareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
 import mod.remaker.view.CustomAttributeView;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class AddCustomAttributeActivity extends AppCompatActivity {
+public class AddCustomAttributeActivity extends ThemedActivity {
 
     private ArrayList<HashMap<String, Object>> activityInjections = new ArrayList<>();
     private ListView listView;

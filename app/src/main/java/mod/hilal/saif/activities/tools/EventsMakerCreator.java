@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.gson.Gson;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.EventsCreatorBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.EventsCreatorBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;

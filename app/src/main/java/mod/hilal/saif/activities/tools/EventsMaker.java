@@ -29,9 +29,9 @@ import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.AddCustomAttributeBinding;
-import com.trindade.ware.databinding.AddNewListenerBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.AddCustomAttributeBinding;
+import com.sketchware.remod.databinding.AddNewListenerBinding;
 
 import java.io.File;
 import java.util.ArrayList;

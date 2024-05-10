@@ -26,8 +26,8 @@ import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.MenuActivityBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.MenuActivityBinding;
 
 import java.io.File;
 import java.util.ArrayList;

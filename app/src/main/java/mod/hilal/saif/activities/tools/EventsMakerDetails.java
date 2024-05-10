@@ -18,8 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.AddCustomAttributeBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.AddCustomAttributeBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
