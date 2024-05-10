@@ -54,7 +54,6 @@ import mod.jbk.util.LogUtil;
 import mod.tyron.backup.CallBackTask;
 import mod.tyron.backup.SingleCopyAsyncTask;
 import mod.trindade.dev.theme.AppTheme;
-import mod.trindade.dev.shizuku.ShizukuUtil;
 
 public class MainActivity extends BasePermissionAppCompatActivity {
     private final OnBackPressedCallback closeDrawer = new OnBackPressedCallback(true) {
@@ -106,13 +105,6 @@ public class MainActivity extends BasePermissionAppCompatActivity {
         }
     }
     
-    public void requestShizukuPermission() {
-       if (ShizukuUtil.checkPermission(1)) {
-          SketchwareUtil.toast("successfully!");
-       } else {            
-          SketchwareUtil.toastError("Shizuku's permission not granted.");
-       }
-    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -159,8 +151,6 @@ public class MainActivity extends BasePermissionAppCompatActivity {
         Insetter.builder().padding(WindowInsetsCompat.Type.navigationBars(), Side.create(true, false, true, false)).applyToView(findViewById(R.id.layout_coordinator));
         setSupportActionBar(findViewById(R.id.toolbar));
         
-        ShizukuUtil.addRequest();
-        requestShizukuPermission();
         
         u = new DB(getApplicationContext(), "U1");
         int u1I0 = u.a("U1I0", -1);
@@ -273,7 +263,7 @@ public class MainActivity extends BasePermissionAppCompatActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        ShizukuUtil.removeRequest();
+        
         xB.b().a();
     }
 
