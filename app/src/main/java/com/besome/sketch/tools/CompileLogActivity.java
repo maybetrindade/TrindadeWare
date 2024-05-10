@@ -18,17 +18,16 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.CompileLogBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.CompileLogBinding;
 
 import mod.SketchwareUtil;
 import mod.hey.studios.util.CompileLogHelper;
 import mod.hey.studios.util.Helper;
 import mod.jbk.diagnostic.CompileErrorSaver;
 import mod.jbk.util.AddMarginOnApplyWindowInsetsListener;
-import mod.trindade.dev.theme.ThemedActivity; 
 
-public class CompileLogActivity extends ThemedActivity {
+public class CompileLogActivity extends AppCompatActivity {
 
     private static final String PREFERENCE_WRAPPED_TEXT = "wrapped_text";
     private static final String PREFERENCE_USE_MONOSPACED_FONT = "use_monospaced_font";

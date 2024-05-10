@@ -5,7 +5,7 @@ import android.content.Context;
 import android.view.Window;
 import android.widget.TextView;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.Objects;
 

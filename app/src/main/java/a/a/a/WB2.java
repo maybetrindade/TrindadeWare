@@ -4,7 +4,7 @@ import android.content.Context;
 import android.text.Spanned;
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;

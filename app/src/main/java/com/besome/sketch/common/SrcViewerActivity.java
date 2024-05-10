@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.besome.sketch.beans.SrcCodeBean;
 import com.besome.sketch.ctrls.CommonSpinnerItem;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.ArrayList;
 

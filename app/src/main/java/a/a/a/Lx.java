@@ -65,7 +65,7 @@ public class Lx {
         List<BuiltInLibraries.BuiltInLibrary> excludedLibraries = ExcludeBuiltInLibrariesActivity.getExcludedLibraries(metadata.sc_id);
         if (isLibraryNotExcluded(BuiltInLibraries.ANDROIDX_APPCOMPAT, excludedLibraries) && metadata.g) {
             content += "implementation 'androidx.appcompat:appcompat:1.4.0'\r\n" +
-                    "implementation 'com.google.android.material:material:1.8.1'\r\n";
+                    "implementation 'com.google.android.material:material:1.6.1'\r\n";
         }
 
         if (isLibraryNotExcluded(BuiltInLibraries.FIREBASE_AUTH, excludedLibraries) && metadata.isFirebaseAuthUsed) {

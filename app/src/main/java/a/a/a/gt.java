@@ -17,7 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

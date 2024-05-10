@@ -10,8 +10,8 @@ import android.view.View;
 
 import com.besome.sketch.beans.ProjectLibraryBean;
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.ManageLibraryAdmobBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.ManageLibraryAdmobBinding;
 
 import a.a.a.GB;
 import a.a.a.Uu;

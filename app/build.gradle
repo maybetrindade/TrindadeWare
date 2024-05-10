@@ -24,8 +24,8 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.trindade.ware"
-        namespace "com.trindade.ware"
+        applicationId "com.sketchware.remod"
+        namespace "com.sketchware.remod"
         
         versionCode 150
         versionName "v6.4.0-SNAPSHOT-" + getCommitHash()

@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.besome.sketch.beans.ProjectLibraryBean;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.ManageLibraryAdmobAppIdBinding;
-import com.trindade.ware.databinding.ManageLibrarySettingAdmobAppIdAddBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.ManageLibraryAdmobAppIdBinding;
+import com.sketchware.remod.databinding.ManageLibrarySettingAdmobAppIdAddBinding;
 
 import a.a.a.Uu;
 import a.a.a.aB;

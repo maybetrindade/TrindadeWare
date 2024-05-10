@@ -13,8 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.MakeBlockLayoutBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.MakeBlockLayoutBinding;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -15,8 +15,8 @@ import android.widget.Toast;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.gson.Gson;
-import com.trindade.ware.BuildConfig;
-import com.trindade.ware.R;
+import com.sketchware.remod.BuildConfig;
+import com.sketchware.remod.R;
 
 import java.io.File;
 import java.util.HashMap;
@@ -26,9 +26,8 @@ import a.a.a.xB;
 import mod.RequestNetwork;
 import mod.RequestNetworkController;
 import mod.SketchwareUtil;
-import mod.trindade.dev.theme.ThemedActivity; 
 
-public class CollectErrorActivity extends ThemedActivity {
+public class CollectErrorActivity extends Activity {
     @SuppressLint("SetTextI18n")
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.besome.sketch.MainActivity;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.HashMap;
 

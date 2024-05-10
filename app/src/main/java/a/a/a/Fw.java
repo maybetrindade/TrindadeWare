@@ -21,7 +21,7 @@ import com.besome.sketch.beans.ViewBean;
 import com.besome.sketch.editor.manage.view.AddViewActivity;
 import com.besome.sketch.editor.manage.view.ManageViewActivity;
 import com.besome.sketch.editor.manage.view.PresetSettingActivity;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.ArrayList;
 import java.util.Iterator;

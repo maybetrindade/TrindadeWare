@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.DrawableRes;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import a.a.a.wB;
 

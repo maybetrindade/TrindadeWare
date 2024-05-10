@@ -43,7 +43,7 @@ import com.besome.sketch.lib.ui.CollapsibleButton;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.HashMap;
 

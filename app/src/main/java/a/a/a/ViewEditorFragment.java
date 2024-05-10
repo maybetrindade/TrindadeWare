@@ -24,7 +24,7 @@ import com.besome.sketch.editor.view.DraggingListener;
 import com.besome.sketch.editor.view.ViewEditor;
 import com.besome.sketch.editor.view.ViewProperty;
 import com.besome.sketch.editor.view.palette.PaletteWidget;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.ArrayList;
 

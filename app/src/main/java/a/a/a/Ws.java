@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 @SuppressLint("ViewConstructor")
 public class Ws extends RelativeLayout {

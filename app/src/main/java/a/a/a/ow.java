@@ -27,7 +27,7 @@ import com.besome.sketch.editor.manage.sound.AddSoundActivity;
 import com.besome.sketch.editor.manage.sound.ManageSoundActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.io.File;
 import java.nio.file.Path;

@@ -13,8 +13,8 @@ import com.besome.sketch.beans.ProjectFileBean;
 import com.besome.sketch.beans.ProjectLibraryBean;
 import com.besome.sketch.beans.SrcCodeBean;
 import com.besome.sketch.beans.ViewBean;
-import com.trindade.ware.R;
-import com.trindade.ware.xml.XmlBuilder;
+import com.sketchware.remod.R;
+import com.sketchware.remod.xml.XmlBuilder;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -332,7 +332,7 @@ public class yq {
     }
 
     /**
-     * Generates DebugActivity.java, SketchApplication.java, and TrindadeLogger.java, if necessary.
+     * Generates DebugActivity.java, SketchApplication.java, and SketchLogger.java, if necessary.
      */
     public void a(Context context) {
         boolean logcatEnabled = N.isDebugBuild && new BuildSettings(sc_id).getValue(
@@ -366,10 +366,10 @@ public class yq {
             }
             if (logcatEnabled) {
                 sketchApplicationFileContent = sketchApplicationFileContent.replace(
-                        "super.onCreate();", "TrindadeLogger.startLogging();\n" +
+                        "super.onCreate();", "SketchLogger.startLogging();\n" +
                                 "        super.onCreate();").replace(
                         "Process.killProcess(Process.myPid());",
-                        "TrindadeLogger.broadcastLog(Log.getStackTraceString(throwable));\n" +
+                        "SketchLogger.broadcastLog(Log.getStackTraceString(throwable));\n" +
                                 "                    Process.killProcess(Process.myPid());"
                 );
             }
@@ -381,11 +381,11 @@ public class yq {
         }
 
         if (logcatEnabled) {
-            if (!new File(javaDir, "TrindadeLogger.java").exists()) {
+            if (!new File(javaDir, "SketchLogger.java").exists()) {
                 String sketchLoggerFileContent = PACKAGE_PLACEHOLDER_PATTERN.matcher(fileUtil.b(
                         context,
                         "debug" + File.separator
-                                + "TrindadeLogger.java"
+                                + "SketchLogger.java"
                 )).replaceAll(packageName);
 
                 if (!notUsingCustomApplicationClass && customApplicationClassName.charAt(0) == '.') {
@@ -395,7 +395,7 @@ public class yq {
 
                 fileUtil.b(javaFilesPath + File.separator
                         + packageNameAsFolders + File.separator
-                        + "TrindadeLogger.java", sketchLoggerFileContent);
+                        + "SketchLogger.java", sketchLoggerFileContent);
             }
         }
     }
@@ -738,8 +738,8 @@ public class yq {
         ix.setYq(this);
 
         // Make generated classes viewable
-        if (!javaFiles.contains(new File(javaDir + "TrindadewareUtil.java"))) {
-            srcCodeBeans.add(new SrcCodeBean("TrindadewareUtil.java",
+        if (!javaFiles.contains(new File(javaDir + "SketchwareUtil.java"))) {
+            srcCodeBeans.add(new SrcCodeBean("SketchwareUtil.java",
                     Lx.i(packageName)));
         }
 

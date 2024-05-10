@@ -27,7 +27,7 @@ import com.besome.sketch.design.DesignActivity;
 import com.besome.sketch.editor.manage.library.ProjectComparator;
 import com.besome.sketch.projects.MyProjectSettingActivity;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

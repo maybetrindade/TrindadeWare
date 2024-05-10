@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import androidx.annotation.NonNull;
 
 import com.besome.sketch.lib.base.CollapsibleLayout;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.List;
 

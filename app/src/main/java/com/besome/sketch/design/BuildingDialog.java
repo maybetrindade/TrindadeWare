@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.besome.sketch.tools.QuizBoard;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import mod.hey.studios.util.Helper;
 

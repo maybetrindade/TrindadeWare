@@ -17,7 +17,7 @@ import androidx.annotation.DrawableRes;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 /**
  * A Sketchware-styled dialog.

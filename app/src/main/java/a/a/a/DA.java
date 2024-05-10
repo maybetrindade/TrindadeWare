@@ -3,7 +3,7 @@ package a.a.a;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 public abstract class DA extends qA {
     public DA() {
