@@ -25,11 +25,11 @@ import com.github.angads25.filepicker.model.DialogConfigs;
 import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.DialogCreateNewFileLayoutBinding;
-import com.trindade.ware.databinding.DialogInputLayoutBinding;
-import com.trindade.ware.databinding.ManageFileBinding;
-import com.trindade.ware.databinding.ManageJavaItemHsBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.DialogCreateNewFileLayoutBinding;
+import com.sketchware.remod.databinding.DialogInputLayoutBinding;
+import com.sketchware.remod.databinding.ManageFileBinding;
+import com.sketchware.remod.databinding.ManageJavaItemHsBinding;
 
 import java.io.File;
 import java.io.IOException;

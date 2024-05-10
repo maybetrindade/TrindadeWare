@@ -131,11 +131,11 @@
                         tools:text="Excluded built-in libraries" />
                 </LinearLayout>
 
-                <com.google.android.material.card.MaterialCardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
-                    app:cardElevation="5dp">
+                    >
 
                     <LinearLayout
                         android:id="@+id/item"
@@ -156,7 +156,7 @@
                             android:textSize="12sp"
                             tools:text="firebase-common-19.3.1, firebase-database-19.3.1" />
                     </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
            </LinearLayout>
         </androidx.core.widget.NestedScrollView>

@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.google.android.material.materialswitch.MaterialSwitch;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
