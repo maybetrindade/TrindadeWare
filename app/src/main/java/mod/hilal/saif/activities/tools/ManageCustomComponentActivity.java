@@ -43,9 +43,8 @@ import mod.elfilibustero.sketch.editor.component.CollapsibleCustomComponentLayou
 import mod.elfilibustero.sketch.lib.ui.SketchFilePickerDialog;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.components.ComponentsHandler;
-import mod.trindade.dev.theme.ThemedActivity; 
 
-public class ManageCustomComponentActivity extends ThemedActivity {
+public class ManageCustomComponentActivity extends AppCompatActivity {
 
     private List<HashMap<String, Object>> componentsList = new ArrayList<>();
 

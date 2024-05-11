@@ -47,8 +47,7 @@ import mod.hey.studios.util.Helper;
 import mod.hilal.saif.activities.tools.ConfigActivity;
 
 public class BackupFactory {
-    public static final String SWB_EXTENSION = "swb";
-    public static final String SETUP_EXTENSION = "setup";
+    public static final String EXTENSION = "swb";
     public static final String DEF_PATH = ".sketchware/backups/";
 
     private static final String[] resSubfolders = {
@@ -310,7 +309,7 @@ public class BackupFactory {
         // Init output zip file
         File outZip = new File(getBackupDir() + File.separator + projectNameOnly, finalFileName +
                 //Adds all the _d if exists. Otherwise its possible that there'll be an infinite loop
-                (project_name.contains("_d") ? project_name.replace(projectNameOnly, "") : "") + "." + SWB_EXTENSION);
+                (project_name.contains("_d") ? project_name.replace(projectNameOnly, "") : "") + "." + EXTENSION);
 
         // Create a duplicate if already exists (impossible now :3)
         if (outZip.exists()) {

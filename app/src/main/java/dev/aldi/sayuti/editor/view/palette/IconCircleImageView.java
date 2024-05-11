@@ -23,7 +23,7 @@ public class IconCircleImageView extends IconBase {
         ViewBean viewBean = new ViewBean();
         viewBean.type = ViewBeans.VIEW_TYPE_WIDGET_CIRCLEIMAGEVIEW;
         viewBean.convert = "de.hdodenhof.circleimageview.CircleImageView";
-        viewBean.inject = "app:civ_border_width=\"0dp\"\napp:civ_border_color=\"#008DCD\"\napp:civ_circle_background_color=\"#FFFFFF\"\napp:civ_border_overlay=\"true\"";
+        viewBean.inject = "app:civ_border_width=\"3dp\"\napp:civ_border_color=\"#008DCD\"\napp:civ_circle_background_color=\"#FFFFFF\"\napp:civ_border_overlay=\"true\"";
         viewBean.image.resName = resourceName;
         return viewBean;
     }

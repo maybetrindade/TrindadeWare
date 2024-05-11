@@ -50,9 +50,8 @@ import mod.hey.studios.code.SrcCodeEditorLegacy;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.activities.tools.ConfigActivity;
 import mod.jbk.util.AddMarginOnApplyWindowInsetsListener;
-import mod.trindade.dev.theme.ThemedActivity;
 
-public class ManageJavaActivity extends ThemedActivity {
+public class ManageJavaActivity extends AppCompatActivity {
 
     // works for both Java & Kotlin files
     private static final String PACKAGE_DECL_REGEX = "package (.*?);?\\n";

@@ -25,9 +25,8 @@ import dev.aldi.sayuti.editor.injection.AddCustomAttributeActivity;
 import dev.aldi.sayuti.editor.injection.AppCompatInjection;
 import mod.hey.studios.util.Helper;
 import mod.remaker.view.CustomAttributeView;
-import mod.trindade.dev.theme.ThemedActivity; 
 
-public class ManageCustomAttributeActivity extends ThemedActivity {
+public class ManageCustomAttributeActivity extends AppCompatActivity {
 
     private final List<String> customAttributeLocations = new LinkedList<>();
     private String sc_id = "";

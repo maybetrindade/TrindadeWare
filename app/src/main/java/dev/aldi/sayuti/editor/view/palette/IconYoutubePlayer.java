@@ -25,7 +25,7 @@ public class IconYoutubePlayer extends IconBase {
         viewBean.layout.height = ViewGroup.LayoutParams.WRAP_CONTENT;
         viewBean.text.text = getName();
         viewBean.convert = "com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView";
-        viewBean.inject = "app:autoPlay=\"true\"\napp:useWebUi=\"false\"\napp:showYouTubeButton=\"true\"\napp:showFullScreenButton=\"true\"\napp:showVideoCurrentTime=\"true\"\napp:showVideoDuration=\"true\"\napp:showSeekBar=\"true\"\napp:handleNetworkEvents=\"false\"\napp:enableAutomaticInitialization=\"true\"";
+        viewBean.inject = "app:autoPlay=\"false\"\napp:useWebUi=\"false\"\napp:showYouTubeButton=\"true\"\napp:showFullScreenButton=\"true\"\napp:showVideoCurrentTime=\"true\"\napp:showVideoDuration=\"true\"\napp:showSeekBar=\"true\"\napp:handleNetworkEvents=\"false\"\napp:enableAutomaticInitialization=\"true\"";
         return viewBean;
     }
 }

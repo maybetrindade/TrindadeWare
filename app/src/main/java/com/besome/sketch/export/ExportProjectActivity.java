@@ -33,7 +33,6 @@ import androidx.core.content.FileProvider;
 import com.airbnb.lottie.LottieAnimationView;
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
 import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.appbar.MaterialToolbar;
 import com.sketchware.remod.BuildConfig;
 import com.sketchware.remod.R;
 
@@ -107,8 +106,9 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.export_project);
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);        
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
         getSupportActionBar().setTitle(Helper.getResString(R.string.myprojects_export_project_actionbar_title));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);

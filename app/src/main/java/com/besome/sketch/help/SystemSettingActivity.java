@@ -5,19 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
 
+import com.besome.sketch.editor.property.PropertySwitchItem;
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
-
-import com.google.android.material.materialswitch.MaterialSwitch;
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.appbar.AppBarLayout;
-
 import com.sketchware.remod.R;
 
 import a.a.a.mB;
@@ -29,23 +23,12 @@ public class SystemSettingActivity extends BaseAppCompatActivity {
     private SharedPreferences.Editor preferenceEditor;
 
     private void addPreference(int key, int resName, int resDescription, boolean value) {
-        View switchLayout = LayoutInflater.from(this).inflate(R.layout.switch_layout, null);
-        MaterialSwitch materialSwitch = switchLayout.findViewById(R.id.material_switch);
-        materialSwitch.setChecked(value);
-        materialSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (key == 0) {
-                preferenceEditor.putBoolean("P12I0", isChecked);
-            } else if (key == 1) {
-                preferenceEditor.putBoolean("P12I2", isChecked);
-            }
-            preferenceEditor.apply();
-        });
-
-        TextView nameTextView = switchLayout.findViewById(R.id.text_name);
-        TextView descTextView = switchLayout.findViewById(R.id.text_desc);
-        nameTextView.setText(Helper.getResString(resName));
-        descTextView.setText(Helper.getResString(resDescription));
-        contentLayout.addView(switchLayout);
+        PropertySwitchItem switchItem = new PropertySwitchItem(this);
+        switchItem.setKey(key);
+        switchItem.setName(Helper.getResString(resName));
+        switchItem.setDesc(Helper.getResString(resDescription));
+        switchItem.setValue(value);
+        contentLayout.addView(switchItem);
     }
 
     @Override
@@ -59,19 +42,19 @@ public class SystemSettingActivity extends BaseAppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.base_activity);
+        setContentView(R.layout.system_settings);
 
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-       // findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
+        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
         getSupportActionBar().setTitle(Helper.getResString(R.string.main_drawer_title_system_settings));
         toolbar.setNavigationOnClickListener(view -> {
             if (!mB.a()) onBackPressed();
         });
 
-        contentLayout = findViewById(R.id.root);
+        contentLayout = findViewById(R.id.content);
         SharedPreferences preferences = getSharedPreferences("P12", Context.MODE_PRIVATE);
         preferenceEditor = preferences.edit();
 
@@ -85,6 +68,18 @@ public class SystemSettingActivity extends BaseAppCompatActivity {
     }
 
     private boolean saveSettings() {
+        for (int i = 0; i < contentLayout.getChildCount(); i++) {
+            View childAtView = contentLayout.getChildAt(i);
+            if (childAtView instanceof PropertySwitchItem) {
+                PropertySwitchItem propertySwitchItem = (PropertySwitchItem) childAtView;
+                if (0 == propertySwitchItem.getKey()) {
+                    preferenceEditor.putBoolean("P12I0", propertySwitchItem.getValue());
+                } else if (1 == propertySwitchItem.getKey()) {
+                    preferenceEditor.putBoolean("P12I2", propertySwitchItem.getValue());
+                }
+            }
+        }
+
         return preferenceEditor.commit();
     }
 }

@@ -14,12 +14,11 @@ import com.sketchware.remod.R;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.lib.code_editor.CodeEditorLayout;
 import mod.hey.studios.lib.code_editor.ColorScheme;
-import mod.trindade.dev.theme.ThemedActivity; 
 
 /**
  * Legacy code editor
  */
-public class SrcCodeEditorLegacy extends ThemedActivity {
+public class SrcCodeEditorLegacy extends Activity {
 
     private CodeEditorLayout codeEditor;
     private SharedPreferences sp;

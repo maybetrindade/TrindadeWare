@@ -48,6 +48,9 @@ Para selecionar a variante de build apropriada no Android Studio, use a guia Bui
 > [!DICA ]
 > Você também pode verificar o pacote `mod`, que contém a maioria das alterações dos contribuidores. 
 
+## Avisos
+> O módulo [app-trindadeware] é onde está as alterações do TrindadeWare,  por conta de bugs ainda não estam no app.
+
 ## Contribuindo 
 
 Se você gostaria de contribuir com o TrindadeWare, siga estes passos: 

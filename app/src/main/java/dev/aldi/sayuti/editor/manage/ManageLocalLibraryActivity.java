@@ -40,9 +40,8 @@ import mod.hey.studios.util.Helper;
 import mod.jbk.build.BuiltInLibraries;
 import mod.jbk.util.AddMarginOnApplyWindowInsetsListener;
 import mod.pranav.dependency.resolver.DependencyResolver;
-import mod.trindade.dev.theme.ThemedActivity;
 
-public class ManageLocalLibraryActivity extends ThemedActivity implements View.OnClickListener {
+public class ManageLocalLibraryActivity extends AppCompatActivity implements View.OnClickListener {
     private boolean notAssociatedWithProject = false;
     private String local_lib_file = "";
     private static String local_libs_path = "";
@@ -65,9 +64,9 @@ public class ManageLocalLibraryActivity extends ThemedActivity implements View.O
         if (getIntent().hasExtra("sc_id")) {
             String sc_id = Objects.requireNonNull(getIntent().getStringExtra("sc_id"));
             notAssociatedWithProject = sc_id.equals("system");
-            local_lib_file = FileUtil.getExternalStorageDir().concat("/.trindadeware/data/").concat(sc_id.concat("/local_library"));
+            local_lib_file = FileUtil.getExternalStorageDir().concat("/.sketchware/data/").concat(sc_id.concat("/local_library"));
         }
-        local_libs_path = FileUtil.getExternalStorageDir().concat("/.trindadeware/libs/local_libs/");
+        local_libs_path = FileUtil.getExternalStorageDir().concat("/.sketchware/libs/local_libs/");
         loadFiles();
     }
 

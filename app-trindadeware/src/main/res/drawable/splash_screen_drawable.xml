@@ -1,0 +1,12 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="?attr/colorBackground" />
+    <item
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+        <bitmap
+            android:src="@mipmap/ic_launcher_foreground"
+            android:gravity="center"
+            android:width="200dp"
+            android:height="200dp"/>
+    </item>
+</layer-list>

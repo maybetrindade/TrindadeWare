@@ -22,9 +22,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
-
 import com.google.android.material.materialswitch.MaterialSwitch;
-import com.google.android.material.appbar.MaterialToolbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.sketchware.remod.R;
@@ -77,11 +75,17 @@ public class ExcludeBuiltInLibrariesActivity extends BaseAppCompatActivity imple
             sc_id = savedInstanceState.getString("sc_id");
         }
 
-        MaterialToolbar materialToolbar = findViewById(R.id.toolbar);        
-        materialToolbar.setNavigationIcon(R.drawable.ic_back);
-        materialToolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
-        materialToolbar.setTitle("Exclude Built-in Libraries");
-        
+        TextView title = findViewById(R.id.tx_toolbar_title);
+        title.setText("Exclude built-in libraries");
+        ImageView back = findViewById(R.id.ig_toolbar_back);
+        back.setOnClickListener(Helper.getBackPressedClickListener(this));
+        Helper.applyRippleToToolbarView(back);
+        ImageView reset = findViewById(R.id.ig_toolbar_load_file);
+        reset.setImageResource(R.drawable.ic_restore_white);
+        reset.setVisibility(View.VISIBLE);
+        reset.setOnClickListener(this);
+        Helper.applyRippleToToolbarView(reset);
+
         TextView enable = findViewById(R.id.tv_enable);
         enable.setText(Helper.getResString(R.string.design_library_settings_title_enabled));
         TextView warning = findViewById(R.id.tv_desc);

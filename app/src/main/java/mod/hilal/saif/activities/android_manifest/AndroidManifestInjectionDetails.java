@@ -33,9 +33,8 @@ import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.android_manifest.ActComponentsDialog;
 import mod.remaker.view.CustomAttributeView;
-import mod.trindade.dev.theme.ThemedActivity; 
 
-public class AndroidManifestInjectionDetails extends ThemedActivity {
+public class AndroidManifestInjectionDetails extends Activity {
 
     private static String ATTRIBUTES_FILE_PATH;
     private final ArrayList<HashMap<String, Object>> listMap = new ArrayList<>();

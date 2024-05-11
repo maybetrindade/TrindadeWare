@@ -32,9 +32,8 @@ import mod.SketchwareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
 import mod.remaker.view.CustomAttributeView;
-import mod.trindade.dev.theme.ThemedActivity; 
 
-public class AddCustomAttributeActivity extends ThemedActivity {
+public class AddCustomAttributeActivity extends AppCompatActivity {
 
     private ArrayList<HashMap<String, Object>> activityInjections = new ArrayList<>();
     private ListView listView;
@@ -62,7 +61,7 @@ public class AddCustomAttributeActivity extends ThemedActivity {
 
             title.setText(widgetType);
 
-            activityInjectionsFilePath = FileUtil.getExternalStorageDir() + "/.trindadeware/data/" + sc_id + "/injection/appcompat/" + activityFilename;
+            activityInjectionsFilePath = FileUtil.getExternalStorageDir() + "/.sketchware/data/" + sc_id + "/injection/appcompat/" + activityFilename;
             if (!FileUtil.isExistFile(activityInjectionsFilePath) || FileUtil.readFile(activityInjectionsFilePath).equals("")) {
                 activityInjections = new Gson().fromJson(AppCompatInjection.getDefaultActivityInjections(), Helper.TYPE_MAP_LIST);
             } else {

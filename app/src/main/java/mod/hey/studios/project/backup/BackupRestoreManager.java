@@ -132,10 +132,10 @@ public class BackupRestoreManager {
         properties.root = Environment.getExternalStorageDirectory();
         properties.error_dir = Environment.getExternalStorageDirectory();
         properties.offset = new File(BackupFactory.getBackupDir());
-        properties.extensions = new String[]{BackupFactory.SWB_EXTENSION};
+        properties.extensions = new String[]{BackupFactory.EXTENSION};
 
         FilePickerDialog fpd = new FilePickerDialog(act, properties);
-        fpd.setTitle("Select backups to restore (" + BackupFactory.SWB_EXTENSION + ")");
+        fpd.setTitle("Select backups to restore (" + BackupFactory.EXTENSION + ")");
         fpd.setDialogSelectionListener(files -> {
             for (int i = 0; i < files.length; i++) {
                 String backupFilePath = files[i];
