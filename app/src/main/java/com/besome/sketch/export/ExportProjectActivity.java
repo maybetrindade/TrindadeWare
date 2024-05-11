@@ -107,7 +107,7 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.export_project);
-        MaterialToolbar = findViewById(R.id.toolbar);
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);        
         getSupportActionBar().setTitle(Helper.getResString(R.string.myprojects_export_project_actionbar_title));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
