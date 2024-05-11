@@ -48,7 +48,7 @@ import mod.hilal.saif.activities.tools.ConfigActivity;
 
 public class BackupFactory {
     public static final String SWB_EXTENSION = "swb";
-    public static final String EXTENSIO
+    public static final String SETUP_EXTENSION = "setup";
     public static final String DEF_PATH = ".sketchware/backups/";
 
     private static final String[] resSubfolders = {
