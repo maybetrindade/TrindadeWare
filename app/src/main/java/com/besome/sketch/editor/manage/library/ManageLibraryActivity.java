@@ -21,7 +21,7 @@ import com.besome.sketch.editor.manage.library.compat.ManageCompatActivity;
 import com.besome.sketch.editor.manage.library.firebase.ManageFirebaseActivity;
 import com.besome.sketch.editor.manage.library.googlemap.ManageGoogleMapActivity;
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.lang.ref.WeakReference;
 
