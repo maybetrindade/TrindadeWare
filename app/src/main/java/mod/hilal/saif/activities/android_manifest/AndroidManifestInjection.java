@@ -28,8 +28,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.besome.sketch.editor.manage.library.LibraryItemView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.gson.Gson;
-import com.trindade.ware.R;
-import com.trindade.ware.databinding.ProgressMsgBoxBinding;
+import com.sketchware.remod.R;
+import com.sketchware.remod.databinding.ProgressMsgBoxBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
