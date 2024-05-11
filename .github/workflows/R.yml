@@ -33,5 +33,5 @@ jobs:
       - name: Upload release apk
         uses: actions/upload-artifact@v3
         with:
-          name: app-release
-          path: app/build/outputs/apk/release/TrindadeWare-Release.apk
+          name: TrindadeWare-Release
+          path: app/build/outputs/apk/release/
