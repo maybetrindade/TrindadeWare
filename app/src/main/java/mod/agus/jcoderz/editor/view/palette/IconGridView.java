@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 import com.besome.sketch.beans.LayoutBean;
 import com.besome.sketch.beans.ViewBean;
 import com.besome.sketch.editor.view.palette.IconBase;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import mod.agus.jcoderz.beans.ViewBeans;
 

@@ -2191,6 +2191,9 @@ Please try again later"</string>
     <string name="link_telegram_invite">https://t.me/trindadeware</string>
     <string name="link_about_team">https://raw.githubusercontent.com/aquilesTrindade/TrindadeAPI/main/database/trindadeware.json</string>
     <string name="link_github_url">https://github.com/aquilesTrindade/TrindadeWare</string>
+    
+    <!-- APIs -->
+    <string name="api_mobsoft_console">a274f257-a4e8-44cf-a20d-825df76ac782</string>
 
     <!-- file picker -->
     <string name="files">Files</string>

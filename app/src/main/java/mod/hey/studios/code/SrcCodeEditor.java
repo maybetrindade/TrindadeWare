@@ -19,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;

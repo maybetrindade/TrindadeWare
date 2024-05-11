@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import com.besome.sketch.beans.ViewBean;
 import com.besome.sketch.editor.view.palette.IconBase;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import mod.agus.jcoderz.beans.ViewBeans;
 
@@ -33,7 +33,7 @@ public class IconMaterialButton extends IconBase {
         viewBean.text.textColor = Color.WHITE;
         viewBean.text.text = getName();
         viewBean.convert = "com.google.android.material.button.MaterialButton";
-        viewBean.inject = "android:textAppearance=\"@style/TextAppearance.MaterialComponents.Button\"\napp:backgroundTint=\"@color/colorPrimary\"\napp:cornerRadius=\"8dp\"\nstyle=\"@style/Widget.MaterialComponents.Button\"";
+        viewBean.inject = "android:textAppearance=\"@style/TextAppearance.Material3.Button\"\napp:backgroundTint=\"@color/colorPrimary\"\napp:cornerRadius=\"10dp\"\nstyle=\"@style/Widget.Material3.Button\"";
         return viewBean;
     }
 }

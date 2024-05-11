@@ -27,7 +27,7 @@ import com.google.android.material.materialswitch.MaterialSwitch;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.io.File;
 import java.lang.ref.WeakReference;

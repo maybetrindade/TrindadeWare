@@ -2,7 +2,7 @@ package dev.aldi.sayuti.editor.injection;
 
 import java.util.ArrayList;
 
-import com.trindade.ware.xml.XmlBuilder;
+import com.sketchware.remod.xml.XmlBuilder;
 import a.a.a.jq;
 import mod.agus.jcoderz.lib.FileUtil;
 

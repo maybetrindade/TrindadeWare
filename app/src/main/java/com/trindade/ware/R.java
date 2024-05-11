@@ -1,3 +1,5 @@
 package com.trindade.ware;
 
-public class R extends com.sketchware.remod.R {}
+import com.sketchware.remod.R;
+
+public class R extends R  {}

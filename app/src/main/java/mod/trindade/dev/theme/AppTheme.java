@@ -2,7 +2,7 @@ package mod.trindade.dev.theme;
 
 import mod.hilal.saif.activities.tools.ConfigActivity; 
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import android.content.Context;
 
@@ -29,7 +29,8 @@ public class AppTheme {
     public void appThemes () {
        addTheme("Sketchware-Default");
        addTheme("Florest");
-       addTheme("Red florest");
+       addTheme("Red Florest");
+       addTheme("Material-You");
     }
     
     public void addTheme (String themeName) {
@@ -48,7 +49,7 @@ public class AppTheme {
             appThemeID = R.style.AppTheme;
        } else if (current("Florest")) {
             appThemeID = R.style.AppTheme_Green;
-       } else if (current("Red florest")) {
+       } else if (current("Red Florest")) {
             appThemeID = R.style.AppTheme_Red;
        }
        return appThemeID;
@@ -61,7 +62,7 @@ public class AppTheme {
             appThemeID = R.style.AppTheme_Main;
        } else if (current("Florest")) {
             appThemeID = R.style.AppTheme_Green_Main;
-       } else if (current("Red florest")) {
+       } else if (current("Red Florest")) {
             appThemeID = R.style.AppTheme_Red_Main;
        }      
        return appThemeID;
@@ -74,7 +75,7 @@ public class AppTheme {
             appThemeID = R.style.Theme_AppCompat_Light_NoActionBar_Translucent;
        } else if (current("Florest")) {
             appThemeID = R.style.Theme_Green_AppCompat_Light_NoActionBar_Translucent;
-       } else if (current("Red florest")) {
+       } else if (current("Red Florest")) {
             appThemeID = R.style.Theme_Red_AppCompat_Light_NoActionBar_Translucent;
        }      
        return appThemeID;
@@ -85,9 +86,11 @@ public class AppTheme {
             return 0;
        } else if (current("Florest")) {
             return 1;
-       } else if (current("Red florest")) {
+       } else if (current("Red Florest")) {
             return 2;
-       }      
+       } else if (current("Material-You")) {
+            return 3;
+       }
        return 0;
     }
     

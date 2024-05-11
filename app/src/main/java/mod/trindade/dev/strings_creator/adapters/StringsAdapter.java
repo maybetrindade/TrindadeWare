@@ -25,7 +25,7 @@ import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 import mod.trindade.dev.strings_creator.classes.SimpleHighlighter;
 import mod.trindade.dev.strings_creator.classes.SyntaxScheme;
 

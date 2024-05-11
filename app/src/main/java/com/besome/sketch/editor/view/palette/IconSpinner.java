@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.besome.sketch.beans.LayoutBean;
 import com.besome.sketch.beans.ViewBean;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 public class IconSpinner extends IconBase {
     public IconSpinner(Context context) {

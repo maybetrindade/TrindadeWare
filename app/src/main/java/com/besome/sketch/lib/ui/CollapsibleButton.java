@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 public class CollapsibleButton extends LinearLayout {
     private int id;

@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import a.a.a.Sp;
 import a.a.a.aB;

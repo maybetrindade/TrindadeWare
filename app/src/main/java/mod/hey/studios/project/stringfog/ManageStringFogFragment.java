@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.trindade.ware.databinding.FragmentStringfogManagerBinding;
+import com.sketchware.remod.databinding.FragmentStringfogManagerBinding;
 
 public class ManageStringFogFragment extends BottomSheetDialogFragment {
 

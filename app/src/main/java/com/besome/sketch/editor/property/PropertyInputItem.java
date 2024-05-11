@@ -12,7 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.besome.sketch.beans.ProjectFileBean;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import a.a.a.Kw;
 import a.a.a.OB;

@@ -6,7 +6,7 @@ import android.content.Context;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 public class PropertyOneLineItem extends RelativeLayout {
     private int key = -1;

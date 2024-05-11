@@ -53,33 +53,16 @@ Para selecionar a variante de build apropriada no Android Studio, use a guia Bui
 Se você gostaria de contribuir com o TrindadeWare, siga estes passos: 
 
 1. Bifurque este repositório. 
-2. Faça alterações em seu repositório bifurcado. 
+2. Faça alter
+ ações em seu repositório bifurcado. 
 3. Teste essas mudanças. 
 4. Crie uma solicitação pull neste repositório. 
 5. Sua solicitação pull será revisada pelos membros do repositório e mesclada se for aceita. 
 
+> Aviso: se for criar uma nova tela faca isso: 
+- Ao inves de usar [Activity] ou [AppCompatActivity] use [ThemedActivity]: Porque? : Porquê usando essa Activity você já tera o sistema de temas adicionado em sua tela!
+
 Aceitamos contribuições de qualquer tamanho, sejam elas recursos importantes ou correções de bugs, mas observe que todas as contribuições serão revisadas minuciosamente.
- 
-### Commit Message
-
-Ao fazer alterações em um ou mais arquivos, você precisa confirmar essas alterações com uma mensagem de confirmação. Aqui estão algumas diretrizes: 
-
-- Mantenha a mensagem de commit curta e detalhada. 
-- Use um destes tipos de commit como prefixo: 
-  - `feat:` para um recurso, possivelmente melhorando algo já existente. 
-  - `fix:` para uma correção, como uma correção de bug. 
-  - `style:` para recursos e atualizações relacionadas ao estilo. 
-  - `refactor:` para refatorar uma seção específica da base de código. 
-  - `test:` para tudo relacionado a testes. 
-  - `docs:` para tudo relacionado à documentação. 
-  - `chore:` para manutenção de código (você também pode usar emojis para representar tipos de commit). 
-
-Examples:
-- `feat: Acelere a compilação com a nova técnica` 
-- `fix: Corrigir falha durante a inicialização em determinados telefones 
-- `refactor: Reformate o código em File.java`     
-
-- Lembrando que dependendo do seu PR (Pull Request) mesmo sem seguir as regras do commit ele pode ser aceito!
 
 ## Obrigado por contribuir 
 

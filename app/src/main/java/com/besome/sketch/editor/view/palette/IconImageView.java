@@ -3,7 +3,7 @@ package com.besome.sketch.editor.view.palette;
 import android.content.Context;
 
 import com.besome.sketch.beans.ViewBean;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 public class IconImageView extends IconBase {
     public String f = "";

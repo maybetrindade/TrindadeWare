@@ -27,7 +27,7 @@ import com.besome.sketch.lib.base.BasePermissionAppCompatActivity;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.io.File;
 import java.io.IOException;

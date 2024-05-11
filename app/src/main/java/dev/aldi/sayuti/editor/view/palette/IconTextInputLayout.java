@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 
 import com.besome.sketch.beans.ViewBean;
 import com.besome.sketch.editor.view.palette.IconBase;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import mod.agus.jcoderz.beans.ViewBeans;
 
@@ -28,7 +28,7 @@ public class IconTextInputLayout extends IconBase {
         viewBean.layout.paddingRight = 0;
         viewBean.layout.paddingBottom = 0;
         viewBean.convert = "com.google.android.material.textfield.TextInputLayout";
-        viewBean.inject = "style=\"@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox\"";
+        viewBean.inject = "style=\"@style/Widget.Material3.TextInputLayout.OutlinedBox\"";
         return viewBean;
     }
 }

@@ -37,7 +37,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 import mod.trindade.dev.strings_creator.adapters.StringsAdapter;
 import mod.trindade.dev.strings_creator.classes.SimpleHighlighter;
 import mod.trindade.dev.strings_creator.classes.copyToClipboard;

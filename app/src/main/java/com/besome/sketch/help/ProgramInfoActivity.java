@@ -16,7 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
 import com.besome.sketch.lib.ui.PropertyOneLineItem;
 import com.besome.sketch.lib.ui.PropertyTwoLineItem;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import a.a.a.GB;
 import a.a.a.aB;

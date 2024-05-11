@@ -14,7 +14,7 @@ import androidx.cardview.widget.CardView;
 import com.besome.sketch.beans.BlockBean;
 import com.besome.sketch.lib.ui.CustomScrollView;
 import com.google.android.material.card.MaterialCardView;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.util.ArrayList;
 

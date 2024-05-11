@@ -2,7 +2,7 @@ package mod.agus.jcoderz.beans;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.ImmutableBiMap;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 public class ViewBeans {
 

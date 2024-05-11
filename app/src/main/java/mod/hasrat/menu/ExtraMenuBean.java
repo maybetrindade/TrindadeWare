@@ -20,7 +20,7 @@ import com.besome.sketch.editor.LogicEditorActivity;
 import com.github.angads25.filepicker.model.DialogConfigs;
 import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.io.File;
 import java.util.ArrayList;
