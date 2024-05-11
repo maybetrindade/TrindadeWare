@@ -3,7 +3,7 @@ package a.a.a;
 import android.media.MediaPlayer;
 
 import com.besome.sketch.editor.manage.sound.AddSoundCollectionActivity;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 public class Iv implements MediaPlayer.OnPreparedListener {
     public final String a;

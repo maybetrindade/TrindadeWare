@@ -33,7 +33,7 @@ import androidx.core.content.FileProvider;
 import com.airbnb.lottie.LottieAnimationView;
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
 import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.toolbar.MaterialToolbar;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.sketchware.remod.BuildConfig;
 import com.sketchware.remod.R;
 

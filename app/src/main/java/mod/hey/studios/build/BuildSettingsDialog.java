@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputLayout;
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import mod.SketchwareUtil;
 
