@@ -22,6 +22,7 @@ import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -30,6 +31,7 @@ import com.github.angads25.filepicker.model.DialogConfigs;
 import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.appbar.MaterialToolbar; 
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.sketchware.remod.R;
@@ -43,8 +45,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 import mod.SketchwareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class BlocksManagerDetailsActivity extends AppCompatActivity {
+public class BlocksManagerDetailsActivity extends ThemedActivity {
 
     private static final String BLOCK_EXPORT_PATH = new File(FileUtil.getExternalStorageDir(), ".sketchware/resources/block/export/").getAbsolutePath();
 
@@ -62,6 +65,7 @@ public class BlocksManagerDetailsActivity extends AppCompatActivity {
     private int palette = 0;
     private Parcelable listViewSavedState;
     private ImageView swap;
+    private MaterialToolbar toolbar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -74,12 +78,17 @@ public class BlocksManagerDetailsActivity extends AppCompatActivity {
     private void initialize() {
         _fab = findViewById(R.id.fab);
         listview1 = findViewById(R.id.listview);
-        ImageView back_icon = findViewById(R.id.backicon);
+        toolbar = findViewById(R.id.toolbar);        
+        toolbar.setNavigationIcon(R.drawable.ic_back);
+        toolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
+        toolbar.setTitle("Mod Settings");
+        /*ImageView back_icon = findViewById(R.id.backicon);
         page_title = findViewById(R.id.pagetitle);
         import_export = findViewById(R.id.import_export);
         swap = findViewById(R.id.swap);
         back_icon.setOnClickListener(Helper.getBackPressedClickListener(this));
         Helper.applyRippleToToolbarView(back_icon);
+        
         import_export.setOnClickListener(v -> {
             PopupMenu popupMenu = new PopupMenu(this, import_export);
             final Menu menu = popupMenu.getMenu();
@@ -127,7 +136,7 @@ public class BlocksManagerDetailsActivity extends AppCompatActivity {
             ((BaseAdapter) listview1.getAdapter()).notifyDataSetChanged();
             listview1.onRestoreInstanceState(savedInstanceState);
         });
-        Helper.applyRippleToToolbarView(swap);
+        Helper.applyRippleToToolbarView(swap);*/
         _fab.setOnClickListener(v -> {
             Object paletteColor = pallet_list.get(palette - 9).get("color");
             if (paletteColor instanceof String) {
@@ -208,7 +217,7 @@ public class BlocksManagerDetailsActivity extends AppCompatActivity {
         blocks_path = getIntent().getStringExtra("dirB");
         _refreshLists();
         if (palette == -1) {
-            page_title.setText("Recycle bin");
+            toolbar.setTitle("Recycle bin");
             swap.setVisibility(View.GONE);
             import_export.setVisibility(View.GONE);
             _fab.setVisibility(View.GONE);
@@ -216,7 +225,7 @@ public class BlocksManagerDetailsActivity extends AppCompatActivity {
             Object paletteName = pallet_list.get(palette - 9).get("name");
 
             if (paletteName instanceof String) {
-                page_title.setText((String) paletteName);
+                toolbar.setTitle((String) paletteName);
             }
         }
     }

@@ -16,6 +16,7 @@ import android.widget.TextView;
 import androidx.annotation.DrawableRes;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.sketchware.remod.R;
 
 /**
@@ -92,7 +93,7 @@ public class aB extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-
+        
         getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
 
@@ -100,6 +101,7 @@ public class aB extends Dialog {
             LayoutParams attributes = getWindow().getAttributes();
             attributes.width = ViewGroup.LayoutParams.MATCH_PARENT;
             getWindow().setAttributes(attributes);
+            getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         }
         setContentView(R.layout.dialog);
 

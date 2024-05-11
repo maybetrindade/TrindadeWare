@@ -29,8 +29,9 @@ import mod.hasrat.tools.ComponentHelper;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.components.ComponentsHandler;
 import mod.jbk.util.OldResourceIdMapper;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class AddCustomComponentActivity extends AppCompatActivity implements View.OnClickListener {
+public class AddCustomComponentActivity extends ThemedActivity implements View.OnClickListener {
 
     private boolean isEditMode = false;
     private int position = 0;

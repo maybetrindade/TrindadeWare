@@ -48,8 +48,9 @@ import mod.hasrat.highlighter.SimpleHighlighter;
 import mod.hasrat.lib.BaseTextWatcher;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.lib.PCP;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class BlocksManagerCreatorActivity extends AppCompatActivity {
+public class BlocksManagerCreatorActivity extends ThemedActivity {
 
     private final ArrayList<String> id_detector = new ArrayList<>();
     private ArrayList<HashMap<String, Object>> blocksList = new ArrayList<>();

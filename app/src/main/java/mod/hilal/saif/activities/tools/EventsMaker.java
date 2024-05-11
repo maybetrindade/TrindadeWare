@@ -42,8 +42,9 @@ import mod.SketchwareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.events.EventsHandler;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class EventsMaker extends Activity {
+public class EventsMaker extends ThemedActivity {
 
     public static final File EVENT_EXPORT_LOCATION = new File(Environment.getExternalStorageDirectory(),
             ".sketchware/data/system/export/events/");

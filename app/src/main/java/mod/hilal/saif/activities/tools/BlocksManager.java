@@ -29,6 +29,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.appbar.MaterialToolbar; 
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
 import com.sketchware.remod.R;
@@ -48,8 +49,9 @@ import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.editor.manage.block.v2.BlockLoader;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.lib.PCP;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class BlocksManager extends AppCompatActivity {
+public class BlocksManager extends ThemedActivity {
 
     private ArrayList<HashMap<String, Object>> all_blocks_list = new ArrayList<>();
     private String blocks_dir = "";
@@ -77,19 +79,17 @@ public class BlocksManager extends AppCompatActivity {
     private void initialize() {
         FloatingActionButton _fab = findViewById(R.id.fab);
         listview1 = findViewById(R.id.list_pallete);
-        ImageView back = findViewById(R.id.ig_toolbar_back);
+        /*ImageView back = findViewById(R.id.ig_toolbar_back);
         TextView title = findViewById(R.id.tx_toolbar_title);
-        ImageView settings = findViewById(R.id.ig_toolbar_load_file);
+        ImageView settings = findViewById(R.id.ig_toolbar_load_file);*/
         card2 = findViewById(R.id.recycle_bin);
         card2_sub = findViewById(R.id.recycle_sub);
 
-        back.setOnClickListener(Helper.getBackPressedClickListener(this));
-        Helper.applyRippleToToolbarView(back);
-        title.setText("Block manager");
-        settings.setVisibility(View.VISIBLE);
-        settings.setImageResource(R.drawable.settings_96_white);
-        Helper.applyRippleToToolbarView(settings);
-        settings.setOnClickListener(v -> {
+        MaterialToolbar materialToolbar = findViewById(R.id.toolbar);        
+        materialToolbar.setNavigationIcon(R.drawable.ic_back);
+        materialToolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
+        materialToolbar.setTitle("Mod Settings");
+       /* settings.setOnClickListener(v -> {
             aB dialog = new aB(this);
             dialog.a(R.drawable.ic_folder_48dp);
             dialog.b("Block configuration");
@@ -150,7 +150,7 @@ public class BlocksManager extends AppCompatActivity {
                 dialog.dismiss();
             });
             dialog.show();
-        });
+        });*/
 
         _fab.setOnClickListener(v -> showPaletteDialog(false, null, null, null, null));
     }

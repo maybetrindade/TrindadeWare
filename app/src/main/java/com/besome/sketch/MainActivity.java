@@ -53,6 +53,7 @@ import mod.ilyasse.activities.about.AboutModActivity;
 import mod.jbk.util.LogUtil;
 import mod.tyron.backup.CallBackTask;
 import mod.tyron.backup.SingleCopyAsyncTask;
+import mod.trindade.dev.theme.AppTheme;
 
 public class MainActivity extends BasePermissionAppCompatActivity {
     private final OnBackPressedCallback closeDrawer = new OnBackPressedCallback(true) {
@@ -88,6 +89,7 @@ public class MainActivity extends BasePermissionAppCompatActivity {
         intent.setData(Uri.parse("package:" + getApplicationContext().getPackageName()));
         startActivityForResult(intent, i);
     }
+    
 
     @Override
     public void l() {
@@ -102,6 +104,7 @@ public class MainActivity extends BasePermissionAppCompatActivity {
             projectsFragment.refreshProjectsList();
         }
     }
+    
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -139,17 +142,16 @@ public class MainActivity extends BasePermissionAppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme_Main);
-        EdgeToEdge.enable(this);
+        AppTheme appThemeHelper = new AppTheme(this);
+        setTheme(appThemeHelper.getMainTheme());
         super.onCreate(savedInstanceState);
-
+        
         tryLoadingCustomizedAppStrings();
         setContentView(R.layout.main);
-        Insetter.builder()
-                .padding(WindowInsetsCompat.Type.navigationBars(), Side.create(true, false, true, false))
-                .applyToView(findViewById(R.id.layout_coordinator));
+        Insetter.builder().padding(WindowInsetsCompat.Type.navigationBars(), Side.create(true, false, true, false)).applyToView(findViewById(R.id.layout_coordinator));
         setSupportActionBar(findViewById(R.id.toolbar));
-
+        
+        
         u = new DB(getApplicationContext(), "U1");
         int u1I0 = u.a("U1I0", -1);
         long u1I1 = u.e("U1I1");
@@ -237,8 +239,8 @@ public class MainActivity extends BasePermissionAppCompatActivity {
                 }).execute(data);
             }
         } else if (hasStorageAccess && !ConfigActivity.isSettingEnabled(ConfigActivity.SETTING_SKIP_MAJOR_CHANGES_REMINDER)) {
-            aB dialog = new aB(this);
-            dialog.b("New changes in v6.4.0");
+           /*aB dialog = new aB(this);
+            dialog.b("Wel");
             dialog.a("Just as a reminder; There have been many changes since v6.3.0 fix1, " +
                     "and it's important to know them all if you want your projects to still work.\n" +
                     "You can view all changes whenever you want at the updated About Sketchware Pro screen.");
@@ -254,13 +256,14 @@ public class MainActivity extends BasePermissionAppCompatActivity {
                 ConfigActivity.setSetting(ConfigActivity.SETTING_SKIP_MAJOR_CHANGES_REMINDER, true);
                 dialog.dismiss();
             });
-            dialog.show();
+            dialog.show();*/
         }
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        
         xB.b().a();
     }
 
