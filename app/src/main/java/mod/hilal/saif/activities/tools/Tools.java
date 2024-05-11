@@ -39,8 +39,10 @@ import mod.alucard.tn.apksigner.ApkSigner;
 import mod.hey.studios.code.SrcCodeEditorLegacy;
 import mod.hey.studios.util.Helper;
 import mod.khaled.logcat.LogReaderActivity;
+
 import mod.trindade.dev.theme.AppTheme;
 import mod.trindade.dev.theme.ThemedActivity;   
+import mod.trindade.dev.filepicker.TFilePickerDialog;
 
 public class Tools extends ThemedActivity {
 
@@ -84,7 +86,7 @@ public class Tools extends ThemedActivity {
         properties.root = getFilesDir().getParentFile();
         properties.error_dir = getExternalCacheDir();
         properties.extensions = null;
-        FilePickerDialog dialog = new FilePickerDialog(this, properties);
+        TFilePickerDialog dialog = new TFilePickerDialog(this, properties);
         dialog.setTitle("Select an entry to modify");
         dialog.setDialogSelectionListener(files -> {
             final boolean isDirectory = new File(files[0]).isDirectory();
