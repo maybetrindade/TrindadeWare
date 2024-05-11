@@ -20,7 +20,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.trindade.ware.R;
+import com.sketchware.remod.R;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
