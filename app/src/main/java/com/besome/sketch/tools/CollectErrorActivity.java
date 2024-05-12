@@ -26,8 +26,9 @@ import a.a.a.xB;
 import mod.RequestNetwork;
 import mod.RequestNetworkController;
 import mod.SketchwareUtil;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class CollectErrorActivity extends Activity {
+public class CollectErrorActivity extends ThemedActivity {
     @SuppressLint("SetTextI18n")
     @Override
     public void onCreate(Bundle savedInstanceState) {
