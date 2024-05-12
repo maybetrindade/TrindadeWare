@@ -57,15 +57,13 @@ public class Lx {
                 "proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n" +
                 "}\r\n" +
                 "}\r\n" +
-                "buildFeatures " +
-                "{"+
-                "viewBinding true\n" +
-                "buildConfig true" +
-                "}\r\n" +
-                "}\r\n" +
-                "\r\n" +
-                "dependencies {\r\n" +
-                "implementation fileTree(dir: 'libs', include: ['*.jar'])\r\n";
+                "buildFeatures {\n" +
+           "    viewBinding true\n" +
+           "    buildConfig true\n" +
+           "}\n\n" +
+           "}\n\n" +
+           "dependencies {\n" +
+           "    implementation fileTree(dir: 'libs', include: ['*.jar'])\n";
 
         List<BuiltInLibraries.BuiltInLibrary> excludedLibraries = ExcludeBuiltInLibrariesActivity.getExcludedLibraries(metadata.sc_id);
         if (isLibraryNotExcluded(BuiltInLibraries.ANDROIDX_APPCOMPAT, excludedLibraries) && metadata.g) {
