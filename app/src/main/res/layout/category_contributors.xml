@@ -88,12 +88,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="Github"
-                android:textSize="12sp"
-                android:layout_marginBottom="3dp"
-                android:paddingHorizontal="14dp"
+                android:textSize="12sp"                
                 android:minWidth="0dp"
-                android:minHeight="0dp"
-                app:paddingEnd="12dp"
+                android:minHeight="0dp"               
                 app:icon="@drawable/ic_github" />
                 
             <Button
@@ -103,15 +100,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"      
                 android:textSize="12sp"
-                android:layout_marginBottom="3dp"
-                android:paddingHorizontal="14dp"
+                android:visible="gone"                
                 android:minWidth="0dp"
                 android:minHeight="0dp"
-                app:paddingEnd="12dp"
+                
                 app:icon="@drawable/ic_github" />
                 
 
-q            </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
 

@@ -16,7 +16,7 @@
         android:background="@null"/>
 
     <Button
-        style="?android:attr/buttonStyle"
+        style="@style/Widget.Material3.Button.TextButton"
         android:background="@null"
         android:text="@string/cancel_button_label"
         android:id="@+id/cancel"
@@ -28,7 +28,7 @@
         android:padding="4dp"/>
 
     <Button
-        style="?android:attr/buttonStyle"
+        style="@style/Widget.Material3.Button.TextButton"
         android:background="@null"
         android:text="@string/choose_button_label"
         android:textStyle="bold"
