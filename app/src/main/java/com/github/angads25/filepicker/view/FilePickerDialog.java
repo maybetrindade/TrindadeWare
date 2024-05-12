@@ -30,6 +30,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.util.TypedValue;
 
 import com.sketchware.remod.R;
 import com.github.angads25.filepicker.controller.DialogSelectionListener;
@@ -66,6 +67,7 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
     private String titleStr = null;
     private String positiveBtnNameStr = null;
     private String negativeBtnNameStr = null;
+    private int DEFAULT_BACKGROUND_COLOR;
 
     public static final int EXTERNAL_READ_PERMISSION_GRANT = 112;
 
@@ -75,6 +77,7 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
         properties = new DialogProperties();
         filter = new ExtensionFilter(properties);
         internalList = new ArrayList<>();
+        AppTheme appThemeHelper  = new AppTheme(context);
     }
 
     public FilePickerDialog(Context context, DialogProperties properties) {
@@ -92,6 +95,16 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
         filter = new ExtensionFilter(properties);
         internalList = new ArrayList<>();
     }
+    
+    public int getColorFromStyle(Context context, int styleID, int attributeID) {
+        TypedValue typedValue = new TypedValue();
+        context.getTheme().resolveAttribute(attributeID, typedValue, true);
+        return typedValue.data;
+    }
+
+    public int getColor(int name) {
+       return getColorFromStyle(context, appThemeHelper.getTheme(), name);
+    }
 
     @Override
     @SuppressWarnings("deprecation")
@@ -106,9 +119,9 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
             select.setEnabled(false);
             int color;
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                color = context.getResources().getColor(R.color.colorAccent, context.getTheme());
+                color = getColor(R.attr.colorPrimary);
             } else {
-                color = context.getResources().getColor(R.color.colorAccent);
+                color = getColor(R.attr.colorPrimary);
             }
             select.setTextColor(Color.argb(128, Color.red(color), Color.green(color), Color.blue(color)));
         }
@@ -153,10 +166,10 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
                     select.setEnabled(false);
                     int color;
                     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                        color = context.getResources().getColor(R.color.colorAccent, context.getTheme());
+                        color = getColor(R.attr.colorPrimary);
                     }
                     else {
-                        color = context.getResources().getColor(R.color.colorAccent);
+                        color = getColor(R.attr.colorPrimary);
                     }
                     select.setTextColor(Color.argb(128, Color.red(color), Color.green(color), Color.blue(color)));
                     select.setText(positiveBtnNameStr);
@@ -164,10 +177,10 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
                     select.setEnabled(true);
                     int color;
                     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                        color = context.getResources().getColor(R.color.colorAccent, context.getTheme());
+                        color = getColor(R.attr.colorPrimary);
                     }
                     else {
-                        color = context.getResources().getColor(R.color.colorAccent);
+                        color = getColor(R.attr.colorPrimary);
                     }
                     select.setTextColor(color);
                     String button_label = positiveBtnNameStr + " (" + size + ") ";
