@@ -48,8 +48,9 @@ import mod.RequestNetwork;
 import mod.RequestNetworkController;
 import mod.SketchwareUtil;
 import mod.hey.studios.util.Helper;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class AboutModActivity extends AppCompatActivity {
+public class AboutModActivity extends ThemedActivity {
     private ViewPager viewPager;
     private ExtendedFloatingActionButton fab;
     private ArrayList<HashMap<String, Object>> teamList = new ArrayList<>();
@@ -94,7 +95,6 @@ public class AboutModActivity extends AppCompatActivity {
         sharedPref = getSharedPreferences("AboutMod", Activity.MODE_PRIVATE);
 
         setSupportActionBar(toolbar);
-        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));

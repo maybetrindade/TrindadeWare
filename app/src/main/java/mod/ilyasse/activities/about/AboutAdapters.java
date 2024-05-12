@@ -17,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,11 +32,15 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 
+import mod.trindade.dev.utils.TrindadeUtil;
+
 public class AboutAdapters {
+
     public static class TeamRecyclerAdapter extends RecyclerView.Adapter<TeamRecyclerAdapter.ViewHolder> {
 
         private final ArrayList<HashMap<String, Object>> team;
-
+        private String githubUrlString = "https://github.com/aquilesTrindade/";
+        
         public TeamRecyclerAdapter(ArrayList<HashMap<String, Object>> data) {
             team = data;
         }
@@ -44,7 +49,7 @@ public class AboutAdapters {
         @NonNull
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             var inflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            var view = inflater.inflate(R.layout.about_teamview, null);
+            var view = inflater.inflate(R.layout.category_contributors, null);
             var layoutParams = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             view.setLayoutParams(layoutParams);
             return new ViewHolder(view);
@@ -86,8 +91,8 @@ public class AboutAdapters {
             } else {
                 holder.title.setVisibility(View.GONE);
             }
-
-
+            
+            
             Object isPartofTeam = team.get(position).get("isMainModder");
             boolean isPartofTeamBool = false;
             if (isPartofTeam instanceof String) {
@@ -100,6 +105,18 @@ public class AboutAdapters {
                 advancedCorners(holder.sidebar, MaterialColors.getColor(holder.sidebar, com.google.android.material.R.attr.colorPrimary));
             } else {
                 advancedCorners(holder.sidebar, MaterialColors.getColor(holder.sidebar, R.attr.colorGreen));
+            }
+            
+            Object githubUrl = team.get(position).get("githubUrl");
+            
+            if (githubUrl instanceof String && githubUrl != null) {
+                    githubUrlString = (String) githubUrl;
+                    holder.github_handle.setOnClickListener(v -> {
+                    TrindadeUtil.openUrl((String) githubUrl);
+                    
+                 });
+            } else {
+                holder.github_handle.setVisibility(View.GONE);
             }
 
             if (isPartofTeamBool) {
@@ -115,13 +132,17 @@ public class AboutAdapters {
                 int activeBackgroundTextColor;
                 if (isActiveBool) {
                     holder.status.setText("Active");
+                    holder.status.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_checked, 0, 0, 0);
                     activeBackgroundColor = MaterialColors.getColor(holder.status, R.attr.colorCoolGreenContainer);
                     activeBackgroundTextColor = MaterialColors.getColor(holder.status, R.attr.colorOnCoolGreenContainer);
                 } else {
                     holder.status.setText("Inactive");
+                    holder.status.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_cross, 0, 0, 0);
                     activeBackgroundColor = MaterialColors.getColor(holder.status, R.attr.colorAmberContainer);
                     activeBackgroundTextColor = MaterialColors.getColor(holder.status, R.attr.colorOnAmberContainer);
                 }
+                
+                
                 rippleRound(holder.status, activeBackgroundColor, activeBackgroundColor, 100);
                 holder.status.setTextColor(activeBackgroundTextColor);
             } else {
@@ -142,7 +163,8 @@ public class AboutAdapters {
             public final ImageView icon;
             public final TextView username;
             public final TextView description;
-            public final TextView status;
+            public final Button status;
+            public final Button github_handle;
 
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
@@ -152,6 +174,7 @@ public class AboutAdapters {
                 username = itemView.findViewById(R.id.tv_user_name);
                 status = itemView.findViewById(R.id.tv_status);
                 description = itemView.findViewById(R.id.tv_description);
+                github_handle = itemView.findViewById(R.id.github_handle);
             }
         }
     }

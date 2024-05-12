@@ -30,8 +30,9 @@ import mod.agus.jcoderz.lib.FileResConfig;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
 import mod.jbk.util.AddMarginOnApplyWindowInsetsListener;
+import mod.trindade.dev.theme.ThemedActivity;
 
-public class ManagePermissionActivity extends AppCompatActivity {
+public class ManagePermissionActivity extends ThemedActivity {
     private PermissionsAdapter adapter;
     private ArrayList<String> arrayList;
     private FileResConfig frc;

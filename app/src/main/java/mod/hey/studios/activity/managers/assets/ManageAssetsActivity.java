@@ -44,8 +44,9 @@ import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.code.SrcCodeEditor;
 import mod.hey.studios.util.Helper;
 import mod.jbk.util.AddMarginOnApplyWindowInsetsListener;
+import mod.trindade.dev.theme.ThemedActivity; 
 
-public class ManageAssetsActivity extends AppCompatActivity {
+public class ManageAssetsActivity extends ThemedActivity {
 
     private final ArrayList<String> currentTree = new ArrayList<>();
     private String current_path;

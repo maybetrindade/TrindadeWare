@@ -46,9 +46,10 @@ import mod.hey.studios.code.SrcCodeEditorLegacy;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.activities.tools.ConfigActivity;
 import mod.jbk.util.AddMarginOnApplyWindowInsetsListener;
+import mod.trindade.dev.theme.ThemedActivity; 
 
 @SuppressLint("SetTextI18n")
-public class ManageResourceActivity extends AppCompatActivity {
+public class ManageResourceActivity extends ThemedActivity {
 
     private CustomAdapter adapter;
     private FilePickerDialog dialog;
