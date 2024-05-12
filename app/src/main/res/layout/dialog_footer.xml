@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
     android:layout_alignParentBottom="true"
-    style="?android:attr/background"
     android:id="@+id/linearLayout">
 
     <View
