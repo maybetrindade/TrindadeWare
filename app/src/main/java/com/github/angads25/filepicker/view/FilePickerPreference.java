@@ -25,7 +25,7 @@ import android.preference.Preference;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.github.angads25.filepicker.R;
+import com.sketchware.remod.R;
 import com.github.angads25.filepicker.controller.DialogSelectionListener;
 import com.github.angads25.filepicker.model.DialogConfigs;
 import com.github.angads25.filepicker.model.DialogProperties;

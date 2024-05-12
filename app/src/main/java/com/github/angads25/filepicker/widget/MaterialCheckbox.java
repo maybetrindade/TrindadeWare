@@ -26,7 +26,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.github.angads25.filepicker.R;
+import com.sketchware.remod.R;
 
 /**
  * <p>

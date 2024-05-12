@@ -28,7 +28,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.github.angads25.filepicker.R;
+import com.sketchware.remod.R;
 import com.github.angads25.filepicker.controller.NotifyItemChecked;
 import com.github.angads25.filepicker.model.DialogConfigs;
 import com.github.angads25.filepicker.model.DialogProperties;
