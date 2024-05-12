@@ -1912,7 +1912,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         T = (int) wB.a(getBaseContext(), (float) T);
         k = findViewById(R.id.toolbar);
         setSupportActionBar(k);
-        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
+        
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         k.setNavigationOnClickListener(v -> {
