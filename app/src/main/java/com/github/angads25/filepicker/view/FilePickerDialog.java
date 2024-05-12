@@ -44,6 +44,8 @@ import com.github.angads25.filepicker.utils.ExtensionFilter;
 import com.github.angads25.filepicker.utils.Utility;
 import com.github.angads25.filepicker.widget.MaterialCheckbox;
 
+import mod.trindade.dev.theme.AppTheme; 
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +70,7 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
     private String positiveBtnNameStr = null;
     private String negativeBtnNameStr = null;
     private int DEFAULT_BACKGROUND_COLOR;
-
+    private AppTheme appThemeHelper; 
     public static final int EXTERNAL_READ_PERMISSION_GRANT = 112;
 
     public FilePickerDialog(Context context) {

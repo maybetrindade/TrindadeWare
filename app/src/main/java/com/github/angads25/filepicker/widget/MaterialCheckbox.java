@@ -25,8 +25,11 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
+import android.util.TypedValue; 
 
 import com.sketchware.remod.R;
+
+import mod.trindade.dev.theme.AppTheme; 
 
 /**
  * <p>
@@ -42,10 +45,12 @@ public class MaterialCheckbox extends View {
     private boolean checked;
     private OnCheckedChangeListener onCheckedChangeListener;
     private Path tick;
-
+    private AppTheme appThemeHelper; 
+    
     public MaterialCheckbox(Context context) {
         super(context);
         initView(context);
+        AppTheme appThemeHelper  = new AppTheme(context);
     }
 
     public MaterialCheckbox(Context context, AttributeSet attrs) {
@@ -84,10 +89,10 @@ public class MaterialCheckbox extends View {
             paint.setAntiAlias(true);
             bounds.set(minDim / 10, minDim / 10, minDim - (minDim/10), minDim - (minDim/10));
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                paint.setColor(getResources().getColor(R.color.colorAccent, context.getTheme()));
+                paint.setColor(getColor(R.attr.colorPrimary));
             }
             else {
-                paint.setColor(getResources().getColor(R.color.colorAccent));
+                paint.setColor(getColor(R.attr.colorPrimary));
             }
             canvas.drawRoundRect(bounds, minDim / 8, minDim / 8, paint);
 
@@ -127,6 +132,16 @@ public class MaterialCheckbox extends View {
 
     public boolean isChecked() {
         return checked;
+    }
+    
+    public int getColorFromStyle(Context context, int styleID, int attributeID) {
+        TypedValue typedValue = new TypedValue();
+        context.getTheme().resolveAttribute(attributeID, typedValue, true);
+        return typedValue.data;
+    }
+
+    public int getColor(int name) {
+       return getColorFromStyle(context, appThemeHelper.getTheme(), name);
     }
 
     public void setChecked(boolean checked) {

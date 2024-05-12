@@ -27,6 +27,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.util.TypedValue; 
 
 import com.sketchware.remod.R;
 import com.github.angads25.filepicker.controller.NotifyItemChecked;
@@ -42,6 +43,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
+import mod.trindade.dev.theme.AppTheme; 
+
 /* <p>
  * Created by Angad Singh on 09-07-2016.
  * </p>
@@ -56,11 +59,13 @@ public class FileListAdapter extends BaseAdapter{
     private Context context;
     private DialogProperties properties;
     private NotifyItemChecked notifyItemChecked;
-
+    private AppTheme appThemeHelper; 
+    
     public FileListAdapter(ArrayList<FileListItem> listItem, Context context, DialogProperties properties) {
         this.listItem = listItem;
         this.context = context;
         this.properties = properties;
+        AppTheme appThemeHelper  = new AppTheme(context);
     }
 
     @Override
@@ -102,10 +107,10 @@ public class FileListAdapter extends BaseAdapter{
         if (item.isDirectory()) {
             holder.type_icon.setImageResource(R.mipmap.ic_type_folder);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                holder.type_icon.setColorFilter(context.getResources().getColor(R.color.colorPrimary,context.getTheme()));
+                holder.type_icon.setColorFilter(getColor(R.attr.colorPrimary));
             }
             else
-            {   holder.type_icon.setColorFilter(context.getResources().getColor(R.color.colorPrimary));
+            {   holder.type_icon.setColorFilter(getColor(R.attr.colorPrimary));
             }
             if(properties.selection_type == DialogConfigs.FILE_SELECT)
             {   holder.fmark.setVisibility(View.INVISIBLE);
@@ -117,10 +122,10 @@ public class FileListAdapter extends BaseAdapter{
         else {
             holder.type_icon.setImageResource(R.mipmap.ic_type_file);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                holder.type_icon.setColorFilter(context.getResources().getColor(R.color.colorAccent,context.getTheme()));
+                holder.type_icon.setColorFilter(getColor(R.attr.colorPrimary));
             }
             else
-            {   holder.type_icon.setColorFilter(context.getResources().getColor(R.color.colorAccent));
+            {   holder.type_icon.setColorFilter(getColor(R.attr.colorPrimary));
             }
             if(properties.selection_type == DialogConfigs.DIR_SELECT)
             {   holder.fmark.setVisibility(View.INVISIBLE);
@@ -171,6 +176,16 @@ public class FileListAdapter extends BaseAdapter{
             }
         });
         return view;
+    }
+    
+    public int getColorFromStyle(Context context, int styleID, int attributeID) {
+        TypedValue typedValue = new TypedValue();
+        context.getTheme().resolveAttribute(attributeID, typedValue, true);
+        return typedValue.data;
+    }
+
+    public int getColor(int name) {
+       return getColorFromStyle(context, appThemeHelper.getTheme(), name);
     }
 
     private class ViewHolder
