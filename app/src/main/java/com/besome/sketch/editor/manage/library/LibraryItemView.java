@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.besome.sketch.beans.ProjectLibraryBean;
-import com.google.android.material.card.MaterialCardView;
+import androidx.cardview.widget.CardView;
 import com.sketchware.remod.R;
 
 import a.a.a.wB;
@@ -16,7 +16,7 @@ import a.a.a.xB;
 
 public class LibraryItemView extends FrameLayout {
     protected final Context context;
-    protected MaterialCardView container;
+    protected CardView container;
 
     public ImageView icon;
     public TextView title;
