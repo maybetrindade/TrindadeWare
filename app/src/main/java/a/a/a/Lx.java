@@ -57,6 +57,11 @@ public class Lx {
                 "proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n" +
                 "}\r\n" +
                 "}\r\n" +
+                "buildFeatures "
+                "{"+
+                "viewBinding true\n" +
+                "buildConfig true" +
+                "}\r\n" +
                 "}\r\n" +
                 "\r\n" +
                 "dependencies {\r\n" +
