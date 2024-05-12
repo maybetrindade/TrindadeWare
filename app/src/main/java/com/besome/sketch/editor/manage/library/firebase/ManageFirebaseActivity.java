@@ -23,7 +23,6 @@ import com.github.angads25.filepicker.model.DialogConfigs;
 import com.github.angads25.filepicker.model.DialogProperties;
 import com.github.angads25.filepicker.view.FilePickerDialog;
 import com.google.android.material.materialswitch.MaterialSwitch;
-import com.google.android.material.appbar.MaterialToolbar; 
 import com.sketchware.remod.R;
 
 import java.util.regex.Matcher;
@@ -86,7 +85,7 @@ public class ManageFirebaseActivity extends BaseAppCompatActivity implements Vie
             s.a("P1I15", true);
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.setData(Uri.parse("https://trindadeware-pro.vercel.app/docs/components/Firebase/connect-to-firebase"));
+            intent.setData(Uri.parse("https://sketchware-pro.vercel.app/docs/components/Firebase/connect-to-firebase"));
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
             intent.addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION);
@@ -165,9 +164,9 @@ public class ManageFirebaseActivity extends BaseAppCompatActivity implements Vie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.manage_library_manage_firebase);
 
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        
+        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
         getSupportActionBar().setTitle(Helper.getResString(R.string.design_library_firebase_title_firebase_manager));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
