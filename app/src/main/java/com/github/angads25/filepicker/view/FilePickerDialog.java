@@ -78,7 +78,7 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
         this.context = context;
         properties = new DialogProperties();
         filter = new ExtensionFilter(properties);
-        internalList = new ArrayList<>();
+        internalList = new ArrayList<>();     
         appThemeHelper  = new AppTheme(context);
     }
 
@@ -88,6 +88,7 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
         this.properties = properties;
         filter = new ExtensionFilter(properties);
         internalList = new ArrayList<>();
+        appThemeHelper  = new AppTheme(context);
     }
 
     public FilePickerDialog(Context context, DialogProperties properties, int themeResId) {
@@ -96,6 +97,7 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
         this.properties = properties;
         filter = new ExtensionFilter(properties);
         internalList = new ArrayList<>();
+        appThemeHelper  = new AppTheme(context);
     }
     
     public int getColorFromStyle(Context context, int styleID, int attributeID) {
