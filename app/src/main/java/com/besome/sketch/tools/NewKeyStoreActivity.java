@@ -151,7 +151,7 @@ public class NewKeyStoreActivity extends BaseAppCompatActivity implements OnClic
         getSupportActionBar().setSubtitle("Export path: " + wq.D);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-        toolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
+        materialToolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
         E = new iI();
 
 
