@@ -56,11 +56,13 @@ public class MaterialCheckbox extends View {
     public MaterialCheckbox(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView(context);
+        appThemeHelper  = new AppTheme(context);
     }
 
     public MaterialCheckbox(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView(context);
+        appThemeHelper  = new AppTheme(context);
     }
 
     public void initView(Context context) {
