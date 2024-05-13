@@ -1,40 +1,30 @@
 package a.a.a;
 
+import static mod.SketchwareUtil.getDip;
+
 import android.app.Activity;
-import android.app.Dialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager.LayoutParams;
+import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.DrawableRes;
+import androidx.appcompat.app.AlertDialog;
 
-import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.sketchware.remod.R;
 
 /**
- * A Sketchware-styled dialog.
+ * Sketchware dialog that wrappes the material alert dialog builder.
  */
-public class aB extends Dialog {
+public class aB extends MaterialAlertDialogBuilder {
 
-    private int dialogImageResId = -1;
-    private String dialogTitleText = "";
-    private String dialogMessageText = "";
-    private View dialogCustomView;
-    private View dialogButtonsContainer;
-    private String dialogDefaultText = "Default";
-    private View.OnClickListener dialogDefaultListener = null;
-    private String dialogNoText = "No";
-    private View.OnClickListener dialogNoListener = null;
-    private String dialogYesText = "Yes";
-    private View.OnClickListener dialogYesListener = null;
+    private AlertDialog dialog;
+    private OnClickListener positiveListener;
+    private OnClickListener negativeListener;
+    private OnClickListener neutralListener;
+    private boolean autoDismiss = true;
+
 
     public aB(Activity activity) {
         super(activity);
@@ -44,130 +34,97 @@ public class aB extends Dialog {
      * Set the dialog's image's resource ID
      */
     public void a(@DrawableRes int resId) {
-        dialogImageResId = resId;
+        setIcon(resId);
     }
 
     /**
      * Set the dialog's custom view
      */
     public void a(View customView) {
-        dialogCustomView = customView;
+        FrameLayout view = new FrameLayout(getContext());
+        view.setLayoutParams(
+                new FrameLayout.LayoutParams(
+                        FrameLayout.LayoutParams.MATCH_PARENT,
+                        FrameLayout.LayoutParams.WRAP_CONTENT
+                )
+        );
+        view.setPadding((int) getDip(24), (int) getDip(8), (int) getDip(24), (int) getDip(8));
+        view.addView(customView);
+        setView(view);
     }
 
     /**
      * Set the dialog's message
      */
     public void a(String message) {
-        dialogMessageText = message;
+        setMessage(message);
     }
 
     /**
      * Set the dialog's "No" button text and listener
      */
-    public void a(String noText, View.OnClickListener noListener) {
-        dialogNoText = noText;
-        dialogNoListener = noListener;
+    public void a(String noText, OnClickListener noListener) {
+        negativeListener = noListener;
+        setNegativeButton(noText, null);
     }
 
     /**
      * Set the dialog's title
      */
     public void b(String title) {
-        dialogTitleText = title;
+        setTitle(title);
     }
 
     /**
      * Set the dialog's "Yes" button text and listener
      */
-    public void b(String yesText, View.OnClickListener yesListener) {
-        dialogYesText = yesText;
-        dialogYesListener = yesListener;
+    public void b(String yesText, OnClickListener yesListener) {
+        positiveListener = yesListener;
+        setPositiveButton(yesText, null);
     }
 
-    public void configureDefaultButton(String defaultText, View.OnClickListener defaultListener) {
-        dialogDefaultText = defaultText;
-        dialogDefaultListener = defaultListener;
+    public void configureDefaultButton(String defaultText, OnClickListener defaultListener) {
+        neutralListener = defaultListener;
+        setNeutralButton(defaultText, null);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        
-        getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-
-        {
-            LayoutParams attributes = getWindow().getAttributes();
-            attributes.width = ViewGroup.LayoutParams.MATCH_PARENT;
-            getWindow().setAttributes(attributes);
-            getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-        }
-        setContentView(R.layout.dialog);
-
-        ImageView dialogImage = findViewById(R.id.dialog_img);
-        TextView dialogTitle = findViewById(R.id.dialog_title);
-        TextView dialogMessage = findViewById(R.id.dialog_msg);
-        FrameLayout dialogCustomViewContainer = findViewById(R.id.custom_view);
-
-        dialogButtonsContainer = findViewById(R.id.layout_button);
-        MaterialButton dialogDefault = findViewById(R.id.common_dialog_default_button);
-        dialogDefault.setText(dialogDefaultText);
-        dialogDefault.setOnClickListener(dialogDefaultListener);
-        MaterialButton dialogNo = findViewById(R.id.dialog_btn_no);
-        dialogNo.setText(dialogNoText);
-        dialogNo.setOnClickListener(dialogNoListener);
-        MaterialButton dialogYes = findViewById(R.id.dialog_btn_yes);
-        dialogYes.setText(dialogYesText);
-        dialogYes.setOnClickListener(dialogYesListener);
-
-        if (dialogTitleText.isEmpty()) {
-            dialogTitle.setVisibility(View.GONE);
-        } else {
-            dialogTitle.setVisibility(View.VISIBLE);
-            dialogTitle.setText(dialogTitleText);
-        }
-
-        if (dialogMessageText.isEmpty()) {
-            dialogMessage.setVisibility(View.GONE);
-        } else {
-            dialogMessage.setVisibility(View.VISIBLE);
-            dialogMessage.setText(dialogMessageText);
-        }
-
-        if (dialogDefaultListener == null) {
-            dialogDefault.setVisibility(View.GONE);
-        }
-
-        if (dialogNoListener == null) {
-            dialogNo.setVisibility(View.GONE);
-        }
-
-        if (dialogYesListener == null) {
-            dialogYes.setVisibility(View.GONE);
-        }
-
-        if (dialogImageResId == -1) {
-            dialogImage.setVisibility(View.GONE);
-        } else {
-            dialogImage.setImageResource(dialogImageResId);
-        }
-
-        if (dialogCustomView != null) {
-            dialogCustomViewContainer.setVisibility(View.VISIBLE);
-            dialogCustomViewContainer.addView(dialogCustomView);
-        } else {
-            dialogCustomViewContainer.setVisibility(View.GONE);
-        }
+    public void autoDismiss(boolean autoDismiss) {
+        this.autoDismiss = autoDismiss;
     }
 
     @Override
-    public void show() {
-        super.show();
-        if (dialogDefaultListener == null && dialogYesListener == null && dialogNoListener == null) {
-            if (dialogButtonsContainer != null) {
-                dialogButtonsContainer.setVisibility(View.GONE);
-            }
+    public AlertDialog show() {
+        dialog = super.create();
+
+        dialog.setOnShowListener(dialogInterface -> setupButtonListeners());
+
+        dialog.show();
+        return dialog;
+    }
+
+    private void setupButtonListeners() {
+        Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        if (positiveButton != null && positiveListener != null) {
+            positiveButton.setOnClickListener(v -> {
+                if (autoDismiss) dialog.dismiss();
+                positiveListener.onClick(dialog, DialogInterface.BUTTON_POSITIVE);
+            });
+        }
+
+        Button negativeButton = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
+        if (negativeButton != null && negativeListener != null) {
+            negativeButton.setOnClickListener(v -> {
+                if (autoDismiss) dialog.dismiss();
+                negativeListener.onClick(dialog, DialogInterface.BUTTON_NEGATIVE);
+            });
+        }
+
+        Button neutralButton = dialog.getButton(AlertDialog.BUTTON_NEUTRAL);
+        if (neutralButton != null && neutralListener != null) {
+            neutralButton.setOnClickListener(v -> {
+                if (autoDismiss) dialog.dismiss();
+                neutralListener.onClick(dialog, DialogInterface.BUTTON_NEUTRAL);
+            });
         }
     }
 }
