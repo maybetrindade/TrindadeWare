@@ -79,7 +79,7 @@ public class FilePickerDialog extends Dialog implements AdapterView.OnItemClickL
         properties = new DialogProperties();
         filter = new ExtensionFilter(properties);
         internalList = new ArrayList<>();
-        AppTheme appThemeHelper  = new AppTheme(context);
+        appThemeHelper  = new AppTheme(context);
     }
 
     public FilePickerDialog(Context context, DialogProperties properties) {

@@ -50,7 +50,7 @@ public class MaterialCheckbox extends View {
     public MaterialCheckbox(Context context) {
         super(context);
         initView(context);
-        AppTheme appThemeHelper  = new AppTheme(context);
+        appThemeHelper  = new AppTheme(context);
     }
 
     public MaterialCheckbox(Context context, AttributeSet attrs) {

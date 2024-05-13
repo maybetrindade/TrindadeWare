@@ -65,7 +65,7 @@ public class FileListAdapter extends BaseAdapter{
         this.listItem = listItem;
         this.context = context;
         this.properties = properties;
-        AppTheme appThemeHelper  = new AppTheme(context);
+        appThemeHelper  = new AppTheme(context);
     }
 
     @Override
